@@ -1,0 +1,126 @@
+/*
+ * Copyright (C) Michael Gates (MichaelGatesDev@gmail.com) 2015
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *
+ */
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Light */
+@font-face {
+    font-family : "Roboto Condensed";
+    font-style  : normal;
+    font-weight : 300;
+    src         : local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url("../../fonts/RobotoCondensed-Light.ttf") format('truetype');
+}
+
+
+@font-face {
+    font-family : "Roboto Condensed";
+    font-style  : italic;
+    font-weight : 300;
+    src         : local('Roboto Condensed Light Italic'), local('RobotoCondensed-LightItalic'), url("../../fonts/RobotoCondensed-LightItalic.ttf") format('truetype');
+}
+
+
+/* Normal */
+@font-face {
+    font-family : "Roboto Condensed";
+    font-style  : normal;
+    font-weight : 400;
+    src         : local('Roboto Condensed Regular'), local('RobotoCondensed-Regular'), url("../../fonts/RobotoCondensed-Regular.ttf") format('truetype');
+}
+
+
+@font-face {
+    font-family : "Roboto Condensed";
+    font-style  : italic;
+    font-weight : 400;
+    src         : local('Roboto Condensed Italic'), local('RobotoCondensed-Italic'), url("../../fonts/RobotoCondensed-Italic.ttf") format('truetype');
+}
+
+
+/* Bold */
+@font-face {
+    font-family : "Roboto Condensed";
+    font-style  : normal;
+    font-weight : 700;
+    src         : local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url("../../fonts/RobotoCondensed-Bold.ttf") format('truetype');
+}
+
+
+@font-face {
+    font-family : "Roboto Condensed";
+    font-style  : italic;
+    font-weight : 700;
+    src         : local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'), url("../../fonts/RobotoCondensed-BoldItalic.ttf") format('truetype');
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Light */
+@font-face {
+    font-family : "Roboto";
+    font-style  : normal;
+    font-weight : 300;
+    src         : local('Roboto Light'), local('Roboto-Light'), url("../../fonts/Roboto-Light.ttf") format('truetype');
+}
+
+
+@font-face {
+    font-family : "Roboto";
+    font-style  : italic;
+    font-weight : 300;
+    src         : local('Roboto Light Italic'), local('Roboto-LightItalic'), url("../../fonts/Roboto-LightItalic.ttf") format('truetype');
+}
+
+
+/* Normal */
+@font-face {
+    font-family : "Roboto";
+    font-style  : normal;
+    font-weight : 400;
+    src         : local('Roboto Regular'), local('Roboto-Regular'), url("../../fonts/Roboto-Regular.ttf") format('truetype');
+}
+
+
+@font-face {
+    font-family : "Roboto";
+    font-style  : italic;
+    font-weight : 400;
+    src         : local('Roboto Italic'), local('Roboto-Italic'), url("../../fonts/Roboto-Italic.ttf") format('truetype');
+}
+
+
+/* Bold */
+@font-face {
+    font-family : "Roboto";
+    font-style  : normal;
+    font-weight : 700;
+    src         : local('Roboto Bold'), local('Roboto-Bold'), url("../../fonts/Roboto-Bold.ttf") format('truetype');
+}
+
+
+@font-face {
+    font-family : "Roboto";
+    font-style  : italic;
+    font-weight : 700;
+    src         : local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url("../../fonts/Roboto-BoldItalic.ttf") format('truetype');
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------- */

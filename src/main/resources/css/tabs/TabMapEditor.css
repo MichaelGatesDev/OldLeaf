@@ -1,0 +1,164 @@
+/*
+ * Copyright (C) Michael Gates (MichaelGatesDev@gmail.com) 2015
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *
+ */
+
+#mainPane {
+    -fx-background-color : #3C3F41;
+}
+
+
+/*------------------------------------------------------------------------------- */
+/* The 'map editor'                                                               */
+/*------------------------------------------------------------------------------- */
+
+/* The 'Map editor' tab */
+#tab-map-editor { }
+
+
+/* The entire border pane for the map editor */
+#mainPane {
+    -fx-padding : 5px;
+}
+
+
+/*------------------------------------------------------------------------------- */
+/* The 'tools'                                                                    */
+/*------------------------------------------------------------------------------- */
+
+/* The entire left side container*/
+#map-editor-tools-container {
+    -fx-border-style     : solid;
+    -fx-border-width     : 2px;
+    -fx-border-color     : transparent transparent transparent transparent;
+    -fx-background-color : transparent;
+}
+
+
+/* The search box on the left side */
+#map-editor-tools-search-pane {
+}
+
+
+/* The actual search combo box */
+#map-editor-tools-search { }
+
+
+/* The scrollpane which contains the accordion  */
+#map-editor-tools-list-pane {
+    -fx-border-width : 0;
+    -fx-padding      : 0;
+}
+
+
+/* The accordion which contains titled panes */
+#map-editor-tools-accordion {
+    -fx-border-width : 0;
+}
+
+
+/*------------------------------------------------------------------------------- */
+/* The 'grid container area'                                                      */
+/*------------------------------------------------------------------------------- */
+
+/* The scrollpane which contains the grid */
+#map-editor-grid-container {
+    -fx-background-color : transparent;
+    -fx-padding          : 15px 10px 10px 10px;
+}
+
+
+/* The area behind the actual gridlines */
+#map-editor-grid-container .viewport {
+    -fx-background-color : transparent;
+}
+
+
+/* The corner between the horizontal & vertical scrollbars */
+#map-editor-grid-container .corner {
+    -fx-background-color : transparent;
+}
+
+
+/* The scrollbars  */
+#map-editor-grid-container .scroll-bar {
+    -fx-background-color : #44484A;
+}
+
+
+/* The scrollbar button  */
+#map-editor-grid-container .scroll-bar .thumb {
+    -fx-background-color : #333539;
+}
+
+
+/*------------------------------------------------------------------------------- */
+/* The actual 'lined grid'                                                        */
+/*------------------------------------------------------------------------------- */
+
+.acres-grid {
+    -fx-background-color : transparent;
+    -fx-border-color     : #1B1B1B;
+    -fx-border-width     : 1px;
+}
+
+
+.acres-grid > .cell {
+    -fx-border-color : #1B1B1B;
+    -fx-border-width : 1px;
+}
+
+
+.acres-grid > .cell:hover {
+    -fx-border-color : red;
+    -fx-cursor       : hand;
+}
+
+
+.tiles-grid {
+    -fx-background-color : transparent;
+    -fx-border-color     : #1B1B1B;
+    -fx-border-insets    : 0.5;
+    -fx-border-width     : 1px;
+}
+
+
+.tiles-grid > .cell {
+    -fx-border-color : #5A5A5A;
+    -fx-border-width : 1px;
+    -fx-opacity      : 0.6;
+}
+
+
+/*
+Would love to use this, but it uses a ridiculous amount of CPU because of the amount of repainting
+
+See: ScenePulseListener.pulse() which is called on repaint
+*/
+
+/*.tiles-grid > .cell:hover {*/
+/*-fx-border-color : red;*/
+/*!*-fx-cursor       : crosshair;*!*/
+/*}*/
+
+/*------------------------------------------------------------------------------- */
+/* The 'layers panel'                                                             */
+/*------------------------------------------------------------------------------- */
+
+.layerButtonsContainer {
+    -fx-padding : 5px;
+}

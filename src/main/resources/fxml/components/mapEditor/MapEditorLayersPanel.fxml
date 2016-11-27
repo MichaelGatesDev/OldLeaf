@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (C) Michael Gates (MichaelGatesDev@gmail.com) 2015
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  ~
+  -->
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox alignment="CENTER"
+      prefHeight="40.0"
+      prefWidth="600.0"
+      spacing="50.0"
+      fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor.MapEditorLayersController"
+      xmlns="http://javafx.com/javafx/null"
+      xmlns:fx="http://javafx.com/fxml/1">
+
+    <stylesheets>
+    </stylesheets>
+
+    <children>
+        <Label text="X: 0 Y: 0"
+               fx:id="coordinatesLabel"/>
+        <Separator orientation="VERTICAL"
+                   prefHeight="200.0"/>
+        <CheckBox mnemonicParsing="false"
+                  selected="true"
+                  text="Acres"/>
+        <CheckBox layoutX="285.0"
+                  layoutY="52.0"
+                  mnemonicParsing="false"
+                  selected="true"
+                  text="Buildings"/>
+        <CheckBox layoutX="335.0"
+                  layoutY="52.0"
+                  mnemonicParsing="false"
+                  selected="true"
+                  text="Items"/>
+    </children>
+
+
+</HBox>

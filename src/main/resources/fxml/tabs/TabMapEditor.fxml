@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (C) Michael Gates (MichaelGatesDev@gmail.com) 2015
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  ~
+  -->
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane
+        xmlns="http://javafx.com/javafx/null"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.tabs.TabMapEditorController"
+        prefHeight="500.0"
+        prefWidth="800.0">
+
+    <stylesheets>
+    </stylesheets>
+
+    <center>
+        <HBox alignment="CENTER"
+              prefHeight="100.0"
+              prefWidth="200.0"
+              spacing="50.0"
+              BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="TOP_CENTER"
+                      prefHeight="500.0"
+                      prefWidth="260.0"
+                      spacing="20.0">
+                    <children>
+                        <ImageView fitHeight="150.0"
+                                   fitWidth="200.0"
+                                   pickOnBounds="true"
+                                   preserveRatio="true"/>
+                        <Button mnemonicParsing="false"
+                                prefHeight="50.0"
+                                prefWidth="200.0"
+                                fx:id="editTownButton"
+                                text="Edit Town">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Button>
+                        <Button layoutX="40.0"
+                                layoutY="200.0"
+                                mnemonicParsing="false"
+                                prefHeight="50.0"
+                                prefWidth="200.0"
+                                fx:id="loadTownButton"
+                                text="Load Town">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Button>
+                        <Button layoutX="40.0"
+                                layoutY="271.0"
+                                mnemonicParsing="false"
+                                prefHeight="50.0"
+                                prefWidth="200.0"
+                                fx:id="saveTownButton"
+                                text="Save Town">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets top="20.0"/>
+                    </padding>
+                </VBox>
+                <VBox alignment="TOP_CENTER"
+                      layoutX="280.0"
+                      layoutY="10.0"
+                      prefHeight="500.0"
+                      prefWidth="260.0"
+                      spacing="20.0">
+                    <children>
+                        <ImageView fitHeight="150.0"
+                                   fitWidth="200.0"
+                                   pickOnBounds="true"
+                                   preserveRatio="true"/>
+                        <Button mnemonicParsing="false"
+                                prefHeight="50.0"
+                                prefWidth="200.0"
+                                fx:id="editIslandButton"
+                                text="Edit Island">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Button>
+                        <Button layoutX="40.0"
+                                layoutY="200.0"
+                                mnemonicParsing="false"
+                                prefHeight="50.0"
+                                prefWidth="200.0"
+                                fx:id="loadIslandButton"
+                                text="Load Island">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Button>
+                        <Button layoutX="40.0"
+                                layoutY="271.0"
+                                mnemonicParsing="false"
+                                prefHeight="50.0"
+                                prefWidth="200.0"
+                                fx:id="saveIslandButton"
+                                text="Save Island">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets top="20.0"/>
+                    </padding>
+                </VBox>
+            </children>
+        </HBox>
+    </center>
+</BorderPane>

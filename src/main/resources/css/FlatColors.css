@@ -1,0 +1,159 @@
+/*
+ * Copyright (C) Michael Gates (MichaelGatesDev@gmail.com) 2015
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *
+ */
+
+/*------------------------------------------------------------------------------- */
+
+.bg-turquoise { -fx-background-color : #1DD2AF; }
+
+
+.bg-emerald { -fx-background-color : #2ECC71; }
+
+
+.bg-river { -fx-background-color : #3498DB; }
+
+
+.bg-amethyst { -fx-background-color : #9B59B6; }
+
+
+.bg-wet-asphalt { -fx-background-color : #34495E; }
+
+
+.bg-green-sea { -fx-background-color : #16A085; }
+
+
+.bg-nephritis { -fx-background-color : #27AE60; }
+
+
+.bg-belize-hole { -fx-background-color : #2980B9; }
+
+
+.bg-wysteria { -fx-background-color : #8E44AD; }
+
+
+.bg-midnight-blue { -fx-background-color : #2C3E50; }
+
+
+.bg-sunflower { -fx-background-color : #F1C40F; }
+
+
+.bg-carrot { -fx-background-color : #E67E22; }
+
+
+.bg-alizarin { -fx-background-color : #E74C3C; }
+
+
+.bg-clouds { -fx-background-color : #ECF0F1; }
+
+
+.bg-concrete { -fx-background-color : #95A5A6; }
+
+
+.bg-orange { -fx-background-color : #F39C12; }
+
+
+.bg-pumpkin { -fx-background-color : #D35400; }
+
+
+.bg-pomegranate { -fx-background-color : #C0392B; }
+
+
+.bg-silver { -fx-background-color : #BDC3C7; }
+
+
+.bg-asbestos { -fx-background-color : #7F8C8D; }
+
+
+.bg-darkest-gray { -fx-background-color : #2B2B2C }
+
+
+.bg-darkish-gray { -fx-background-color : #282829 }
+
+
+.bg-darker-gray { -fx-background-color : #313336 }
+
+
+.bg-gray { -fx-background-color : #3A3E3F }
+
+
+.bg-lighter-gray { -fx-background-color : #45494A }
+
+
+/*------------------------------------------------------------------------------- */
+
+.fg-turquoise { -fx-text-fill : #1DD2AF; }
+
+
+.fg-emerald { -fx-text-fill : #2ECC71; }
+
+
+.fg-river { -fx-text-fill : #3498DB; }
+
+
+.fg-amethyst { -fx-text-fill : #9B59B6; }
+
+
+.fg-wet-asphalt { -fx-text-fill : #34495E; }
+
+
+.fg-green-sea { -fx-text-fill : #16A085; }
+
+
+.fg-nephritis { -fx-text-fill : #27AE60; }
+
+
+.fg-belize-hole { -fx-text-fill : #2980B9; }
+
+
+.fg-wysteria { -fx-text-fill : #8E44AD; }
+
+
+.fg-midnight-blue { -fx-text-fill : #2C3E50; }
+
+
+.fg-sunflower { -fx-text-fill : #F1C40F; }
+
+
+.fg-carrot { -fx-text-fill : #E67E22; }
+
+
+.fg-alizarin { -fx-text-fill : #E74C3C; }
+
+
+.fg-clouds { -fx-text-fill : #ECF0F1; }
+
+
+.fg-concrete { -fx-text-fill : #95A5A6; }
+
+
+.fg-orange { -fx-text-fill : #F39C12; }
+
+
+.fg-pumpkin { -fx-text-fill : #D35400; }
+
+
+.fg-pomegranate { -fx-text-fill : #C0392B; }
+
+
+.fg-silver { -fx-text-fill : #BDC3C7; }
+
+
+.fg-asbestos { -fx-text-fill : #7F8C8D; }
+
+
+/*------------------------------------------------------------------------------- */

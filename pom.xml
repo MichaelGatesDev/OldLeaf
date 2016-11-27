@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) Michael Gates (MichaelGatesDev@gmail.com) 2015
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  ~
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.michaelgatesdev</groupId>
+    <artifactId>OldLeaf</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+
+    <!-- Properties -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <downloadSources>true</downloadSources>
+        <downloadJavadocs>true</downloadJavadocs>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <!-- Repositories -->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Central</name>
+            <url>http://repo1.maven.org/maven2/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>oss-sonatype</id>
+            <name>oss-sonatype</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+
+    <!-- Dependencies -->
+    <dependencies>
+
+        <!-- ControlsFX -->
+        <dependency>
+            <groupId>org.controlsfx</groupId>
+            <artifactId>controlsfx</artifactId>
+            <version>8.40.11-SNAPSHOT</version>
+        </dependency>
+
+        <!-- Apache Commons IO -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.3.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Apache Commons Lang -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>LATEST</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Apache Collections -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>LATEST</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Log4J logger -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>LATEST</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- jUnit testing -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>LATEST</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+
+    <!-- Build Settings -->
+    <build>
+        <finalName>${project.name}</finalName>
+        <defaultGoal>clean package install</defaultGoal>
+
+        <!-- Resources-->
+        <resources>
+            <resource>
+                <targetPath>.</targetPath>
+                <directory>${basedir}/src/main/resources/</directory>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+
+        <!-- Plugins -->
+        <plugins>
+            <!-- JavaFX -->
+            <plugin>
+                <groupId>com.zenjava</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>8.2.0</version>
+                <configuration>
+                    <jfxMainAppJarName>OldLeaf-${version}.jar</jfxMainAppJarName>
+                    <mainClass>com.michaelgatesdev.OldLeaf.Main</mainClass>
+                    <verbose>true</verbose>
+                    <allPermissions>true</allPermissions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

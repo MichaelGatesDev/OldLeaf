@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (C) Michael Gates (MichaelGatesDev@gmail.com) 2015
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  ~
+  -->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<ScrollPane fitToHeight="true"
+            fitToWidth="true"
+            hbarPolicy="NEVER"
+            prefHeight="800.0"
+            prefWidth="230.0"
+            xmlns="http://javafx.com/javafx/null"
+            xmlns:fx="http://javafx.com/fxml/1">
+
+    <VBox alignment="TOP_CENTER"
+          spacing="15.0">
+
+        <stylesheets>
+        </stylesheets>
+
+        <children>
+            <ImageView fitHeight="200.0"
+                       fitWidth="200.0"
+                       pickOnBounds="true"
+                       preserveRatio="true">
+                <Image url="img/PicNotFound.png"
+                       backgroundLoading="true"/>
+            </ImageView>
+            <Label text="Player Name"/>
+            <Label layoutX="94.0"
+                   layoutY="190.0"
+                   text="Player Gender"/>
+            <Label layoutX="97.0"
+                   layoutY="237.0"
+                   text="Town Name"/>
+            <Label layoutX="78.0"
+                   layoutY="289.0"
+                   text="TPC Region"/>
+            <Label layoutX="80.0"
+                   layoutY="321.0"
+                   text="Birth Date"/>
+            <Label layoutX="86.0"
+                   layoutY="353.0"
+                   text="Registration Date"/>
+            <Button mnemonicParsing="false"
+                    prefHeight="25.0"
+                    prefWidth="170.0"
+                    text="Edit Appearance"/>
+            <Button layoutX="20.0"
+                    layoutY="417.0"
+                    mnemonicParsing="false"
+                    prefHeight="25.0"
+                    prefWidth="170.0"
+                    text="Edit Inventory"/>
+            <Button layoutX="20.0"
+                    layoutY="457.0"
+                    mnemonicParsing="false"
+                    prefHeight="25.0"
+                    prefWidth="170.0"
+                    text="Edit Badges"/>
+            <Button layoutX="20.0"
+                    layoutY="497.0"
+                    mnemonicParsing="false"
+                    prefHeight="25.0"
+                    prefWidth="170.0"
+                    text="Edit Emotions"/>
+            <Button layoutX="20.0"
+                    layoutY="537.0"
+                    mnemonicParsing="false"
+                    prefHeight="25.0"
+                    prefWidth="170.0"
+                    text="Edit Bank/Medals"/>
+            <Button layoutX="20.0"
+                    layoutY="577.0"
+                    mnemonicParsing="false"
+                    prefHeight="25.0"
+                    prefWidth="170.0"
+                    text="Edit Best Friends"/>
+        </children>
+    </VBox>
+
+</ScrollPane>

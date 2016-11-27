@@ -1,0 +1,79 @@
+/*
+ * Copyright (C) Michael Gates (MichaelGatesDev@gmail.com) 2015
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *
+ */
+
+/*------------------------------------------------------------------------------- */
+/* Navigation Bar (tabs)                                                          */
+/*------------------------------------------------------------------------------- */
+
+/* The entire tab navigation pane */
+#nav-tabs-pane {
+    -fx-tab-min-height : 3em; /* 24 */
+    -fx-tab-max-height : 3em; /* 24 */
+}
+
+
+/* Normal tab */
+#nav-tabs-pane .tab {
+    -fx-background-insets : 0.0;
+    -fx-background-radius : 0.0;
+    -fx-background-color  : #333538;
+    -fx-padding           : 5 30 5 30;
+}
+
+
+/* Selected tab */
+#nav-tabs-pane .tab:selected {
+    -fx-background-color : #383B3E;
+    /*-fx-border-style     : hidden hidden solid hidden;*/
+    -fx-border-style     : hidden hidden hidden hidden;
+    -fx-border-width     : 0.188em;
+    -fx-border-color     : #2F3233;
+}
+
+
+/* Tab in focus ? */
+#nav-tabs-pane .tab:focused {
+    -fx-focus-color : transparent;
+}
+
+
+#nav-tabs-pane .tab .tab-label {
+    -fx-background-color : transparent;
+    -fx-alignment        : CENTER;
+    -fx-text-fill        : #CBCBCC;
+    -fx-font-family      : "Roboto Light", "Georgia";
+    -fx-font-weight      : 600;
+}
+
+
+#nav-tabs-pane *.tab-header-background {
+    -fx-background-color : #333538;
+}
+
+
+#nav-tabs-pane:top *.tab-header-area {
+    -fx-background-insets : 0, 0 0 1 0;
+    -fx-padding           : 0.0em 0.166667em 0.0em 0.0em;
+}
+
+
+#nav-tabs-pane .tab:selected .focus-indicator {
+    -fx-focus-color  : transparent;
+    -fx-border-color : transparent;
+}

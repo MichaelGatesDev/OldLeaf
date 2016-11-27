@@ -1,0 +1,157 @@
+/*
+ * Copyright (C) Michael Gates (MichaelGatesDev@gmail.com) 2015
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *
+ */
+@import url("fonts/Roboto.css");
+
+/*------------------------------------------------------------------------------- */
+/* Flat buttons                                                                   */
+/*------------------------------------------------------------------------------- */
+
+.flat-button {
+    -fx-font-family       : "Roboto", "Georgia";
+    -fx-font-style        : normal;
+    -fx-background-insets : 0.0;
+    -fx-background-radius : 2.0;
+}
+
+
+.flat-button:hover {
+    -fx-opacity : 0.95;
+}
+
+
+/*------------------------------------------------------------------------------- */
+/* Combo boxes                                                                    */
+/*------------------------------------------------------------------------------- */
+
+.flat-combo-box {
+    -fx-background-insets : 0.0;
+    -fx-background-radius : 0.0;
+    -fx-background-color  : transparent;
+}
+
+
+.flat-combo-box:hover {
+    -fx-opacity : 0.95;
+}
+
+
+.flat-combo-box .arrow, .combo-box .arrow-button {
+    -fx-background-color : #3E4243;
+}
+
+
+.flat-combo-box .text-field {
+    -fx-font-family      : "Roboto Light", "Georgia";
+    -fx-font-style       : normal;
+    -fx-background-color : #45494A;
+    -fx-text-fill        : #CBCBCC;
+}
+
+
+.flat-combo-box .list-cell {
+    -fx-background       : white;
+    -fx-background-color : transparent;
+    -fx-text-fill        : -fx-text-base-color;
+    -fx-padding          : 3 0 2 7;
+    -fx-cell-size        : 1.66667em;
+}
+
+
+.flat-combo-box .combo-box-popup .list-view {
+    -fx-background-color  : #3D4145;
+    -fx-background-insets : 0, 1;
+    -fx-effect            : dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 8, 0.0, 0, 0);
+}
+
+
+.flat-combo-box .combo-box-popup .list-view .list-cell {
+    -fx-padding          : 4 0 4 5;
+
+    /* No alternate highlighting */
+    -fx-background-color : white;
+}
+
+
+.flat-combo-box .combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover {
+    -fx-background       : -fx-accent;
+    -fx-background-color : -fx-selection-bar;
+    -fx-text-fill        : -fx-selection-bar-text;
+}
+
+
+.flat-combo-box .combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color : white;
+    -fx-text-fill        : -fx-text-inner-color;
+}
+
+
+/*------------------------------------------------------------------------------- */
+/* Flat Accordion Pane                                                            */
+/*------------------------------------------------------------------------------- */
+
+.flat-accordion {
+    -fx-background-insets : 0.0;
+    -fx-background-radius : 0.0;
+    -fx-background-color  : #383B3F;
+    -fx-border-color      : transparent;
+    -fx-box-border        : transparent; /* The color of the inside of the accordion */
+}
+
+
+.flat-accordion .titled-pane {
+    -fx-background-color : transparent;
+    -fx-text-fill        : #CBCBCC;
+}
+
+
+.flat-accordion .titled-pane .arrow, .titled-pane .arrow-button {
+}
+
+
+.flat-accordion .titled-pane .title {
+    -fx-background-color : #333539;
+    -fx-alignment        : center;
+    -fx-cursor           : "hand";
+    -fx-focus-color      : #555555;
+    -fx-font-family      : "Roboto Light", "Georgia";
+}
+
+
+.flat-accordion .titled-pane .content {
+    -fx-padding : -1;
+}
+
+
+.flat-accordion .titled-pane .list-view .cell:even {
+    -fx-font-family : "Roboto Light", "Georgia";
+    -fx-text-fill   : #CBCBCC;
+}
+
+
+.flat-accordion .titled-pane .list-view .cell:even {
+    -fx-background-color : #3C3F41;
+}
+
+
+.flat-accordion .titled-pane .list-view .cell:odd {
+    -fx-background-color : #3F4144;
+}
+
+
+/*------------------------------------------------------------------------------- */
