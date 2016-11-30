@@ -24,12 +24,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane id="mainPane"
-            prefHeight="500.0"
-            prefWidth="800.0"
-            xmlns="http://javafx.com/javafx/null"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.tabs.TabMainController">
+<BorderPane id="mainPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.tabs.TabMainController">
 
     <stylesheets>
         <!--<URL value="@../../css/tabs/TabMain.css" />-->
@@ -38,52 +33,24 @@
     </stylesheets>
 
     <center>
-        <VBox prefHeight="200.0"
-              prefWidth="100.0"
-              BorderPane.alignment="CENTER">
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
             <children>
-                <HBox alignment="CENTER"
-                      prefHeight="100.0"
-                      prefWidth="200.0"
-                      spacing="50.0">
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
                     <children>
-                        <Button defaultButton="true"
-                                mnemonicParsing="false"
-                                prefHeight="40.0"
-                                prefWidth="246.0"
-                                fx:id="loadSaveButton"
-                                text="Load garden.dat"/>
-                        <Button disable="true"
-                                layoutX="287.0"
-                                layoutY="40.0"
-                                mnemonicParsing="false"
-                                prefHeight="40.0"
-                                prefWidth="246.0"
-                                fx:id="saveSaveButton"
-                                text="Save garden.dat"/>
+                        <Button fx:id="loadSaveButton" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="246.0" text="Load garden.dat" />
+                        <Button fx:id="saveSaveButton" disable="true" layoutX="287.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="246.0" text="Save garden.dat" />
                     </children>
                 </HBox>
-                <HBox alignment="CENTER"
-                      layoutX="10.0"
-                      layoutY="10.0"
-                      prefHeight="100.0"
-                      prefWidth="200.0"
-                      spacing="50.0">
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Button fx:id="loadSaveButton1" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="246.0" text="Load garden_plus.dat" />
+                  <Button fx:id="saveSaveButton1" disable="true" layoutX="287.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="246.0" text="Save garden_plus.dat" />
+               </children>
+            </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
                     <children>
-                        <Button defaultButton="true"
-                                mnemonicParsing="false"
-                                prefHeight="40.0"
-                                prefWidth="246.0"
-                                fx:id="loadRamButton"
-                                text="Load acnlram.bin"/>
-                        <Button disable="true"
-                                layoutX="287.0"
-                                layoutY="40.0"
-                                mnemonicParsing="false"
-                                prefHeight="40.0"
-                                prefWidth="246.0"
-                                fx:id="saveRamButton"
-                                text="Save acnlram.bin"/>
+                        <Button fx:id="loadRamButton" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="246.0" text="Load acnlram.bin" />
+                        <Button fx:id="saveRamButton" disable="true" layoutX="287.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="246.0" text="Save acnlram.bin" />
                     </children>
                 </HBox>
             </children>
