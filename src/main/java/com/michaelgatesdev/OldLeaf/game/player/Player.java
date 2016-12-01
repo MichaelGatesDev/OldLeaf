@@ -29,7 +29,6 @@ import com.michaelgatesdev.OldLeaf.game.player.inventory.PlayerPocketInventory;
 import com.michaelgatesdev.OldLeaf.memory.ByteArrayImage;
 import com.michaelgatesdev.OldLeaf.memory.LimitedByteString;
 import javafx.scene.image.Image;
-import org.apache.log4j.Logger;
 
 public class Player
 {
@@ -42,7 +41,7 @@ public class Player
             new EyeColor((short) 0x03, Gender.BOTH, new Image(Player.class.getClassLoader().getResourceAsStream("img/eye_color/b_0x03.png"))),
             new EyeColor((short) 0x04, Gender.BOTH, new Image(Player.class.getClassLoader().getResourceAsStream("img/eye_color/b_0x04.png"))),
             new EyeColor((short) 0x05, Gender.BOTH, new Image(Player.class.getClassLoader().getResourceAsStream("img/eye_color/b_0x05.png"))),
-    };
+            };
 
     public static final FaceStyle[] FACE_STYLES = new FaceStyle[]{
             new FaceStyle((short) 0x0A, Gender.FEMALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/face_style/f_0x0A.png"))),
@@ -69,7 +68,7 @@ public class Player
             new FaceStyle((short) 0x07, Gender.MALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/face_style/m_0x07.png"))),
             new FaceStyle((short) 0x08, Gender.MALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/face_style/m_0x08.png"))),
             new FaceStyle((short) 0x09, Gender.MALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/face_style/m_0x09.png"))),
-    };
+            };
 
     public static final HairColor[] HAIR_COLORS = new HairColor[]{
             new HairColor((short) 0x0A, Gender.BOTH, new Image(Player.class.getClassLoader().getResourceAsStream("img/hair_color/b_0x0A.png"))),
@@ -88,7 +87,7 @@ public class Player
             new HairColor((short) 0x07, Gender.BOTH, new Image(Player.class.getClassLoader().getResourceAsStream("img/hair_color/b_0x07.png"))),
             new HairColor((short) 0x08, Gender.BOTH, new Image(Player.class.getClassLoader().getResourceAsStream("img/hair_color/b_0x08.png"))),
             new HairColor((short) 0x09, Gender.BOTH, new Image(Player.class.getClassLoader().getResourceAsStream("img/hair_color/b_0x09.png"))),
-    };
+            };
 
     public static final HairStyle[] HAIR_STYLES = new HairStyle[]{
             new HairStyle((short) 0x1A, Gender.FEMALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/hair_style/f_0x1A.png"))),
@@ -125,15 +124,12 @@ public class Player
             new HairStyle((short) 0x08, Gender.MALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/hair_style/m_0x08.png"))),
             new HairStyle((short) 0x09, Gender.MALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/hair_style/m_0x09.png"))),
             new HairStyle((short) 0x10, Gender.MALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/hair_style/m_0x10.png"))),
-    };
+            };
 
     // ============================================================================================================================================ \\
 
-    private static final Logger logger = Logger.getLogger(Player.class);
-
     private static final int MAX_NAME_LENGTH      = 10;
     private static final int MAX_TOWN_NAME_LENGTH = 10;
-
 
     private LimitedByteString name;
     private Gender            gender;
