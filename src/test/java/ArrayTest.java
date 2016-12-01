@@ -24,7 +24,7 @@ import org.junit.Test;
 
 public class ArrayTest
 {
-    private static final int[] NUMBERS = new int[] { 0, 5, 13, -1, 0xAD, 0xB2A4 };
+    private static final int[] NUMBERS = new int[]{ 0, 5, 13, -1, 0xAD, 0xB2A4 };
 
 
     @Test
