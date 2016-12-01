@@ -33,7 +33,7 @@ public class ArrayTest
         Assert.assertTrue(ArrayUtils.contains(NUMBERS, 5));
         Assert.assertTrue(ArrayUtils.contains(NUMBERS, 13));
         Assert.assertFalse(ArrayUtils.contains(NUMBERS, 0xAA));
-        Assert.assertFalse(ArrayUtils.contains(NUMBERS, 0xAD));
+        Assert.assertTrue(ArrayUtils.contains(NUMBERS, 0xAD));
     }
 
 

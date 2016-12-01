@@ -80,7 +80,8 @@ public class Main extends Application
         instance = new Main();
         instance.initialize();
         // this kills the singleton
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+        Runtime.getRuntime().addShutdownHook(new Thread(() ->
+        {
             instance = null;
         }));
     }
@@ -182,7 +183,6 @@ public class Main extends Application
      * @param destDir the directory which will parent the created directory
      * @param name    the name of the directory
      * @param log     log the result to console
-     *
      * @return created directory
      */
     private File createDirectory(File destDir, String name, boolean log)
