@@ -42,13 +42,9 @@ public class TabMainController implements Initializable
     // ============================================================================================================================================ \\
 
     @FXML
-    Button loadSaveButton;
+    Button loadButton;
     @FXML
-    Button saveSaveButton;
-    @FXML
-    Button loadRamButton;
-    @FXML
-    Button saveRamButton;
+    Button exportButton;
 
     private boolean choosingFile;
 
@@ -58,8 +54,9 @@ public class TabMainController implements Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        loadSaveButton.setOnMouseClicked(event ->
+        loadButton.setOnMouseClicked(event ->
         {
+            // If already selecting a file
             if (choosingFile)
             {
                 return;
@@ -67,7 +64,7 @@ public class TabMainController implements Initializable
 
             choosingFile = true;
 
-            File file = showFileChooser("Load Animal Crossing New Leaf save", "Load garden.dat", "dat");
+            File file = showFileChooser("Load Animal Crossing New Leaf save", "Load save file", "dat", "bin");
             if (file == null)
             {
                 logger.info("Cancelled loading save.");
