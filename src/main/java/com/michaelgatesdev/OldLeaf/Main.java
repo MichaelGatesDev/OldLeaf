@@ -21,6 +21,7 @@
 package com.michaelgatesdev.OldLeaf;
 
 import com.michaelgatesdev.OldLeaf.game.SaveGame;
+import com.michaelgatesdev.OldLeaf.locale.UTF8Control;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Orientation;
@@ -39,6 +40,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ResourceBundle;
 
 public class Main extends Application
 {
@@ -53,6 +55,8 @@ public class Main extends Application
     private static final String DONATE_URL      = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YP8QAA3Q4BTWC";
 
     private static Main instance;
+
+    private ResourceBundle locale;
 
     private File rootDir;
     private File backupsDir;
@@ -80,10 +84,7 @@ public class Main extends Application
         instance = new Main();
         instance.initialize();
         // this kills the singleton
-        Runtime.getRuntime().addShutdownHook(new Thread(() ->
-        {
-            instance = null;
-        }));
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> instance = null));
     }
 
 
@@ -92,6 +93,9 @@ public class Main extends Application
      */
     private void initialize()
     {
+        // Grab locale bundle
+        locale = ResourceBundle.getBundle("Locale", /*Locale.JAPAN,*/ new UTF8Control());
+
         // Create/Initialize all the directories */
         rootDir = new File(System.getProperty("user.dir") + "/");
         backupsDir = createDirectory(rootDir, "_backups", true);
@@ -138,7 +142,7 @@ public class Main extends Application
 
         StatusBar statusBar = new StatusBar();
         statusBar.setId("statusBar");
-        statusBar.setText("Please load a game save");
+        statusBar.setText("Save.Load.PleaseLoad");
         statusBar.setProgress(0.0);
 
         statusBar.getRightItems().add(new Separator(Orientation.VERTICAL));
@@ -189,7 +193,10 @@ public class Main extends Application
     {
         if (destDir == null || !destDir.exists())
         {
-            logger.error(String.format("Destination directory doesn't exist."));
+            if (log)
+            {
+                logger.error(String.format(locale.getString("File.Directory.DestinationNonexistent"), destDir));
+            }
             return null;
         }
 
@@ -202,11 +209,11 @@ public class Main extends Application
             {
                 if (result)
                 {
-                    logger.info(String.format("Created directory '(%s)' in '(%s)'", name, destDir.toString()));
+                    logger.info(String.format(locale.getString("File.Directory.Created"), name, destDir.toString()));
                 }
                 else
                 {
-                    logger.error(String.format("Error creating directory '(%s)' in '(%s)'", name, destDir.toString()));
+                    logger.error(String.format(locale.getString("File.Directory.ErrorCreating"), name, destDir.toString()));
                 }
             }
         }
@@ -232,21 +239,6 @@ public class Main extends Application
     public static Main getInstance()
     {
         return instance;
-    }
-
-
-    /**
-     * @return The main scene of the program
-     */
-    public Scene getMainScene()
-    {
-        return scene;
-    }
-
-
-    public SaveGame getSaveGame()
-    {
-        return saveGame;
     }
 
 
