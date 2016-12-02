@@ -71,6 +71,7 @@ public class TabMainController implements Initializable
             if (file == null)
             {
                 logger.info("Cancelled loading save.");
+                choosingFile = false;
                 return;
             }
 
