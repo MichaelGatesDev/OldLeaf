@@ -1,39 +1,22 @@
-/*
- * Copyright (C) Michael Gates (MichaelGatesDev@gmail.com) 2015
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- *
- */
-
-
 package com.michaelgatesdev.OldLeaf.gui.components.grid;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import org.apache.log4j.Logger;
 
-public class Grid extends Canvas
+public abstract class Grid extends Canvas implements GridEvents
 {
     // ============================================================================================================================================ \\
-
-    private static final Logger logger = Logger.getLogger(Grid.class);
 
     private static final int    MIN_COLUMNS   = 1;
     private static final int    MIN_ROWS      = 1;
     private static final double MIN_CELL_SIZE = 5.0;
+
+    private static final Color  SEPARATOR_COLOR = Color.BLACK;
+    private static final double SEPARATOR_SIZE  = 0.5D;
+
+    private Color  separatorColor;
+    private double separatorWidth;
 
     private int    columns;
     private int    rows;
@@ -46,14 +29,12 @@ public class Grid extends Canvas
     // ============================================================================================================================================ \\
 
 
-    /**
-     * Constructor which will automatically calculate the size of the grid (width & height) according to the cell size and the number of cells
-     *
+    /***
      * @param columns  The number of columns
      * @param rows     The number of rows
      * @param cellSize The size each cell should be
      */
-    public Grid(int columns, int rows, double cellSize)
+    public Grid(int columns, int rows, double cellSize, Color separatorColor, double separatorWidth)
     {
         if (columns < MIN_COLUMNS)
         {
@@ -78,7 +59,21 @@ public class Grid extends Canvas
         this.height = rows * cellSize;
         this.setHeight(height);
 
+        this.separatorColor = separatorColor;
+        this.separatorWidth = separatorWidth;
+
         this.populate();
+    }
+
+
+    /***
+     * @param columns  The number of columns
+     * @param rows     The number of rows
+     * @param cellSize The size each cell should be
+     */
+    public Grid(int columns, int rows, double cellSize)
+    {
+        this(columns, rows, cellSize, SEPARATOR_COLOR, SEPARATOR_SIZE);
     }
 
 
@@ -88,47 +83,92 @@ public class Grid extends Canvas
     /**
      * Populates the grid with cells
      */
-    protected void populate()
+    public void populate()
     {
         GraphicsContext graphics = this.getGraphicsContext2D();
 
-        double gridWidth = columns * cellSize;
-        double gridHeight = rows * cellSize;
+        double gridWidth = this.getColumns() * this.getCellSize();
+        double gridHeight = this.getRows() * this.getCellSize();
 
         graphics.clearRect(0, 0, this.getWidth(), this.getHeight());
 
-        graphics.setStroke(Color.BLACK);
-        graphics.setLineWidth(0.5);
+        graphics.setStroke(separatorColor);
+        graphics.setLineWidth(separatorWidth);
 
         // draw vertical lines
-        for (int x = 0; x < gridWidth + 1; x += cellSize)
+        for (int x = 0; x < gridWidth + 1; x += this.getCellSize())
         {
             graphics.strokeLine(x, 0, x, gridHeight);
         }
         // draw horizontal lines
-        for (int y = 0; y < gridHeight + 1; y += cellSize)
+        for (int y = 0; y < gridHeight + 1; y += this.getCellSize())
         {
             graphics.strokeLine(0, y, gridWidth, y);
         }
 
         // Create cells
-        this.cells = new Cell[columns][rows];
+        this.setCells(new Cell[this.getColumns()][this.getRows()]);
 
-        // columns
-        for (int x = 0; x < columns; x++)
+
+        // --- \\
+
+        // Cell clicked
+        this.setOnMouseClicked(event ->
         {
-            // rows
-            for (int y = 0; y < rows; y++)
-            {
-                int startX = (int) (x * cellSize);
-                int startY = (int) (y * cellSize);
-                int endX = (int) (startX + cellSize);
-                int endY = (int) (startY + cellSize);
+            int x = (int) event.getX();
+            int y = (int) event.getY();
 
-                Cell cell = new Cell(this, startX, startY, endX, endY);
-                cells[x][y] = cell;
+            int gridX = (int) (x / this.getCellSize());
+            int gridY = (int) (y / this.getCellSize());
+
+            // ignore out of bounds
+            if (gridX < 0 || gridX > getColumns() || gridY < 0 || gridY > getRows())
+            {
+                return;
             }
-        }
+
+            Cell cell = this.getCells()[gridX][gridY];
+            if (cell != null)
+            {
+                this.onCellClick(event.getButton(), cell, gridX, gridY);
+            }
+        });
+
+        // Cell hovered over
+        this.setOnMouseMoved(event ->
+        {
+            int x = (int) event.getX();
+            int y = (int) event.getY();
+
+            if (x < 0 || y < 0)
+            {
+                return;
+            }
+
+            int gridX = (int) (x / this.getCellSize());
+            int gridY = (int) (y / this.getCellSize());
+
+            // ignore out of bounds
+            if (gridX < 0 || gridX > getColumns() || gridY < 0 || gridY > getRows())
+            {
+                return;
+            }
+
+            Cell cell = this.getCells()[gridX][gridY];
+            if (cell != null)
+            {
+                this.onCellHover(cell, gridX, gridY);
+            }
+        });
+    }
+
+
+    // ============================================================================================================================================ \\
+
+
+    public void setCells(Cell[][] cells)
+    {
+        this.cells = cells;
     }
 
 

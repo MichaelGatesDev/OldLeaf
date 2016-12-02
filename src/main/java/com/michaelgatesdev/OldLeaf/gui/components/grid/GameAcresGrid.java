@@ -24,7 +24,7 @@ import com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor.MapEditorController
 import javafx.scene.input.MouseButton;
 import org.apache.log4j.Logger;
 
-public class GameAcresGrid extends EditableGrid
+public class GameAcresGrid extends ImageGrid
 {
     // ============================================================================================================================================ \\
 

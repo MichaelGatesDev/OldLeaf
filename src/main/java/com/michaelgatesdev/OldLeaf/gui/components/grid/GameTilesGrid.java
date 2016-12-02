@@ -25,7 +25,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseButton;
 import org.apache.log4j.Logger;
 
-public class GameTilesGrid extends EditableGrid
+public class GameTilesGrid extends PaintGrid
 {
     // ============================================================================================================================================ \\
 
@@ -54,18 +54,20 @@ public class GameTilesGrid extends EditableGrid
     @Override
     public void onCellClick(MouseButton button, Cell cell, int gridPosX, int gridPosY)
     {
+        PaintableCell pc = (PaintableCell) cell;
+
         if (button == MouseButton.PRIMARY)
         {
-            if (!cell.isColored())
+            if (!pc.isPainted())
             {
-                cell.color();
+                pc.paint();
             }
         }
         else if (button == MouseButton.SECONDARY)
         {
-            if (cell.isColored())
+            if (pc.isPainted())
             {
-                cell.uncolor();
+                pc.clean();
             }
         }
     }

@@ -36,16 +36,17 @@ public class SaveGame
 
     private static final Logger logger = Logger.getLogger(SaveGame.class);
 
-    private static final long GARDEN_SIZE = 522752L;
-    private static final long RAM_SIZE    = 522624L;
+    private static final long GARDEN_SIZE_OLD = 522752L;
+    private static final long RAM_SIZE        = 522624L;
+    private static final long GARDEN_SIZE     = 563968L;
 
-    private static final int SECURE_VALUE_LENGTH = 8; // Secure NAND value
-    private static final int TRIMMABLE_SIZE      = 0x8; // If you trim this off, then you are on par with ACNLRam.bin files
+    private static final int SECURE_VALUE_LENGTH = 0x8; // Secure NAND value
 
     private static final int MAX_PLAYERS = 4;
 
-    private File         file;
-    private boolean      ramDump;
+    private File     file;
+    private SaveType saveType;
+
     private byte[]       secureValue;
     private FruitType    nativeFruit;
     private GrassShape   grassShape;
@@ -62,10 +63,17 @@ public class SaveGame
     // ============================================================================================================================================ \\
 
 
-    public SaveGame(File file, boolean ramDump)
+    public SaveGame(File file)
     {
         this.file = file;
-        this.ramDump = ramDump;
+    }
+
+
+    private enum SaveType
+    {
+        STANDARD,
+        LEGACY,
+        RAM,
     }
 
     // ============================================================================================================================================ \\
@@ -73,18 +81,42 @@ public class SaveGame
 
     public void load() throws SaveSizeInvalidException
     {
-        // unknown size
-        if (file.length() != GARDEN_SIZE && file.length() != RAM_SIZE)
+        long fileSize = file.length();
+        if (fileSize == GARDEN_SIZE)
         {
-            throw new SaveSizeInvalidException();
+            logger.debug("Loading regular save..");
+            saveType = SaveType.STANDARD;
+        }
+        else if (fileSize == GARDEN_SIZE_OLD)
+        {
+            logger.debug("Loading ~legacy~ save..");
+            saveType = SaveType.LEGACY;
+        }
+        else if (fileSize == RAM_SIZE)
+        {
+            logger.debug("Loading ~ram dump~..");
+            saveType = SaveType.RAM;
+        }
+        else
+        {
+            throw new SaveSizeInvalidException(String.format("Save size is invalid. %s", fileSize));
         }
 
+        readData(saveType);
+    }
+
+
+    private void readData(SaveType type)
+    {
         try
         {
             RandomAccessFile raf = new RandomAccessFile(file, "r");
             logger.info("Loading save...");
 
-            if (!ramDump)
+            boolean isRamDump = saveType == SaveType.RAM;
+            boolean isLegacy = saveType == SaveType.LEGACY;
+
+            if (!isRamDump)
             {
                 this.secureValue = new byte[]{};
                 for (int i = 0; i < SECURE_VALUE_LENGTH; i++)
@@ -95,22 +127,22 @@ public class SaveGame
             }
 
             // start at the beginning
-            int currentOffset = ramDump ? 0x0 : 0x8; // ram dump doesn't have a secure value
+            int startOffset = isRamDump ? 0x0 : 0x8; // ram dump doesn't have a secure value
 
             // native fruit
-            raf.seek(currentOffset + 0x5C7B6);
+            raf.seek(startOffset + (isLegacy ? OffsetsLegacy.TOWN_NATIVEFRUIT : OffsetsPlus.TOWN_NATIVEFRUIT));
             this.nativeFruit = FruitType.fromByteValue(raf.readByte());
 
             // grass shape
-            raf.seek(currentOffset + 0x4DA01);
+            raf.seek(startOffset + (isLegacy ? OffsetsLegacy.TOWN_GRASSTYPE : OffsetsPlus.TOWN_GRASSTYPE));
             this.grassShape = GrassShape.fromByteValue(raf.readByte());
 
             // town tree size
-            raf.seek(currentOffset + 0x49526);
+            raf.seek(startOffset + (isLegacy ? OffsetsLegacy.TOWN_TREESIZE : OffsetsPlus.TOWN_TREESIZE));
             this.townTreeSize = TownTreeSize.fromByteValue(raf.readByte());
 
             // play time
-            raf.seek(currentOffset + 0x5C730);
+            raf.seek(startOffset + (isLegacy ? OffsetsLegacy.TOWN_PLAYTIME : OffsetsPlus.TOWN_PLAYTIME));
             short playTime = Short.reverseBytes(raf.readShort());
             this.secondsPlayed = playTime % 60;
             this.minutesPlayed = (playTime / 60) % 60;

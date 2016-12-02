@@ -46,6 +46,8 @@ public class Main extends Application
 {
     // ============================================================================================================================================ \\
 
+    // TODO: IMPLEMENT NEW GRID SYSTEM
+
     private static final Logger logger = Logger.getLogger(Main.class);
 
     private static final int MAIN_WINDOW_WIDTH  = 1000;

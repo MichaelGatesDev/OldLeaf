@@ -75,7 +75,7 @@ public class TabMainController implements Initializable
                 return;
             }
 
-            SaveGame saveGame = new SaveGame(file, false);
+            SaveGame saveGame = new SaveGame(file);
             try
             {
                 saveGame.load();
