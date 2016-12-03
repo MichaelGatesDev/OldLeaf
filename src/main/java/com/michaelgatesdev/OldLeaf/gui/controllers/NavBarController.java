@@ -20,6 +20,10 @@
 
 package com.michaelgatesdev.OldLeaf.gui.controllers;
 
+import org.apache.log4j.Logger;
+
 public class NavBarController
 {
+    private static final Logger logger = Logger.getLogger(NavBarController.class);
+    
 }

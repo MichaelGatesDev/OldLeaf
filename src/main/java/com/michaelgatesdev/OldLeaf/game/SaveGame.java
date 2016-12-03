@@ -33,20 +33,20 @@ import java.io.RandomAccessFile;
 public class SaveGame
 {
     // ============================================================================================================================================ \\
-
+    
     private static final Logger logger = Logger.getLogger(SaveGame.class);
-
+    
     private static final long GARDEN_SIZE_OLD = 522752L;
     private static final long RAM_SIZE        = 522624L;
     private static final long GARDEN_SIZE     = 563968L;
-
+    
     private static final int SECURE_VALUE_LENGTH = 0x8; // Secure NAND value
-
+    
     private static final int MAX_PLAYERS = 4;
-
+    
     private File     file;
     private SaveType saveType;
-
+    
     private byte[]       secureValue;
     private FruitType    nativeFruit;
     private GrassShape   grassShape;
@@ -59,26 +59,26 @@ public class SaveGame
     private Player[]     players;
     private GameMap      townMap;
     private GameMap      islandMap;
-
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     public SaveGame(File file)
     {
         this.file = file;
     }
-
-
+    
+    
     private enum SaveType
     {
         STANDARD,
         LEGACY,
         RAM,
     }
-
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     public void load() throws SaveSizeInvalidException
     {
         long fileSize = file.length();
@@ -101,21 +101,21 @@ public class SaveGame
         {
             throw new SaveSizeInvalidException(String.format("Save size is invalid. %s", fileSize));
         }
-
+        
         readData(saveType);
     }
-
-
+    
+    
     private void readData(SaveType type)
     {
         try
         {
             RandomAccessFile raf = new RandomAccessFile(file, "r");
             logger.info("Loading save...");
-
+            
             boolean isRamDump = saveType == SaveType.RAM;
             boolean isLegacy = saveType == SaveType.LEGACY;
-
+            
             if (!isRamDump)
             {
                 this.secureValue = new byte[]{};
@@ -125,22 +125,22 @@ public class SaveGame
                     secureValue = ArrayUtils.add(secureValue, b);
                 }
             }
-
+            
             // start at the beginning
             int startOffset = isRamDump ? 0x0 : 0x8; // ram dump doesn't have a secure value
-
+            
             // native fruit
             raf.seek(startOffset + (isLegacy ? OffsetsLegacy.TOWN_NATIVEFRUIT : OffsetsPlus.TOWN_NATIVEFRUIT));
             this.nativeFruit = FruitType.fromByteValue(raf.readByte());
-
+            
             // grass shape
             raf.seek(startOffset + (isLegacy ? OffsetsLegacy.TOWN_GRASSTYPE : OffsetsPlus.TOWN_GRASSTYPE));
             this.grassShape = GrassShape.fromByteValue(raf.readByte());
-
+            
             // town tree size
             raf.seek(startOffset + (isLegacy ? OffsetsLegacy.TOWN_TREESIZE : OffsetsPlus.TOWN_TREESIZE));
             this.townTreeSize = TownTreeSize.fromByteValue(raf.readByte());
-
+            
             // play time
             raf.seek(startOffset + (isLegacy ? OffsetsLegacy.TOWN_PLAYTIME : OffsetsPlus.TOWN_PLAYTIME));
             short playTime = Short.reverseBytes(raf.readShort());
@@ -150,22 +150,22 @@ public class SaveGame
             this.daysPlayed = (playTime / 60 * 60 * 24) % 25000;
 //            raf.seek(currentOffset + 0x5C7BA);
 //            this.daysPlayed = Short.reverseBytes(raf.readShort());
-
+            
             // Player data
             for (int i = 0; i < MAX_PLAYERS; i++)
             {
-
+                
             }
-
+            
         }
         catch (IOException e)
         {
             e.printStackTrace();
         }
     }
-
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     // ============================================================================================================================================ \\
 }

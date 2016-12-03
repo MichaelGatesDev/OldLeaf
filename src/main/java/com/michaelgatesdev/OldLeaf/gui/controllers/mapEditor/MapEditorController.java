@@ -25,6 +25,7 @@ import com.michaelgatesdev.OldLeaf.gui.components.grid.GameTilesGrid;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import org.apache.log4j.Logger;
 
 import java.net.URL;
@@ -33,65 +34,65 @@ import java.util.ResourceBundle;
 public class MapEditorController implements Initializable
 {
     // ============================================================================================================================================ \\
-
+    
     private static final Logger logger = Logger.getLogger(MapEditorController.class);
-
+    
     private static final int ACRE_COLUMNS = 5;
     private static final int ACRE_ROWS    = 4;
-
+    
     private static final int TILE_COLUMNS = 16;
     private static final int TILE_ROWS    = 16;
-
+    
     private static final double TILE_SIZE = 10.0;
-
+    
     @FXML
     StackPane gridContainer;
-
+    
     private GameAcresGrid acresGrid;
     private GameTilesGrid tilesGrid;
-
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        createGrid();
+        this.createGrid();
     }
-
-
+    
+    
     private void createGrid()
     {
         long startTime = System.currentTimeMillis();
-
-        acresGrid = new GameAcresGrid(ACRE_COLUMNS, ACRE_ROWS, TILE_SIZE * 16);
+        
+        acresGrid = new GameAcresGrid(ACRE_COLUMNS, ACRE_ROWS, TILE_SIZE * 16, Color.BLACK, 1.0D);
         gridContainer.getChildren().add(acresGrid);
-
-        tilesGrid = new GameTilesGrid(ACRE_COLUMNS * TILE_COLUMNS, ACRE_ROWS * TILE_ROWS, TILE_SIZE);
+        
+        tilesGrid = new GameTilesGrid(ACRE_COLUMNS * TILE_COLUMNS, ACRE_ROWS * TILE_ROWS, TILE_SIZE, Color.BLACK, 0.25D);
         gridContainer.getChildren().add(tilesGrid);
-
+        
         //TODO buildings grid
-
+        
         long finishTime = System.currentTimeMillis();
-
+        
         logger.debug(String.format("Total draw time for grid(s) %d ms", finishTime - startTime));
     }
-
-
+    
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     public GameTilesGrid getTilesGrid()
     {
         return tilesGrid;
     }
-
-
+    
+    
     public GameAcresGrid getAcresGrid()
     {
         return acresGrid;
     }
-
-
+    
+    
     // ============================================================================================================================================ \\
 }

@@ -1,5 +1,6 @@
 package com.michaelgatesdev.OldLeaf.gui.components.grid;
 
+import com.michaelgatesdev.OldLeaf.gui.components.grid.handlers.CellListener;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
@@ -7,28 +8,29 @@ import javafx.scene.paint.Color;
 public abstract class Grid extends Canvas implements GridEvents
 {
     // ============================================================================================================================================ \\
-
+    
     private static final int    MIN_COLUMNS   = 1;
     private static final int    MIN_ROWS      = 1;
     private static final double MIN_CELL_SIZE = 5.0;
-
-    private static final Color  SEPARATOR_COLOR = Color.BLACK;
-    private static final double SEPARATOR_SIZE  = 0.5D;
-
+    
+    private static final Color  SEPARATOR_COLOR  = Color.BLACK;
+    private static final double SEPARATOR_SIZE   = 0.25D;
+    private static final double SEPARATOR_OFFSET = (SEPARATOR_SIZE / 2.0D);
+    
     private Color  separatorColor;
     private double separatorWidth;
-
+    
     private int    columns;
     private int    rows;
     private double cellSize;
     private double width;
     private double height;
-
+    
     private Cell[][] cells;
-
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     /***
      * @param columns  The number of columns
      * @param rows     The number of rows
@@ -48,24 +50,32 @@ public abstract class Grid extends Canvas implements GridEvents
         {
             throw new IllegalArgumentException(String.format("Cells must be at least %f unit(s) in size!", MIN_CELL_SIZE));
         }
-
+        
         this.columns = columns;
         this.rows = rows;
         this.cellSize = cellSize;
-
+        
         this.width = columns * cellSize;
         this.setWidth(width);
-
+        
         this.height = rows * cellSize;
         this.setHeight(height);
-
+        
         this.separatorColor = separatorColor;
         this.separatorWidth = separatorWidth;
-
+        
         this.populate();
+        
+        // ~~register events~~
+        // Cell clicked
+        this.setOnMouseClicked(new CellListener.CellClickListener(this));
+        // Cell dragged into
+        this.setOnMouseDragged(new CellListener.CellClickListener(this));
+        // Cell hovered over
+        this.setOnMouseMoved(new CellListener.CellHoverListener(this));
     }
-
-
+    
+    
     /***
      * @param columns  The number of columns
      * @param rows     The number of rows
@@ -75,106 +85,55 @@ public abstract class Grid extends Canvas implements GridEvents
     {
         this(columns, rows, cellSize, SEPARATOR_COLOR, SEPARATOR_SIZE);
     }
-
-
+    
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     /**
      * Populates the grid with cells
      */
     public void populate()
     {
-        GraphicsContext graphics = this.getGraphicsContext2D();
-
-        double gridWidth = this.getColumns() * this.getCellSize();
-        double gridHeight = this.getRows() * this.getCellSize();
-
-        graphics.clearRect(0, 0, this.getWidth(), this.getHeight());
-
-        graphics.setStroke(separatorColor);
-        graphics.setLineWidth(separatorWidth);
-
-        // draw vertical lines
-        for (int x = 0; x < gridWidth + 1; x += this.getCellSize())
-        {
-            graphics.strokeLine(x, 0, x, gridHeight);
-        }
-        // draw horizontal lines
-        for (int y = 0; y < gridHeight + 1; y += this.getCellSize())
-        {
-            graphics.strokeLine(0, y, gridWidth, y);
-        }
-
+        // draw column/row lines
+        this.redrawLines();
+        
         // Create cells
         this.setCells(new Cell[this.getColumns()][this.getRows()]);
-
-
-        // --- \\
-
-        // Cell clicked
-        this.setOnMouseClicked(event ->
-        {
-            int x = (int) event.getX();
-            int y = (int) event.getY();
-
-            int gridX = (int) (x / this.getCellSize());
-            int gridY = (int) (y / this.getCellSize());
-
-            // ignore out of bounds
-            if (gridX < 0 || gridX > getColumns() || gridY < 0 || gridY > getRows())
-            {
-                return;
-            }
-
-            Cell cell = this.getCells()[gridX][gridY];
-            if (cell != null)
-            {
-                this.onCellClick(event.getButton(), cell, gridX, gridY);
-            }
-        });
-
-        // Cell hovered over
-        this.setOnMouseMoved(event ->
-        {
-            int x = (int) event.getX();
-            int y = (int) event.getY();
-
-            if (x < 0 || y < 0)
-            {
-                return;
-            }
-
-            int gridX = (int) (x / this.getCellSize());
-            int gridY = (int) (y / this.getCellSize());
-
-            // ignore out of bounds
-            if (gridX < 0 || gridX > getColumns() || gridY < 0 || gridY > getRows())
-            {
-                return;
-            }
-
-            Cell cell = this.getCells()[gridX][gridY];
-            if (cell != null)
-            {
-                this.onCellHover(cell, gridX, gridY);
-            }
-        });
     }
-
-
+    
+    
+    public void redrawLines()
+    {
+        GraphicsContext graphics = this.getGraphicsContext2D();
+        graphics.setStroke(separatorColor);
+        graphics.setLineWidth(separatorWidth);
+        
+        // draw vertical lines
+        for (int x = 0; x < width + 1; x += this.getCellSize())
+        {
+            graphics.strokeLine(x + SEPARATOR_OFFSET, 0, x + SEPARATOR_OFFSET, height);
+        }
+        // draw horizontal lines
+        for (int y = 0; y < height + 1; y += this.getCellSize())
+        {
+            graphics.strokeLine(0, y + SEPARATOR_OFFSET, width, y + SEPARATOR_OFFSET);
+        }
+    }
+    
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     public void setCells(Cell[][] cells)
     {
         this.cells = cells;
     }
-
-
+    
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     /**
      * @return The number of columns in the grid
      */
@@ -182,8 +141,8 @@ public abstract class Grid extends Canvas implements GridEvents
     {
         return columns;
     }
-
-
+    
+    
     /**
      * @return The number of rows in the grid
      */
@@ -191,8 +150,8 @@ public abstract class Grid extends Canvas implements GridEvents
     {
         return rows;
     }
-
-
+    
+    
     /**
      * @return The width / height of cells
      */
@@ -200,8 +159,8 @@ public abstract class Grid extends Canvas implements GridEvents
     {
         return cellSize;
     }
-
-
+    
+    
     /**
      * @return A 2D array of all cells in the grid
      */
@@ -209,6 +168,6 @@ public abstract class Grid extends Canvas implements GridEvents
     {
         return cells;
     }
-
+    
     // ============================================================================================================================================ \\
 }

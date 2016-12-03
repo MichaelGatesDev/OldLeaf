@@ -47,7 +47,7 @@
   ~
   -->
 
-<BorderPane id="mainPane"
+<BorderPane id=""
             prefHeight="500.0"
             prefWidth="800.0"
             xmlns="http://javafx.com/javafx/null"

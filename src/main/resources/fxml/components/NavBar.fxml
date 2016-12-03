@@ -23,7 +23,7 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<TabPane id="nav-tabs-pane"
+<TabPane id="navbar"
          prefHeight="500.0"
          prefWidth="800.0"
          tabClosingPolicy="UNAVAILABLE"
@@ -31,47 +31,33 @@
          xmlns="http://javafx.com/javafx/null"
          xmlns:fx="http://javafx.com/fxml/1"
          fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.NavBarController">
-    <tabs>
-        <Tab id="tab-main"
-             text="Main">
-            <content>
-                <fx:include source="../tabs/TabMain.fxml"/>
-            </content>
-        </Tab>
-        <Tab id="tab-players"
-             disable="true"
-             text="Players">
-            <content>
-                <fx:include source="../tabs/TabPlayers.fxml"/>
-            </content>
-        </Tab>
-        <Tab id="tab-map-editor"
-             disable="true"
-             text="Map Editor">
-            <content>
-                <fx:include source="../tabs/TabMapEditor.fxml"/>
-            </content>
-        </Tab>
-        <Tab id="tab-villagers"
-             disable="true"
-             text="Villagers">
-            <content>
-                <fx:include source="../tabs/TabVillagers.fxml"/>
-            </content>
-        </Tab>
-        <Tab id="tab-advanced"
-             disable="true"
-             text="Advanced">
-            <content>
-                <fx:include source="../tabs/TabAdvanced.fxml"/>
-            </content>
-        </Tab>
-        <Tab id="tab-settings"
-             disable="true"
-             text="Settings">
-            <content>
-                <fx:include source="../tabs/TabSettings.fxml"/>
-            </content>
-        </Tab>
-    </tabs>
+    <Tab id="tab-main"
+         text="Main">
+        <fx:include source="../tabs/TabMain.fxml"/>
+    </Tab>
+    <Tab id="tab-players"
+         disable="true"
+         text="Players">
+        <fx:include source="../tabs/TabPlayers.fxml"/>
+    </Tab>
+    <Tab id="tab-map-editor"
+         disable="true"
+         text="Map Editor">
+        <fx:include source="../tabs/TabMapEditor.fxml"/>
+    </Tab>
+    <Tab id="tab-villagers"
+         disable="true"
+         text="Villagers">
+        <fx:include source="../tabs/TabVillagers.fxml"/>
+    </Tab>
+    <Tab id="tab-advanced"
+         disable="true"
+         text="Advanced">
+        <fx:include source="../tabs/TabAdvanced.fxml"/>
+    </Tab>
+    <Tab id="tab-settings"
+         disable="true"
+         text="Settings">
+        <fx:include source="../tabs/TabSettings.fxml"/>
+    </Tab>
 </TabPane>

@@ -1,10 +1,25 @@
 package com.michaelgatesdev.OldLeaf.gui.components.grid;
 
+import javafx.scene.paint.Color;
+
 public abstract class PaintGrid extends Grid
 {
     // ============================================================================================================================================ \\
-
-
+    
+    
+    /**
+     * @param columns
+     * @param rows
+     * @param cellSize
+     * @param separatorColor
+     * @param separatorWidth
+     */
+    public PaintGrid(int columns, int rows, double cellSize, Color separatorColor, double separatorWidth)
+    {
+        super(columns, rows, cellSize, separatorColor, separatorWidth);
+    }
+    
+    
     /**
      * @param columns  The number of columns
      * @param rows     The number of rows
@@ -14,15 +29,15 @@ public abstract class PaintGrid extends Grid
     {
         super(columns, rows, cellSize);
     }
-
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     @Override
     public void populate()
     {
         super.populate();
-
+        
         for (int x = 0; x < this.getColumns(); x++)
         {
             for (int y = 0; y < this.getRows(); y++)
@@ -31,12 +46,12 @@ public abstract class PaintGrid extends Grid
                 int startY = (int) (y * this.getCellSize());
                 int endX = (int) (startX + this.getCellSize());
                 int endY = (int) (startY + this.getCellSize());
-
+                
                 PaintableCell cell = new PaintableCell(this, startX, startY, endX, endY);
                 this.getCells()[x][y] = cell;
             }
         }
     }
-
+    
     // ============================================================================================================================================ \\
 }

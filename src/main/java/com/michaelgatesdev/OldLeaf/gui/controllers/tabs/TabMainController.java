@@ -25,7 +25,10 @@ import com.michaelgatesdev.OldLeaf.exceptions.SaveSizeInvalidException;
 import com.michaelgatesdev.OldLeaf.game.SaveGame;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.stage.FileChooser;
 import org.apache.log4j.Logger;
 
@@ -36,21 +39,21 @@ import java.util.ResourceBundle;
 public class TabMainController implements Initializable
 {
     // ============================================================================================================================================ \\
-
+    
     private static final Logger logger = Logger.getLogger(TabMainController.class);
-
+    
     // ============================================================================================================================================ \\
-
+    
     @FXML
     Button loadButton;
     @FXML
     Button exportButton;
-
+    
     private boolean choosingFile;
-
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -61,9 +64,9 @@ public class TabMainController implements Initializable
             {
                 return;
             }
-
+            
             choosingFile = true;
-
+            
             File file = showFileChooser("Load Animal Crossing New Leaf save", "Load save file", "dat", "bin");
             if (file == null)
             {
@@ -71,12 +74,13 @@ public class TabMainController implements Initializable
                 choosingFile = false;
                 return;
             }
-
+            
             SaveGame saveGame = new SaveGame(file);
             try
             {
                 saveGame.load();
                 Main.getInstance().setSaveGame(saveGame);
+                this.unlockNavigation();
             }
             catch (SaveSizeInvalidException e)
             {
@@ -89,17 +93,31 @@ public class TabMainController implements Initializable
             }
         });
     }
-
-
+    
+    
+    private void unlockNavigation()
+    {
+        Scene scene = loadButton.getScene();
+        
+        TabPane navBar = (TabPane) scene.lookup("#navbar");
+        for (Tab tab : navBar.getTabs())
+        {
+            logger.debug(String.format("Enabling %s tab", tab.getText()));
+            tab.setDisable(false);
+        }
+        logger.debug("Unlocked navigation.");
+    }
+    
+    
     private File showFileChooser(String title, String description, String... extensions)
     {
         FileChooser chooser = new FileChooser();
         chooser.setTitle(title);
         chooser.setSelectedExtensionFilter(new FileChooser.ExtensionFilter(description, extensions));
-
+        
         return chooser.showOpenDialog(null);
     }
-
-
+    
+    
     // ============================================================================================================================================ \\
 }

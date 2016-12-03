@@ -40,26 +40,25 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Main extends Application
 {
     // ============================================================================================================================================ \\
-
-    // TODO: IMPLEMENT NEW GRID SYSTEM
-
+    
     private static final Logger logger = Logger.getLogger(Main.class);
-
+    
     private static final int MAIN_WINDOW_WIDTH  = 1000;
     private static final int MAIN_WINDOW_HEIGHT = 650;
-
+    
     private static final String SOURCE_CODE_URL = "https://github.com/MichaelGatesDev/OldLeaf/";
     private static final String DONATE_URL      = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YP8QAA3Q4BTWC";
-
+    
     private static Main instance;
-
+    
     private ResourceBundle locale;
-
+    
     private File rootDir;
     private File backupsDir;
     private File templatesDir;
@@ -67,15 +66,15 @@ public class Main extends Application
     private File townTemplatesDir;
     private File islandTemplatesDir;
     private File appearanceTemplatesDir;
-
+    
     // JavaFX stuff for later
     private Scene scene;
-
+    
     private SaveGame saveGame;
-
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     /**
      * The main method when the program starts
      *
@@ -88,8 +87,8 @@ public class Main extends Application
         // this kills the singleton
         Runtime.getRuntime().addShutdownHook(new Thread(() -> instance = null));
     }
-
-
+    
+    
     /**
      * Initializes the program in a non-static way
      */
@@ -97,7 +96,7 @@ public class Main extends Application
     {
         // Grab locale bundle
         locale = ResourceBundle.getBundle("Locale", /*Locale.JAPAN,*/ new UTF8Control());
-
+        
         // Create/Initialize all the directories */
         rootDir = new File(System.getProperty("user.dir") + "/");
         backupsDir = createDirectory(rootDir, "_backups", true);
@@ -107,21 +106,29 @@ public class Main extends Application
         townTemplatesDir = createDirectory(templatesDir, "town", true);
         islandTemplatesDir = createDirectory(templatesDir, "island", true);
         appearanceTemplatesDir = createDirectory(templatesDir, "appearance", true);
-
+        
         // Init GUI
         launch();
     }
-
-
+    
+    
     @Override
     public void start(Stage stage) throws Exception
     {
-        Parent root = FXMLLoader.load(Main.class.getClassLoader().getResource("fxml/Main.fxml"));
-
+        URL res = Main.class.getClassLoader().getResource("fxml/Main.fxml");
+        
+        if (res == null)
+        {
+            logger.error("Main resource path does not exist");
+            return;
+        }
+        
+        Parent root = FXMLLoader.load(res);
+        
         scene = new Scene(root, MAIN_WINDOW_WIDTH, MAIN_WINDOW_HEIGHT);
-
-        createStatusBar();
-
+        
+        this.createStatusBar();
+        
         // Package window
         stage.getIcons().add(new Image("img/logo.png"));
         stage.setTitle("Old Leaf");
@@ -130,25 +137,25 @@ public class Main extends Application
         stage.setMinHeight(MAIN_WINDOW_HEIGHT);
         stage.show();
     }
-
-
+    
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     /**
      * Creates the main Status Bar of the program
      */
     private void createStatusBar()
     {
         BorderPane borderPane = (BorderPane) scene.lookup("#mainPane");
-
+        
         StatusBar statusBar = new StatusBar();
         statusBar.setId("statusBar");
         statusBar.setText("Save.Load.PleaseLoad");
         statusBar.setProgress(0.0);
-
+        
         statusBar.getRightItems().add(new Separator(Orientation.VERTICAL));
-
+        
         Hyperlink sourceLink = new Hyperlink("Source Code");
         sourceLink.setOnMouseClicked(event ->
         {
@@ -162,7 +169,7 @@ public class Main extends Application
             }
         });
         statusBar.getRightItems().add(sourceLink);
-
+        
         Hyperlink donateLink = new Hyperlink("Donate");
         donateLink.setOnMouseClicked(event ->
         {
@@ -176,13 +183,13 @@ public class Main extends Application
             }
         });
         statusBar.getRightItems().add(donateLink);
-
+        
         borderPane.setBottom(statusBar);
     }
-
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     /**
      * Creates a {@link File} directory.
      *
@@ -201,12 +208,12 @@ public class Main extends Application
             }
             return null;
         }
-
+        
         File folder = new File(destDir, "/" + name + "/");
         if (!folder.exists())
         {
             boolean result = folder.mkdir();
-
+            
             if (log)
             {
                 if (result)
@@ -221,20 +228,20 @@ public class Main extends Application
         }
         return folder;
     }
-
-
+    
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     public void setSaveGame(SaveGame saveGame)
     {
         this.saveGame = saveGame;
     }
-
-
+    
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     /**
      * @return The singleton instance of the program for easy access
      */
@@ -242,7 +249,12 @@ public class Main extends Application
     {
         return instance;
     }
-
-
+    
+    
+    public Scene getMainScene()
+    {
+        return scene;
+    }
+    
     // ============================================================================================================================================ \\
 }

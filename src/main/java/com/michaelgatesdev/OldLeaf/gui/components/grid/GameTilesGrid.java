@@ -23,19 +23,17 @@ package com.michaelgatesdev.OldLeaf.gui.components.grid;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseButton;
-import org.apache.log4j.Logger;
+import javafx.scene.paint.Color;
 
 public class GameTilesGrid extends PaintGrid
 {
     // ============================================================================================================================================ \\
-
-    private static final Logger logger = Logger.getLogger(GameTilesGrid.class);
-
+    
     private Label coordinatesLabel;
-
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     /**
      * Creates a new instance of an EditableGrid
      *
@@ -43,19 +41,19 @@ public class GameTilesGrid extends PaintGrid
      * @param rows     The number of rows
      * @param cellSize The size each cell should be
      */
-    public GameTilesGrid(int columns, int rows, double cellSize)
+    public GameTilesGrid(int columns, int rows, double cellSize, Color separatorColor, double separatorWidth)
     {
-        super(columns, rows, cellSize);
+        super(columns, rows, cellSize, separatorColor, separatorWidth);
     }
-
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     @Override
     public void onCellClick(MouseButton button, Cell cell, int gridPosX, int gridPosY)
     {
         PaintableCell pc = (PaintableCell) cell;
-
+        
         if (button == MouseButton.PRIMARY)
         {
             if (!pc.isPainted())
@@ -71,8 +69,8 @@ public class GameTilesGrid extends PaintGrid
             }
         }
     }
-
-
+    
+    
     @Override
     public void onCellHover(Cell cell, int gridX, int gridY)
     {
@@ -82,8 +80,8 @@ public class GameTilesGrid extends PaintGrid
         }
         coordinatesLabel.setText(String.format("X: %d Y: %d", gridX + 1, gridY + 1));
     }
-
-
+    
+    
     /**
      * Checks to see if the coordinatesLabel is valid
      *
@@ -95,16 +93,16 @@ public class GameTilesGrid extends PaintGrid
         {
             return true;
         }
-
+        
         Node node = this.getScene().lookup("#coordinatesLabel");
         if (!(node instanceof Label))
         {
             return false;
         }
-
+        
         coordinatesLabel = (Label) node;
         return true;
     }
-
+    
     // ============================================================================================================================================ \\
 }
