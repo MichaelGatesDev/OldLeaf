@@ -1,6 +1,6 @@
 package com.michaelgatesdev.OldLeaf.game.villager;
 
-import com.michaelgatesdev.OldLeaf.game.player.appearance.Gender;
+import com.michaelgatesdev.OldLeaf.game.player.Gender;
 
 public final class Villager
 {

@@ -18,7 +18,7 @@
  */
 
 
-package com.michaelgatesdev.OldLeaf.game.player.appearance;
+package com.michaelgatesdev.OldLeaf.game.player;
 
 public enum Gender
 {

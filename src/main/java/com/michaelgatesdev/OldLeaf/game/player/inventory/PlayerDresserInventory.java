@@ -17,29 +17,28 @@
  *
  */
 
+
 package com.michaelgatesdev.OldLeaf.game.player.inventory;
+
+import com.michaelgatesdev.OldLeaf.game.player.Player;
 
 public class PlayerDresserInventory extends PlayerInventory
 {
     // ============================================================================================================================================ \\
-
-    public static final int DRESSER_SIZE = 180;
-
-    // ============================================================================================================================================ \\
-
-
+    
+    
     @Override
     public int getMaxSize()
     {
-        return DRESSER_SIZE;
+        return Player.DRESSER_SIZE;
     }
-
-
+    
+    
     @Override
     public String getName()
     {
         return "Dresser";
     }
-
+    
     // ============================================================================================================================================ \\
 }

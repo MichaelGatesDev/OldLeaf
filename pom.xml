@@ -93,6 +93,14 @@
             <scope>compile</scope>
         </dependency>
 
+        <!-- Reflections -->
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>LATEST</version>
+            <scope>compile</scope>
+        </dependency>
+
         <!-- Log4J logger -->
         <dependency>
             <groupId>log4j</groupId>

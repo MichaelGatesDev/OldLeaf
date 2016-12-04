@@ -22,7 +22,9 @@ package com.michaelgatesdev.OldLeaf.game;
 
 import com.michaelgatesdev.OldLeaf.exceptions.SaveSizeInvalidException;
 import com.michaelgatesdev.OldLeaf.game.map.GameMap;
+import com.michaelgatesdev.OldLeaf.game.player.Gender;
 import com.michaelgatesdev.OldLeaf.game.player.Player;
+import com.michaelgatesdev.OldLeaf.game.player.TPCRegion;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.log4j.Logger;
 
@@ -154,6 +156,67 @@ public class SaveGame
             // Player data
             for (int i = 0; i < MAX_PLAYERS; i++)
             {
+                Player player = new Player();
+                int currentOffset = startOffset + (isLegacy ? (OffsetsLegacy.PLAYERS + OffsetsLegacy.PLAYER_SIZE * i) : (OffsetsPlus.PLAYERS + OffsetsPlus.PLAYER_SIZE * i));
+                
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_PLAYTIME : OffsetsPlus.PLAYER_PLAYTIME));
+                player.setTimePlayed(raf.readInt());
+                
+                // --- APPEARANCE ---
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_HAIRSTYLE : OffsetsPlus.PLAYER_HAIRSTYLE));
+                player.getAppearance().setHairStyle(Player.getHairStyle(raf.readByte()));
+                
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_HAIRCOLOR : OffsetsPlus.PLAYER_HAIRCOLOR));
+                player.getAppearance().setHairColor(Player.getHairColor(raf.readByte()));
+                
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_FACE : OffsetsPlus.PLAYER_FACE));
+                player.getAppearance().setFaceStyle(Player.getFaceStyle(raf.readByte()));
+                
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_EYECOLOR : OffsetsPlus.PLAYER_EYECOLOR));
+                player.getAppearance().setEyeColor(Player.getEyeColor(raf.readByte()));
+                
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_TAN : OffsetsPlus.PLAYER_TAN));
+                player.getAppearance().setTan(raf.readByte());
+                
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_GENDER : OffsetsPlus.PLAYER_GENDER));
+                player.setGender(raf.readByte() == 0x00 ? Gender.MALE : Gender.FEMALE);
+                
+                // --- ID ---
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_ID1 : OffsetsPlus.PLAYER_ID1));
+                player.setId1(raf.readByte());
+                
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_ID2 : OffsetsPlus.PLAYER_ID2));
+                player.setId2(raf.readByte());
+                
+                // --- TPC ---
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_TPCREGION : OffsetsPlus.PLAYER_TPCREGION));
+                player.setTPCRegion(TPCRegion.fromByteValue(raf.readByte()));
+                
+                // --- DATES ---
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_BIRTHDAYMONTH : OffsetsPlus.PLAYER_BIRTHDAYMONTH));
+                int birthMonth = raf.readByte();
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_BIRTHDAYDAY : OffsetsPlus.PLAYER_BIRTHDAYDAY));
+                int birthDay = raf.readByte();
+                player.setBirthDate(new GameDate(birthMonth, birthDay));
+                
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_REGYEAR : OffsetsPlus.PLAYER_REGYEAR));
+                int regYear = raf.readByte();
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_REGMONTH : OffsetsPlus.PLAYER_REGMONTH));
+                int regMonth = raf.readByte();
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_REGDAY : OffsetsPlus.PLAYER_REGDAY));
+                int regDay = raf.readByte();
+                player.setRegistrationDate(new GameDate(regYear, regMonth, regDay));
+                
+                //TODO HOUSE
+                
+                //TODO PATTERNS
+                
+                // --- INVENTORY ---
+                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_POCKETS : OffsetsPlus.PLAYER_POCKETS));
+                for (int j = 0; j < Player.POCKETS_SIZE; j++)
+                {
+                    
+                }
                 
             }
             

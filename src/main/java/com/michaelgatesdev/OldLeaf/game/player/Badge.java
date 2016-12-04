@@ -1,0 +1,29 @@
+package com.michaelgatesdev.OldLeaf.game.player;
+
+public enum Badge
+{
+    FISH,
+    BUGS,
+    MARINE,
+    FISH_COLLECTION,
+    BUG_COLLECTION,
+    MARINE_COLLECTION,
+    BALLOONS,
+    VISITING_OTHER_TOWNS,
+    TOWN_BEING_VISITED,
+    WATERING_FLOWERS,
+    BANK,
+    TURNIPS,
+    MEDALS,
+    STREETPASS,
+    WEEDS,
+    SHOPPING,
+    LETTERS,
+    REFURBISHING,
+    CATALOG,
+    K_K_SLIDER,
+    HOME_POINTS,
+    TIME_PLAYED,
+    HELPING_NEIGHBORS,
+    DREAM_SUITE
+}

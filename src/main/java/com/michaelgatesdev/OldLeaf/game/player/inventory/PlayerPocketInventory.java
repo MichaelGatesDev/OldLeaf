@@ -20,27 +20,25 @@
 
 package com.michaelgatesdev.OldLeaf.game.player.inventory;
 
+import com.michaelgatesdev.OldLeaf.game.player.Player;
+
 public class PlayerPocketInventory extends PlayerInventory
 {
     // ============================================================================================================================================ \\
-
-    public static final int POCKETS_SIZE = 16;
-
-    // ============================================================================================================================================ \\
-
-
+    
+    
     @Override
     public int getMaxSize()
     {
-        return POCKETS_SIZE;
+        return Player.POCKETS_SIZE;
     }
-
-
+    
+    
     @Override
     public String getName()
     {
         return "Pockets";
     }
-
+    
     // ============================================================================================================================================ \\
 }
