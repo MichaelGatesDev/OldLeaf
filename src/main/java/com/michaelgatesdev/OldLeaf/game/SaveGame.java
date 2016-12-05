@@ -20,17 +20,21 @@
 
 package com.michaelgatesdev.OldLeaf.game;
 
+import com.michaelgatesdev.OldLeaf.exceptions.GameItemAddException;
 import com.michaelgatesdev.OldLeaf.exceptions.SaveSizeInvalidException;
 import com.michaelgatesdev.OldLeaf.game.map.GameMap;
 import com.michaelgatesdev.OldLeaf.game.player.Gender;
 import com.michaelgatesdev.OldLeaf.game.player.Player;
 import com.michaelgatesdev.OldLeaf.game.player.TPCRegion;
+import com.michaelgatesdev.OldLeaf.game.player.inventory.PlayerInventory;
+import com.michaelgatesdev.OldLeaf.memory.ByteArrayImage;
+import com.michaelgatesdev.OldLeaf.util.HexUtil;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.log4j.Logger;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.*;
 
 public class SaveGame
 {
@@ -104,7 +108,7 @@ public class SaveGame
             throw new SaveSizeInvalidException(String.format("Save size is invalid. %s", fileSize));
         }
         
-        readData(saveType);
+        this.readData(saveType);
     }
     
     
@@ -212,14 +216,90 @@ public class SaveGame
                 //TODO PATTERNS
                 
                 // --- INVENTORY ---
-                raf.seek(currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_POCKETS : OffsetsPlus.PLAYER_POCKETS));
-                for (int j = 0; j < Player.POCKETS_SIZE; j++)
+                int pocketInvOff = currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_POCKETS : OffsetsPlus.PLAYER_POCKETS);
+                loadInventory(raf, pocketInvOff, Player.POCKETS_SIZE, player.getPocketInventory());
+                
+                int dresserInvOff = currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_DRESSERS : OffsetsPlus.PLAYER_DRESSERS);
+                loadInventory(raf, dresserInvOff, Player.DRESSER_SIZE, player.getDresserInventory());
+                
+                int islandBoxInvOff = currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_ISLANDBOX : OffsetsPlus.PLAYER_ISLANDBOX);
+                loadInventory(raf, islandBoxInvOff, Player.ISLAND_BOX_SIZE, player.getIslandBoxInventory());
+                
+                // --- BADGES ---
+//                int badgesOff = currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_BADGES : OffsetsPlus.PLAYER_BADGES);
+//                for (int j = 0; j < player.getBadges().length; j++)
+//                {
+//                    raf.seek(badgesOff + j);
+//                    player.getBadges()[i] = raf.readByte();
+//                }
+                // --- BADGES ---
+                
+                int imgOff = currentOffset + (isLegacy ? OffsetsLegacy.PLAYER_TPCPIC : OffsetsPlus.PLAYER_TPCPIC);
+                raf.seek(imgOff);
+                // if they have an image
+                if (raf.readInt() == 0xe1ffd8ff)
                 {
+                    String imageBytes = "";
+                    for (int x = 0; x < 0x1400; x++)
+                    {
+                        imageBytes += HexUtil.toHexString(new byte[]{ raf.readByte() });
+                    }
                     
+                    BufferedImage image = ImageIO.read(new ByteArrayInputStream(HexUtil.toByteArray(imageBytes)));
+                    if (image != null)
+                    {
+                        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                        ImageIO.write(image, "jpg", baos);
+                        byte[] bytes = baos.toByteArray();
+                        
+                        ByteArrayImage img = new ByteArrayImage(bytes);
+                        player.setImage(img);
+                    }
                 }
+                else
+                {
+                    player.setImage(null); //TODO not found image
+                }
+                
                 
             }
             
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+    
+    
+    private void loadInventory(RandomAccessFile raf, long offset, int size, PlayerInventory inv)
+    {
+        try
+        {
+            for (int j = 0; j < size; j++)
+            {
+                long tempOff = offset + (j * 4);
+                raf.seek(tempOff);
+                short id = Short.reverseBytes(raf.readShort());
+                byte flag1 = raf.readByte();
+                byte flag2 = raf.readByte();
+                
+                GameItem item = new GameItem.Builder()
+                        .withName("")
+                        .withFlag1(flag1)
+                        .withFlag2(flag2)
+                        .withShortValue(id)
+                        .build();
+                
+                try
+                {
+                    inv.addItem(item);
+                }
+                catch (GameItemAddException e)
+                {
+                    e.printStackTrace();
+                }
+            }
         }
         catch (IOException e)
         {
