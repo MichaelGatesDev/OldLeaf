@@ -30,12 +30,12 @@ import java.io.IOException;
 public class ByteArrayImage extends ByteData
 {
     // ============================================================================================================================================ \\
-
+    
     private byte[] data;
-
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     /**
      * An array of bytes which forms an image
      *
@@ -45,18 +45,18 @@ public class ByteArrayImage extends ByteData
     {
         this.data = data;
     }
-
-
+    
+    
     // ============================================================================================================================================ \\
-
-
+    
+    
     @Override
     public byte[] getDataAsByteArray()
     {
         return data;
     }
-
-
+    
+    
     /**
      * @return A JavaFX {@link Image} from the byte array
      */
@@ -73,6 +73,6 @@ public class ByteArrayImage extends ByteData
         }
         return image;
     }
-
+    
     // ============================================================================================================================================ \\
 }

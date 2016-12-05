@@ -58,7 +58,7 @@ public class Player
             new FaceStyle((byte) 0x09, Gender.FEMALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/face_style/f_0x09.png"))),
             new FaceStyle((byte) 0x0A, Gender.MALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/face_style/m_0x0A.png"))),
             new FaceStyle((byte) 0x0B, Gender.MALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/face_style/m_0x0B.png"))),
-            new FaceStyle((byte) 0x0C, Gender.MALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/face_style/m_0x0C.png"))),
+            new FaceStyle((byte) 0x0C, Gender.MALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/face_style/m_0x00.png"))),
             new FaceStyle((byte) 0x01, Gender.MALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/face_style/m_0x01.png"))),
             new FaceStyle((byte) 0x02, Gender.MALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/face_style/m_0x02.png"))),
             new FaceStyle((byte) 0x03, Gender.MALE, new Image(Player.class.getClassLoader().getResourceAsStream("img/face_style/m_0x03.png"))),
@@ -165,7 +165,7 @@ public class Player
         this.name = new LimitedByteString("Player", MAX_NAME_LENGTH, true);
         this.gender = Gender.UNKNOWN;
         this.townName = new LimitedByteString("Town Name", MAX_TOWN_NAME_LENGTH, true);
-        this.image = new ByteArrayImage(new byte[]{});
+        this.image = new ByteArrayImage(new byte[0x1400]);
         this.tpcRegion = TPCRegion.UNKNOWN;
         this.birthDate = new GameDate(1, 1);
         this.registrationDate = new GameDate(1, 1, 2000);
