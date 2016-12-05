@@ -173,7 +173,7 @@ public class Player
         this.pocketInventory = new PlayerPocketInventory();
         this.dresserInventory = new PlayerDresserInventory();
         this.islandBoxInventory = new PlayerIslandBoxInventory();
-        this.badges = new Badge[]{};
+        this.badges = new Badge[24];
 //        this.emotions = new PlayerEmotion[]{};
         this.pocketBells = 0;
         this.bankBells = 0;
