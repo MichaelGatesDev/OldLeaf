@@ -42,19 +42,19 @@ public abstract class PlayerInventory implements Inventory
     public PlayerInventory()
     {
         this.gameItems = new ArrayList<>();
-        
-        // fill with empty slots
-        for (int i = 0; i < this.getMaxSize(); i++)
-        {
-            try
-            {
-                this.addItem(GameItem.EMPTY);
-            }
-            catch (GameItemAddException e)
-            {
-                e.printStackTrace();
-            }
-        }
+
+//        // fill with empty slots
+//        for (int i = 0; i < this.getMaxSize(); i++)
+//        {
+//            try
+//            {
+//                this.addItem(GameItem.EMPTY);
+//            }
+//            catch (GameItemAddException e)
+//            {
+//                e.printStackTrace();
+//            }
+//        }
     }
     
     
