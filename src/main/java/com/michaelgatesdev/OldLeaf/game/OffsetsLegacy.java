@@ -1,118 +1,632 @@
 package com.michaelgatesdev.OldLeaf.game;
 
-public class OffsetsLegacy
+import com.michaelgatesdev.OldLeaf.game.offsets.OffsetStash;
+
+public class OffsetsLegacy extends OffsetStash
 {
-    private static final int SECURE_VALUE_SIZE      = 0x80;
     //
-    public static final  int TOWN_TREESIZE          = SECURE_VALUE_SIZE + 0x049526;
-    public static final  int TOWN_GRASSTYPE         = SECURE_VALUE_SIZE + 0x04da01;
-    public static final  int TOWN_PLAYTIME          = SECURE_VALUE_SIZE + 0x5c730;
-    public static final  int TOWN_DAYSPLAYED        = SECURE_VALUE_SIZE + 0x5c7ba;
-    public static final  int TOWN_NATIVEFRUIT       = SECURE_VALUE_SIZE + 0x05c7b6;
-    public static final  int TOWN_ID1               = SECURE_VALUE_SIZE + 0x05c738;
-    public static final  int TOWN_ID2               = SECURE_VALUE_SIZE + 0x05c739;
-    public static final  int TOWN_NAME              = SECURE_VALUE_SIZE + 0x05c73a;
-    public static final  int TOWN_AVAILABLEPWPS     = SECURE_VALUE_SIZE + 0x04d9c8;
+    public int TOWN_TREESIZE()
+    {
+        return SECURE_VALUE_SIZE() + 0x049526;
+    }
+    
+    
+    public int TOWN_GRASSTYPE()
+    {
+        return SECURE_VALUE_SIZE() + 0x04da01;
+    }
+    
+    
+    public int TOWN_PLAYTIME()
+    {
+        return SECURE_VALUE_SIZE() + 0x5c730;
+    }
+    
+    
+    public int TOWN_DAYSPLAYED()
+    {
+        return SECURE_VALUE_SIZE() + 0x5c7ba;
+    }
+    
+    
+    public int TOWN_NATIVEFRUIT()
+    {
+        return SECURE_VALUE_SIZE() + 0x05c7b6;
+    }
+    
+    
+    public int TOWN_ID1()
+    {
+        return SECURE_VALUE_SIZE() + 0x05c738;
+    }
+    
+    
+    public int TOWN_ID2()
+    {
+        return SECURE_VALUE_SIZE() + 0x05c739;
+    }
+    
+    
+    public int TOWN_NAME()
+    {
+        return SECURE_VALUE_SIZE() + 0x05c73a;
+    }
+    
+    
+    public int TOWN_AVAILABLEPWPS()
+    {
+        return SECURE_VALUE_SIZE() + 0x04d9c8;
+    }
+    
+    
     //
-    public static final  int MUSEUM_ROOM1           = SECURE_VALUE_SIZE + 0x0659d8;
-    public static final  int MUSEUM_ROOMSIZE        = 0x0b98;
+    public int MUSEUM_ROOM1()
+    {
+        return SECURE_VALUE_SIZE() + 0x0659d8;
+    }
+    
+    
+    public int MUSEUM_ROOMSIZE()
+    {
+        return 0x0b98;
+    }
+    
+    
     //
-    public static final  int MAP_GRASS              = SECURE_VALUE_SIZE + 0x053e80;
-    public static final  int MAP_ACRES              = SECURE_VALUE_SIZE + 0x04da04;
-    public static final  int MAP_BUILDINGS          = SECURE_VALUE_SIZE + 0x049528;
-    public static final  int MAP_ITEMS              = SECURE_VALUE_SIZE + 0x04da58;
+    public int MAP_GRASS()
+    {
+        return SECURE_VALUE_SIZE() + 0x053e80;
+    }
+    
+    
+    public int MAP_ACRES()
+    {
+        return SECURE_VALUE_SIZE() + 0x04da04;
+    }
+    
+    
+    public int MAP_BUILDINGS()
+    {
+        return SECURE_VALUE_SIZE() + 0x049528;
+    }
+    
+    
+    public int MAP_ITEMS()
+    {
+        return SECURE_VALUE_SIZE() + 0x04da58;
+    }
+    
+    
     //
-    public static final  int ISLAND_ACRES           = SECURE_VALUE_SIZE + 0x06a408;
-    public static final  int ISLAND_BUILDINGS       = SECURE_VALUE_SIZE + 0x06b428;
-    public static final  int ISLAND_ITEMS           = SECURE_VALUE_SIZE + 0x06a428;
+    public int ISLAND_ACRES()
+    {
+        return SECURE_VALUE_SIZE() + 0x06a408;
+    }
+    
+    
+    public int ISLAND_BUILDINGS()
+    {
+        return SECURE_VALUE_SIZE() + 0x06b428;
+    }
+    
+    
+    public int ISLAND_ITEMS()
+    {
+        return SECURE_VALUE_SIZE() + 0x06a428;
+    }
+    
+    
     //
-    public static final  int PLAYERS                = SECURE_VALUE_SIZE + 0x20;
-    public static final  int PLAYER_HAIRSTYLE       = 0x04;
-    public static final  int PLAYER_HAIRCOLOR       = 0x05;
-    public static final  int PLAYER_FACE            = 0x06;
-    public static final  int PLAYER_EYECOLOR        = 0x07;
-    public static final  int PLAYER_TAN             = 0x08;
-    public static final  int PLAYER_HAT             = 0x0a;
-    public static final  int PLAYER_ACCESSORY       = 0x0e;
-    public static final  int PLAYER_WETSUIT         = 0x12;
-    public static final  int PLAYER_TOPWEAR         = 0x16;
-    public static final  int PLAYER_BOTTOMWEAR      = 0x1a;
-    public static final  int PLAYER_SOCKS           = 0x1e;
-    public static final  int PLAYER_SHOES           = 0x22;
-    public static final  int PLAYER_HELDITEM        = 0x26;
-    public static final  int PLAYER_PATTERNS        = 0x2c;
-    public static final  int PLAYER_ID1             = 0x55a6;
-    public static final  int PLAYER_ID2             = 0x55a7;
-    public static final  int PLAYER_NAME            = 0x55a8;
-    public static final  int PLAYER_GENDER          = 0x55ba;
-    public static final  int PLAYER_TPCREGION       = 0x55d2;
-    public static final  int PLAYER_BIRTHDAYMONTH   = 0x55d4;
-    public static final  int PLAYER_BIRTHDAYDAY     = 0x55d5;
-    public static final  int PLAYER_REGYEAR         = 0x55d6;
-    public static final  int PLAYER_REGMONTH        = 0x55d8;
-    public static final  int PLAYER_REGDAY          = 0x55d9;
-    public static final  int PLAYER_BADGES          = 0x569c;
-    public static final  int PLAYER_TPCPIC          = 0x5724;
-    public static final  int PLAYER_PLAYTIME        = 0x6b90;
-    public static final  int PLAYER_MEDALS          = 0x6b9c;
-    public static final  int PLAYER_POCKETS         = 0x6bb0;
-    public static final  int PLAYER_ENCYCLOPEDIA    = 0x6c00;
-    public static final  int PLAYER_BANK            = 0x6b6c;
-    public static final  int PLAYER_WALLET          = 0x6e38;
-    public static final  int PLAYER_ISLANDBOX       = 0x6e40;
-    public static final  int PLAYER_DRESSERS        = 0x8e18;
-    public static final  int PLAYER_HOUSESIZE       = 0x057e64;
-    public static final  int PLAYER_HOUSESTYLE      = 0x057e65;
-    public static final  int PLAYER_HOUSEDOORSHAPE  = 0x057e66;
-    public static final  int PLAYER_HOUSEBRICK      = 0x057e67;
-    public static final  int PLAYER_HOUSEROOF       = 0x057e68;
-    public static final  int PLAYER_HOUSEDOOR       = 0x057e69;
-    public static final  int PLAYER_HOUSEFENCE      = 0x057e6a;
-    public static final  int PLAYER_HOUSEPAVEMENT   = 0x057e6b;
-    public static final  int PLAYER_HOUSEMAILBOX    = 0x057e6c;
-    public static final  int PLAYER_SIZE            = 0x9f10;
+    public int PLAYERS()
+    {
+        return SECURE_VALUE_SIZE() + 0x20;
+    }
+    
+    
+    public int PLAYER_HAIRSTYLE()
+    {
+        return 0x04;
+    }
+    
+    
+    public int PLAYER_HAIRCOLOR()
+    {
+        return 0x05;
+    }
+    
+    
+    public int PLAYER_FACE()
+    {
+        return 0x06;
+    }
+    
+    
+    public int PLAYER_EYECOLOR()
+    {
+        return 0x07;
+    }
+    
+    
+    public int PLAYER_TAN()
+    {
+        return 0x08;
+    }
+    
+    
+    public int PLAYER_HAT()
+    {
+        return 0x0a;
+    }
+    
+    
+    public int PLAYER_ACCESSORY()
+    {
+        return 0x0e;
+    }
+    
+    
+    public int PLAYER_WETSUIT()
+    {
+        return 0x12;
+    }
+    
+    
+    public int PLAYER_TOPWEAR()
+    {
+        return 0x16;
+    }
+    
+    
+    public int PLAYER_BOTTOMWEAR()
+    {
+        return 0x1a;
+    }
+    
+    
+    public int PLAYER_SOCKS()
+    {
+        return 0x1e;
+    }
+    
+    
+    public int PLAYER_SHOES()
+    {
+        return 0x22;
+    }
+    
+    
+    public int PLAYER_HELDITEM()
+    {
+        return 0x26;
+    }
+    
+    
+    public int PLAYER_PATTERNS()
+    {
+        return 0x2c;
+    }
+    
+    
+    public int PLAYER_ID1()
+    {
+        return 0x55a6;
+    }
+    
+    
+    public int PLAYER_ID2()
+    {
+        return 0x55a7;
+    }
+    
+    
+    public int PLAYER_NAME()
+    {
+        return 0x55a8;
+    }
+    
+    
+    public int PLAYER_GENDER()
+    {
+        return 0x55ba;
+    }
+    
+    
+    public int PLAYER_TPCREGION()
+    {
+        return 0x55d2;
+    }
+    
+    
+    public int PLAYER_BIRTHDAYMONTH()
+    {
+        return 0x55d4;
+    }
+    
+    
+    public int PLAYER_BIRTHDAYDAY()
+    {
+        return 0x55d5;
+    }
+    
+    
+    public int PLAYER_REGYEAR()
+    {
+        return 0x55d6;
+    }
+    
+    
+    public int PLAYER_REGMONTH()
+    {
+        return 0x55d8;
+    }
+    
+    
+    public int PLAYER_REGDAY()
+    {
+        return 0x55d9;
+    }
+    
+    
+    public int PLAYER_BADGES()
+    {
+        return 0x569c;
+    }
+    
+    
+    public int PLAYER_TPCPIC()
+    {
+        return 0x5724;
+    }
+    
+    
+    public int PLAYER_PLAYTIME()
+    {
+        return 0x6b90;
+    }
+    
+    
+    public int PLAYER_MEDALS()
+    {
+        return 0x6b9c;
+    }
+    
+    
+    public int PLAYER_POCKETS()
+    {
+        return 0x6bb0;
+    }
+    
+    
+    public int PLAYER_ENCYCLOPEDIA()
+    {
+        return 0x6c00;
+    }
+    
+    
+    public int PLAYER_BANK()
+    {
+        return 0x6b6c;
+    }
+    
+    
+    public int PLAYER_WALLET()
+    {
+        return 0x6e38;
+    }
+    
+    
+    public int PLAYER_ISLANDBOX()
+    {
+        return 0x6e40;
+    }
+    
+    
+    public int PLAYER_DRESSERS()
+    {
+        return 0x8e18;
+    }
+    
+    
+    public int PLAYER_HOUSESIZE()
+    {
+        return 0x057e64;
+    }
+    
+    
+    public int PLAYER_HOUSESTYLE()
+    {
+        return 0x057e65;
+    }
+    
+    
+    public int PLAYER_HOUSEDOORSHAPE()
+    {
+        return 0x057e66;
+    }
+    
+    
+    public int PLAYER_HOUSEBRICK()
+    {
+        return 0x057e67;
+    }
+    
+    
+    public int PLAYER_HOUSEROOF()
+    {
+        return 0x057e68;
+    }
+    
+    
+    public int PLAYER_HOUSEDOOR()
+    {
+        return 0x057e69;
+    }
+    
+    
+    public int PLAYER_HOUSEFENCE()
+    {
+        return 0x057e6a;
+    }
+    
+    
+    public int PLAYER_HOUSEPAVEMENT()
+    {
+        return 0x057e6b;
+    }
+    
+    
+    public int PLAYER_HOUSEMAILBOX()
+    {
+        return 0x057e6c;
+    }
+    
+    
+    public int PLAYER_SIZE()
+    {
+        return 0x9f10;
+    }
+    
+    
     //
-    public static final  int VILLAGERS              = SECURE_VALUE_SIZE + 0x027c90;
-    public static final  int VILLAGER_ID            = 0x00;
-    public static final  int VILLAGER_PERSONALITY   = 0x02;
-    public static final  int VILLAGER_STOREDLETTER1 = 0x182c;
-    public static final  int VILLAGER_STOREDLETTER2 = 0x186e;
-    public static final  int VILLAGER_STOREDLETTER3 = 0x19f0;
-    public static final  int VILLAGER_SHIRT         = 0x244e;
-    public static final  int VILLAGER_SONG          = 0x2452;
-    public static final  int VILLAGER_WALL          = 0x2456;
-    public static final  int VILLAGER_FLOOR         = 0x245a;
-    public static final  int VILLAGER_UMBRELLA      = 0x245e;
-    public static final  int VILLAGER_FURNITURE     = 0x2462;
-    public static final  int VILLAGER_CATCHPHRASE   = 0x24a6;
-    public static final  int VILLAGER_STATUS        = 0x24c4;
-    public static final  int VILLAGER_SIZE          = 0x24f8;
+    public int VILLAGERS()
+    {
+        return SECURE_VALUE_SIZE() + 0x027c90;
+    }
+    
+    
+    public int VILLAGER_ID()
+    {
+        return 0x00;
+    }
+    
+    
+    public int VILLAGER_PERSONALITY()
+    {
+        return 0x02;
+    }
+    
+    
+    public int VILLAGER_STOREDLETTER1()
+    {
+        return 0x182c;
+    }
+    
+    
+    public int VILLAGER_STOREDLETTER2()
+    {
+        return 0x186e;
+    }
+    
+    
+    public int VILLAGER_STOREDLETTER3()
+    {
+        return 0x19f0;
+    }
+    
+    
+    public int VILLAGER_SHIRT()
+    {
+        return 0x244e;
+    }
+    
+    
+    public int VILLAGER_SONG()
+    {
+        return 0x2452;
+    }
+    
+    
+    public int VILLAGER_WALL()
+    {
+        return 0x2456;
+    }
+    
+    
+    public int VILLAGER_FLOOR()
+    {
+        return 0x245a;
+    }
+    
+    
+    public int VILLAGER_UMBRELLA()
+    {
+        return 0x245e;
+    }
+    
+    
+    public int VILLAGER_FURNITURE()
+    {
+        return 0x2462;
+    }
+    
+    
+    public int VILLAGER_CATCHPHRASE()
+    {
+        return 0x24a6;
+    }
+    
+    
+    public int VILLAGER_STATUS()
+    {
+        return 0x24c4;
+    }
+    
+    
+    public int VILLAGER_SIZE()
+    {
+        return 0x24f8;
+    }
+    
+    
     //
-    public static final  int PAST_VILLAGERS         = SECURE_VALUE_SIZE + 0x03f17e;
+    public int PAST_VILLAGERS()
+    {
+        return SECURE_VALUE_SIZE() + 0x03f17e;
+    }
+    
+    
     //
-    public static final  int SHOP_LOSTFOUND         = SECURE_VALUE_SIZE + 0x05c75e;
-    public static final  int SHOP_NOOK              = SECURE_VALUE_SIZE + 0x05c7ec;
-    public static final  int SHOP_ABLE1             = SECURE_VALUE_SIZE + 0x05c868;
-    public static final  int SHOP_ABLEPATTERNS      = SECURE_VALUE_SIZE + 0x05c8b4;
-    public static final  int SHOP_ABLE2             = SECURE_VALUE_SIZE + 0x060c34;
-    public static final  int SHOP_LEIF              = SECURE_VALUE_SIZE + 0x060c72;
-    public static final  int SHOP_REDD              = SECURE_VALUE_SIZE + 0x060cac;
-    public static final  int SHOP_KICKS             = SECURE_VALUE_SIZE + 0x060daa;
-    public static final  int SHOP_RETAIL            = SECURE_VALUE_SIZE + 0x060e30;
-    public static final  int SHOP_MUSEUM            = SECURE_VALUE_SIZE + 0x06523a;
-    public static final  int SHOP_LOLGYROIDS        = SECURE_VALUE_SIZE + 0x06530e;
-    public static final  int SHOP_ISLAND            = SECURE_VALUE_SIZE + 0x065334;
-    public static final  int SHOP_HOMES             = SECURE_VALUE_SIZE + 0x06524a;
-    public static final  int SHOP_GRACIE            = SECURE_VALUE_SIZE + 0x065274;
+    public int SHOP_LOSTFOUND()
+    {
+        return SECURE_VALUE_SIZE() + 0x05c75e;
+    }
+    
+    
+    public int SHOP_NOOK()
+    {
+        return SECURE_VALUE_SIZE() + 0x05c7ec;
+    }
+    
+    
+    public int SHOP_ABLE1()
+    {
+        return SECURE_VALUE_SIZE() + 0x05c868;
+    }
+    
+    
+    public int SHOP_ABLEPATTERNS()
+    {
+        return SECURE_VALUE_SIZE() + 0x05c8b4;
+    }
+    
+    
+    public int SHOP_ABLE2()
+    {
+        return SECURE_VALUE_SIZE() + 0x060c34;
+    }
+    
+    
+    public int SHOP_LEIF()
+    {
+        return SECURE_VALUE_SIZE() + 0x060c72;
+    }
+    
+    
+    public int SHOP_REDD()
+    {
+        return SECURE_VALUE_SIZE() + 0x060cac;
+    }
+    
+    
+    public int SHOP_KICKS()
+    {
+        return SECURE_VALUE_SIZE() + 0x060daa;
+    }
+    
+    
+    public int SHOP_RETAIL()
+    {
+        return SECURE_VALUE_SIZE() + 0x060e30;
+    }
+    
+    
+    public int SHOP_MUSEUM()
+    {
+        return SECURE_VALUE_SIZE() + 0x06523a;
+    }
+    
+    
+    public int SHOP_LOLGYROIDS()
+    {
+        return SECURE_VALUE_SIZE() + 0x06530e;
+    }
+    
+    
+    public int SHOP_ISLAND()
+    {
+        return SECURE_VALUE_SIZE() + 0x065334;
+    }
+    
+    
+    public int SHOP_HOMES()
+    {
+        return SECURE_VALUE_SIZE() + 0x06524a;
+    }
+    
+    
+    public int SHOP_GRACIE()
+    {
+        return SECURE_VALUE_SIZE() + 0x065274;
+    }
+    
+    
     //
-    public static final  int MIN_WALL               = 0x2342;
-    public static final  int MAX_WALL               = 0x23c6;
-    public static final  int MIN_FLOOR              = 0x23c7;
-    public static final  int MAX_FLOOR              = 0x2445;
-    public static final  int MIN_SONG               = 0x2126;
-    public static final  int MAX_SONG               = 0x2180;
-    public static final  int MIN_SHIRT              = 0x2448;
-    public static final  int MAX_SHIRT              = 0x260b;
-    public static final  int MIN_UMBRELLA           = 0x2755;
-    public static final  int MAX_UMBRELLA           = 0x2778;
+    public int MIN_WALL()
+    {
+        return 0x2342;
+    }
+    
+    
+    public int MAX_WALL()
+    {
+        return 0x23c6;
+    }
+    
+    
+    public int MIN_FLOOR()
+    {
+        return 0x23c7;
+    }
+    
+    
+    public int MAX_FLOOR()
+    {
+        return 0x2445;
+    }
+    
+    
+    public int MIN_SONG()
+    {
+        return 0x2126;
+    }
+    
+    
+    public int MAX_SONG()
+    {
+        return 0x2180;
+    }
+    
+    
+    public int MIN_SHIRT()
+    {
+        return 0x2448;
+    }
+    
+    
+    public int MAX_SHIRT()
+    {
+        return 0x260b;
+    }
+    
+    
+    public int MIN_UMBRELLA()
+    {
+        return 0x2755;
+    }
+    
+    
+    public int MAX_UMBRELLA()
+    {
+        return 0x2778;
+    }
 }
