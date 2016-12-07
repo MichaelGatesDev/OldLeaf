@@ -244,39 +244,13 @@ public class SaveGame
             int townN = 0;
             for (int i = 0; i < GameMap.TOWN_ACRE_COLUMNS * GameMap.TOWN_ACRE_ROWS; i++)
             {
-                /*
-                    var acre=document.createElement('div');
-                    acre.className='acre';
-                    el('map').appendChild(acre);
-                    
-                    var acreX=i%5;
-                    var acreY=parseInt(i/5);
-                    acre.id='acre'+(acreX+1)+'_'+(acreY+1);
-                    
-                    for(var j=0; j<Constants.Sizes.ACRE; j++)
-                    {
-                        var realX=acreX*16+(j%16)+16;
-                        var realY=acreY*16+(parseInt(j/16))+16;
-                        
-                        var itemSlot=new ItemSlot(Offsets.MAP_ITEMS, nTiles, realX+'x'+realY);
-                        acre.appendChild(itemSlot.tile);
-                        nTiles++;
-                        
-                        mapXY[realX][realY]=itemSlot;
-                    }
-                */
-                
                 int acreX = i % 5;
                 int acreY = i / 5;
-                
-                logger.debug(String.format("Tile position on ACRE #%d: %d|%d", i, acreX, acreY));
                 
                 for (int j = 0; j < GameMap.TILES_TOTAL; j++)
                 {
                     int realX = acreX * 16 + (j % 16);
                     int realY = acreY * 16 + (j / 16);
-                    
-                    logger.debug(String.format("Real X: %d | Real Y: %d", realX, realY));
                     
                     raf.seek(townItemsOffset + (townN * 4));
                     short id = Short.reverseBytes(raf.readShort());

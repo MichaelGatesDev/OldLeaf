@@ -33,7 +33,6 @@ public class GameTilesGrid extends PaintGrid
     // ============================================================================================================================================ \\
     
     
-    //TODO: FIGURE THIS SHIT OUT
     public void fillWithItems(GameItem[][] tiles, int maxCols, int maxRows)
     {
         for (int x = 0; x < maxCols; x++)
@@ -44,23 +43,16 @@ public class GameTilesGrid extends PaintGrid
                 
                 PaintableCell pc = (PaintableCell) this.getCells()[x][y];
                 pc.paint(c);
-                logger.debug(String.format("Cell: %d|%d = %s", x, y, c.toString()));
             }
         }
     }
     
     
-    private Color getItemColor(GameItem tile)
+    private Color getItemColor(GameItem item)
     {
-        if (tile == null)
+        if (item.isNothing())
         {
-            logger.debug("NULL TILE!!! = " + tile);
-            return Color.BLUE;
-        }
-        
-        if (tile.isNothing())
-        {
-            return Color.WHITE;
+            return Color.TRANSPARENT;
         }
         else
         {

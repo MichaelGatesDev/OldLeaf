@@ -146,7 +146,7 @@ public class Main extends Application
     {
         /* Game items */
         Map<Short, String> map = new HashMap<>();
-        Map<String, String> itemsRaw = FileUtil.loadMapFromFile(file, delimiter);
+        Map<String, String> itemsRaw = FileUtil.loadMapFromFile(file, delimiter, "(^[^|]*$)");
         
         for (String key : itemsRaw.keySet())
         {
@@ -154,7 +154,7 @@ public class Main extends Application
             byte[] bytes = HexUtil.toByteArray(key);
             short shortValue = HexUtil.byteArrayToShort(bytes);
             
-            gameItemNames.put(shortValue, value);
+            map.put(shortValue, value);
         }
         return map;
     }
