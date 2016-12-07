@@ -45,11 +45,13 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="mainPane"
+<BorderPane fx:id="mainPane"
+            id="mainPane"
             prefHeight="500.0"
             prefWidth="800.0"
             xmlns="http://javafx.com/javafx/null"
-            xmlns:fx="http://javafx.com/fxml/1">
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.MainController">
 
     <stylesheets>
         <!--<URL value="@../css/Main.css"/>-->

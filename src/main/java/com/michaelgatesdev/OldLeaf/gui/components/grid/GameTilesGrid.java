@@ -20,14 +20,18 @@
 
 package com.michaelgatesdev.OldLeaf.gui.components.grid;
 
+import com.michaelgatesdev.OldLeaf.game.GameItem;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
+import org.apache.log4j.Logger;
 
 public class GameTilesGrid extends PaintGrid
 {
     // ============================================================================================================================================ \\
+    
+    private static final Logger logger = Logger.getLogger(GameTilesGrid.class);
     
     private Label coordinatesLabel;
     
@@ -47,6 +51,42 @@ public class GameTilesGrid extends PaintGrid
     }
     
     // ============================================================================================================================================ \\
+    
+    
+    //TODO: FIGURE THIS SHIT OUT
+    public void fillWithItems(GameItem[][] tiles, int maxCols, int maxRows)
+    {
+        for (int x = 0; x < maxCols; x++)
+        {
+            for (int y = 0; y < maxRows; y++)
+            {
+                Color c = this.getItemColor(tiles[x][y]);
+                
+                PaintableCell pc = (PaintableCell) this.getCells()[x][y];
+                pc.paint(c);
+                logger.debug(String.format("Cell: %d|%d = %s", x, y, c.toString()));
+            }
+        }
+    }
+    
+    
+    private Color getItemColor(GameItem tile)
+    {
+        if (tile == null)
+        {
+            logger.debug("NULL TILE!!! = " + tile);
+            return Color.BLUE;
+        }
+        
+        if (tile.isNothing())
+        {
+            return Color.WHITE;
+        }
+        else
+        {
+            return Color.RED;
+        }
+    }
     
     
     @Override

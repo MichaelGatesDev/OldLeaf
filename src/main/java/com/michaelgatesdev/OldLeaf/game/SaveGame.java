@@ -22,6 +22,7 @@ package com.michaelgatesdev.OldLeaf.game;
 
 import com.michaelgatesdev.OldLeaf.exceptions.GameItemAddException;
 import com.michaelgatesdev.OldLeaf.exceptions.SaveSizeInvalidException;
+import com.michaelgatesdev.OldLeaf.game.map.TownMap;
 import com.michaelgatesdev.OldLeaf.game.map.GameMap;
 import com.michaelgatesdev.OldLeaf.game.offsets.OffsetStash;
 import com.michaelgatesdev.OldLeaf.game.player.Gender;
@@ -264,6 +265,66 @@ public class SaveGame
                 }
             }
             
+            // TOWN
+            int townItemsOffset = offsets.MAP_ITEMS();
+            townMap = new TownMap();
+            int townN = 0;
+            for (int i = 0; i < GameMap.TOWN_ACRE_COLUMNS * GameMap.TOWN_ACRE_ROWS; i++)
+            {
+                /*
+                    var acre=document.createElement('div');
+                    acre.className='acre';
+                    el('map').appendChild(acre);
+                    
+                    var acreX=i%5;
+                    var acreY=parseInt(i/5);
+                    acre.id='acre'+(acreX+1)+'_'+(acreY+1);
+                    
+                    for(var j=0; j<Constants.Sizes.ACRE; j++)
+                    {
+                        var realX=acreX*16+(j%16)+16;
+                        var realY=acreY*16+(parseInt(j/16))+16;
+                        
+                        var itemSlot=new ItemSlot(Offsets.MAP_ITEMS, nTiles, realX+'x'+realY);
+                        acre.appendChild(itemSlot.tile);
+                        nTiles++;
+                        
+                        mapXY[realX][realY]=itemSlot;
+                    }
+                */
+                
+                int acreX = i % 5;
+                int acreY = i / 5;
+                
+                logger.debug(String.format("Tile position on ACRE #%d: %d|%d", i, acreX, acreY));
+                
+                for (int j = 0; j < GameMap.TILES_TOTAL; j++)
+                {
+                    int realX = acreX * 16 + (j % 16) + 0;
+                    int realY = acreY * 16 + (j / 16) + 0;
+                    
+                    logger.debug(String.format("Real X: %d | Real Y: %d", realX, realY));
+                    
+                    raf.seek(townItemsOffset + (townN * 4));
+                    short id = Short.reverseBytes(raf.readShort());
+                    byte flag1 = raf.readByte();
+                    byte flag2 = raf.readByte();
+                    
+                    GameItem item = new GameItem.Builder()
+                            .withName("~Something~")
+                            .withFlag1(flag1)
+                            .withFlag2(flag2)
+                            .withShortValue(id)
+                            .build();
+                    
+                    townMap.getTiles()[realX][realY] = item;
+                    townN++;
+                }
+            }
+            
+            // ISLAND
+            
+            
             logger.info("Finished loading the save");
         }
         catch (IOException e)
@@ -310,6 +371,84 @@ public class SaveGame
     }
     
     // ============================================================================================================================================ \\
+    
+    
+    public File getFile()
+    {
+        return file;
+    }
+    
+    
+    public SaveType getSaveType()
+    {
+        return saveType;
+    }
+    
+    
+    public byte[] getSecureValue()
+    {
+        return secureValue;
+    }
+    
+    
+    public FruitType getNativeFruit()
+    {
+        return nativeFruit;
+    }
+    
+    
+    public GrassShape getGrassShape()
+    {
+        return grassShape;
+    }
+    
+    
+    public TownTreeSize getTownTreeSize()
+    {
+        return townTreeSize;
+    }
+    
+    
+    public int getSecondsPlayed()
+    {
+        return secondsPlayed;
+    }
+    
+    
+    public int getMinutesPlayed()
+    {
+        return minutesPlayed;
+    }
+    
+    
+    public int getHoursPlayed()
+    {
+        return hoursPlayed;
+    }
+    
+    
+    public int getDaysPlayed()
+    {
+        return daysPlayed;
+    }
+    
+    
+    public Player[] getPlayers()
+    {
+        return players;
+    }
+    
+    
+    public GameMap getTownMap()
+    {
+        return townMap;
+    }
+    
+    
+    public GameMap getIslandMap()
+    {
+        return islandMap;
+    }
     
     
     // ============================================================================================================================================ \\

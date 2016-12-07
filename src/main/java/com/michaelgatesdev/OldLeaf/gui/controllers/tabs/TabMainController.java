@@ -95,7 +95,7 @@ public class TabMainController implements Initializable
             {
                 saveGame.load();
                 Main.getInstance().setSaveGame(saveGame);
-                this.unlockNavigation();
+                Main.getInstance().getGuiManager().unlockNavigation(loadButton);
             }
             catch (SaveSizeInvalidException e)
             {

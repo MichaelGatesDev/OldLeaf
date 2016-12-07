@@ -21,6 +21,7 @@
 package com.michaelgatesdev.OldLeaf;
 
 import com.michaelgatesdev.OldLeaf.game.SaveGame;
+import com.michaelgatesdev.OldLeaf.gui.GuiManager;
 import com.michaelgatesdev.OldLeaf.locale.UTF8Control;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -43,7 +44,8 @@ public class Main extends Application
     private static final int MAIN_WINDOW_WIDTH  = 1000;
     private static final int MAIN_WINDOW_HEIGHT = 650;
     
-    private static Main instance;
+    private static Main       instance;
+    private        GuiManager guiManager;
     
     private ResourceBundle locale;
     
@@ -82,6 +84,8 @@ public class Main extends Application
      */
     private void initialize()
     {
+        this.guiManager = new GuiManager(this);
+        
         // Grab locale bundle
         locale = ResourceBundle.getBundle("Locale", /*Locale.JAPAN,*/ new UTF8Control());
         
@@ -110,10 +114,11 @@ public class Main extends Application
             return;
         }
         
-        Parent root = FXMLLoader.load(res);
+        FXMLLoader loader = new FXMLLoader(res);
+        Parent root = loader.load();
+        
         
         Scene scene = new Scene(root, MAIN_WINDOW_WIDTH, MAIN_WINDOW_HEIGHT);
-        this.mainScene = scene;
         
         // Package window
         stage.getIcons().add(new Image("img/logo.png"));
@@ -179,16 +184,29 @@ public class Main extends Application
     // ============================================================================================================================================ \\
     
     
+    public static Logger getLogger()
+    {
+        return logger;
+    }
+    
+    
     public static Main getInstance()
     {
         return instance;
     }
     
     
-    public Scene getMainScene()
+    public GuiManager getGuiManager()
     {
-        return mainScene;
+        return guiManager;
     }
+    
+    
+    public SaveGame getSaveGame()
+    {
+        return saveGame;
+    }
+    
     
     // ============================================================================================================================================ \\
 }
