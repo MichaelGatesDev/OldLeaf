@@ -17,7 +17,10 @@ public abstract class Cell
     private int width;
     private int height;
     
-    // ============================================================================================================================================ \\    public Cell(Grid container, int minX, int minY, int maxX, int maxY)
+    // ============================================================================================================================================ \\
+    
+    
+    public Cell(Grid container, int minX, int minY, int maxX, int maxY)
     {
         this.container = container;
         this.minX = minX;
@@ -34,11 +37,15 @@ public abstract class Cell
         }
     }
     
+    // ============================================================================================================================================ \\
     
-    // ============================================================================================================================================ \\    public Grid getContainer()
+    
+    public Grid getContainer()
     {
         return container;
     }
+    
+    
     public GraphicsContext getGraphics()
     {
         return graphics;

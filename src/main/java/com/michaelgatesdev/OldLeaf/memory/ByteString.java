@@ -6,34 +6,17 @@ public class ByteString extends ByteData
 {
     // ============================================================================================================================================ \\
     
-    whose data
-    @param
+    private String  data;
+    private boolean mirrorBytes;
     
-    can be
-    private String da
+    // ============================================================================================================================================ \\
     
-    // ============================================================================================================================================ \\    /**
-     *A
-    easily represented
-    private bool
-    in bytes
-    data Theta;
-    ean  mirrorBytes;
+    
+    /**
+     * A {@link String} whose data can be easily represented in bytes
      *
-             *
-    
-    
-    {
-        @link String
-    }
-    
-    
-    {
-        @link String
-    }
+     * @param data The {@link String}
      */
-    
-    
     public ByteString(String data)
     {
         this.data = data;
@@ -50,9 +33,13 @@ public class ByteString extends ByteData
     {
         this.data = data;
         this.mirrorBytes = mirrorBytes;
-    }    // ============================================================================================================================================ \\    @Override
+    }
     
     
+    // ============================================================================================================================================ \\
+    
+    
+    @Override
     public byte[] getDataAsByteArray()
     {
         byte[] bytes = data.getBytes(Charset.forName("UTF-8"));

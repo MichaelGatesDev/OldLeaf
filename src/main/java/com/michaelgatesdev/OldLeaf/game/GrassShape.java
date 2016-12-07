@@ -10,36 +10,27 @@ public enum GrassShape
     
     // ============================================================================================================================================ \\
     
-    Parses a
-    from   a
-     *
-    @param
-    value The
-    // =====
-    byte to
-    {
-        
-        parse from
-    byte
-     *
-             *
-        private byte value;======================================================================================================================================= \\
-        GrassShape( byte value)
-        {
-            this.value = value;
-        }    // ============================================================================================================================================ \\    /**@link GrassShape
-    }
-     *
-             *@return Parsed
+    private byte value;
+    
+    // ============================================================================================================================================ \\
     
     
+    GrassShape(byte value)
     {
-        @link GrassShape
+        this.value = value;
     }
-    or null if none
+    
+    
+    // ============================================================================================================================================ \\
+    
+    
+    /**
+     * Parses a {@link GrassShape} from a byte
+     *
+     * @param value The byte to parse from
+     *
+     * @return Parsed {@link GrassShape} or null if none
      */
-    
-    
     public static GrassShape fromByteValue(byte value)
     {
         for (GrassShape gs : GrassShape.values())
@@ -57,6 +48,7 @@ public enum GrassShape
      * Parses a {@link GrassShape} from a {@link String}
      *
      * @param s The string to parse from
+     *
      * @return Parsed {@link GrassShape} or null if none
      */
     public static GrassShape fromString(String s)
@@ -75,5 +67,8 @@ public enum GrassShape
     public byte getValue()
     {
         return value;
-    }    // ============================================================================================================================================ \\
+    }
+    
+    
+    // ============================================================================================================================================ \\
 }

@@ -1,5 +1,6 @@
 package com.michaelgatesdev.OldLeaf.game;
 
+import com.michaelgatesdev.OldLeaf.Main;
 import com.michaelgatesdev.OldLeaf.exceptions.GameItemAddException;
 import com.michaelgatesdev.OldLeaf.exceptions.SaveSizeInvalidException;
 import com.michaelgatesdev.OldLeaf.game.map.GameMap;
@@ -283,7 +284,7 @@ public class SaveGame
                     byte flag2 = raf.readByte();
                     
                     GameItem item = new GameItem.Builder()
-                            .withName("~Something~")
+                            .withName(Main.getInstance().getGameItemNames().get(id))
                             .withFlag1(flag1)
                             .withFlag2(flag2)
                             .withShortValue(id)

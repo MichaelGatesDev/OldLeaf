@@ -12,39 +12,25 @@ public enum FruitType
     
     // ============================================================================================================================================ \\
     
-    Parses a
-    from   a
+    private byte value;
     
-    // ============================================================================================================================================ \\    /**
-     *
-    @param
-    value The
-    // =====
-    byte to
+    // ============================================================================================================================================ \\
+    
+    
+    FruitType(byte value)
     {
-        
-        parse from
-    byte
-     *
-             *
-        private byte value;======================================================================================================================================= \\
-        FruitType( byte value)
-        {
-            this.value = value;
-        }
-        @link FruitType
+        this.value = value;
     }
-     *
-             *@return Parsed
+    
+    // ============================================================================================================================================ \\
     
     
-    {
-        @link FruitType
-    }
-    or null if none
+    /**
+     * Parses a {@link FruitType} from a byte
+     *
+     * @param value The byte to parse from
+     * @return Parsed {@link FruitType} or null if none
      */
-    
-    
     public static FruitType fromByteValue(byte value)
     {
         for (FruitType ft : FruitType.values())

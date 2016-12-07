@@ -3,16 +3,22 @@ package com.michaelgatesdev.OldLeaf;
 import com.michaelgatesdev.OldLeaf.game.SaveGame;
 import com.michaelgatesdev.OldLeaf.gui.GuiManager;
 import com.michaelgatesdev.OldLeaf.locale.UTF8Control;
+import com.michaelgatesdev.OldLeaf.util.FileUtil;
+import com.michaelgatesdev.OldLeaf.util.HexUtil;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class Main extends Application
@@ -30,6 +36,7 @@ public class Main extends Application
     private ResourceBundle locale;
     
     private File rootDir;
+    private File resourcesDir;
     private File backupsDir;
     private File templatesDir;
     private File inventoryTemplatesDir;
@@ -37,10 +44,9 @@ public class Main extends Application
     private File islandTemplatesDir;
     private File appearanceTemplatesDir;
     
-    // JavaFX stuff for later
-    private Scene mainScene;
-    
-    private SaveGame saveGame;
+    private SaveGame           saveGame;
+    private Map<Short, String> gameItemNames;
+    private Map<Short, String> gameStructureNames;
     
     // ============================================================================================================================================ \\
     
@@ -71,6 +77,7 @@ public class Main extends Application
         
         // Create/Initialize all the directories */
         rootDir = new File(System.getProperty("user.dir") + "/");
+        resourcesDir = createDirectory(rootDir, "_resources", true);
         backupsDir = createDirectory(rootDir, "_backups", true);
         templatesDir = createDirectory(rootDir, "_templates", true);
         inventoryTemplatesDir = createDirectory(templatesDir, "inventory", true);
@@ -78,8 +85,33 @@ public class Main extends Application
         islandTemplatesDir = createDirectory(templatesDir, "island", true);
         appearanceTemplatesDir = createDirectory(templatesDir, "appearance", true);
         
+        // Create/Initialize all files
+        File itemsFile = copyResourceFile("text/items.txt", "items.txt", resourcesDir);
+        this.gameItemNames = this.loadHexStringMap(itemsFile, "\\|");
+        File structuresFile = copyResourceFile("text/structures.txt", "gameStructureNames.txt", resourcesDir);
+        this.gameStructureNames = this.loadHexStringMap(structuresFile, "\\|");
+        
+        
         // Init GUI
         launch();
+    }
+    
+    
+    private File copyResourceFile(String resourcePath, String fileName, File dest)
+    {
+        File file = new File(dest, fileName);
+        if (!file.exists())
+        {
+            try
+            {
+                FileUtils.copyURLToFile(this.getResourceURL(resourcePath), file);
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
+        return file;
     }
     
     
@@ -108,6 +140,25 @@ public class Main extends Application
         stage.setMinHeight(MAIN_WINDOW_HEIGHT);
         stage.show();
     }
+    
+    
+    private Map<Short, String> loadHexStringMap(File file, String delimiter)
+    {
+        /* Game items */
+        Map<Short, String> map = new HashMap<>();
+        Map<String, String> itemsRaw = FileUtil.loadMapFromFile(file, delimiter);
+        
+        for (String key : itemsRaw.keySet())
+        {
+            String value = itemsRaw.get(key);
+            byte[] bytes = HexUtil.toByteArray(key);
+            short shortValue = HexUtil.byteArrayToShort(bytes);
+            
+            gameItemNames.put(shortValue, value);
+        }
+        return map;
+    }
+    
     
     // ============================================================================================================================================ \\
     
@@ -152,6 +203,11 @@ public class Main extends Application
     }
     
     
+    public URL getResourceURL(String path)
+    {
+        return Main.class.getClassLoader().getResource(path);
+    }
+    
     // ============================================================================================================================================ \\
     
     
@@ -187,6 +243,17 @@ public class Main extends Application
         return saveGame;
     }
     
+    
+    public Map<Short, String> getGameItemNames()
+    {
+        return gameItemNames;
+    }
+    
+    
+    public Map<Short, String> getStructureNames()
+    {
+        return gameStructureNames;
+    }
     
     // ============================================================================================================================================ \\
 }

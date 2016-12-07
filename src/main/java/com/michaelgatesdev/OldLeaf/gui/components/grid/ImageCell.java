@@ -6,29 +6,24 @@ public class ImageCell extends Cell
 {
     // ============================================================================================================================================ \\.
     
-    Fills the
-    @param
+    private Image image;
     
-    cell with
-    image to
+    // ============================================================================================================================================ \\
     
     
-    // ============================================================================================================================================ \\    /**
-     *
-    an image
-    image the
-    cell wi
-    private I
-     *
-             *
-    fill the
-    // =======thmage image;===================================================================================================================================== \\    public ImageCell(Grid container, int minX, int minY, int maxX, int maxY)
+    public ImageCell(Grid container, int minX, int minY, int maxX, int maxY)
     {
         super(container, minX, minY, maxX, maxY);
     }
+    
+    // ============================================================================================================================================ \\
+    
+    
+    /**
+     * Fills the cell with an image
+     *
+     * @param image the image to fill the cell with
      */
-    
-    
     public void fillWithImage(Image image)
     {
         this.getGraphics().clearRect(this.getMinX() + 2, this.getMinY() + 2, this.getWidth() - 2, this.getHeight() - 2);
