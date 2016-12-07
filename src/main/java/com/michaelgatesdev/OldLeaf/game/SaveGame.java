@@ -28,7 +28,6 @@ import com.michaelgatesdev.OldLeaf.game.player.Gender;
 import com.michaelgatesdev.OldLeaf.game.player.Player;
 import com.michaelgatesdev.OldLeaf.game.player.TPCRegion;
 import com.michaelgatesdev.OldLeaf.game.player.inventory.PlayerInventory;
-import com.michaelgatesdev.OldLeaf.gui.GuiManager;
 import com.michaelgatesdev.OldLeaf.memory.ByteArrayImage;
 import com.michaelgatesdev.OldLeaf.util.HexUtil;
 import org.apache.commons.lang3.ArrayUtils;
@@ -111,7 +110,6 @@ public class SaveGame
         }
         
         this.readData(saveType);
-        GuiManager.populate();
     }
     
     

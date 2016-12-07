@@ -24,22 +24,13 @@ import com.michaelgatesdev.OldLeaf.game.SaveGame;
 import com.michaelgatesdev.OldLeaf.locale.UTF8Control;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Orientation;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.Separator;
 import javafx.scene.image.Image;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import org.apache.log4j.Logger;
-import org.controlsfx.control.StatusBar;
 
-import java.awt.*;
 import java.io.File;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -51,9 +42,6 @@ public class Main extends Application
     
     private static final int MAIN_WINDOW_WIDTH  = 1000;
     private static final int MAIN_WINDOW_HEIGHT = 650;
-    
-    private static final String SOURCE_CODE_URL = "https://github.com/MichaelGatesDev/OldLeaf/";
-    private static final String DONATE_URL      = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YP8QAA3Q4BTWC";
     
     private static Main instance;
     
@@ -68,7 +56,7 @@ public class Main extends Application
     private File appearanceTemplatesDir;
     
     // JavaFX stuff for later
-    private Scene scene;
+    private Scene mainScene;
     
     private SaveGame saveGame;
     
@@ -100,7 +88,6 @@ public class Main extends Application
         // Create/Initialize all the directories */
         rootDir = new File(System.getProperty("user.dir") + "/");
         backupsDir = createDirectory(rootDir, "_backups", true);
-        backupsDir = createDirectory(rootDir, "_backups", true);
         templatesDir = createDirectory(rootDir, "_templates", true);
         inventoryTemplatesDir = createDirectory(templatesDir, "inventory", true);
         townTemplatesDir = createDirectory(templatesDir, "town", true);
@@ -125,9 +112,8 @@ public class Main extends Application
         
         Parent root = FXMLLoader.load(res);
         
-        scene = new Scene(root, MAIN_WINDOW_WIDTH, MAIN_WINDOW_HEIGHT);
-        
-        this.createStatusBar();
+        Scene scene = new Scene(root, MAIN_WINDOW_WIDTH, MAIN_WINDOW_HEIGHT);
+        this.mainScene = scene;
         
         // Package window
         stage.getIcons().add(new Image("img/logo.png"));
@@ -136,55 +122,6 @@ public class Main extends Application
         stage.setMinWidth(MAIN_WINDOW_WIDTH);
         stage.setMinHeight(MAIN_WINDOW_HEIGHT);
         stage.show();
-    }
-    
-    
-    // ============================================================================================================================================ \\
-    
-    
-    /**
-     * Creates the main Status Bar of the program
-     */
-    private void createStatusBar()
-    {
-        BorderPane borderPane = (BorderPane) scene.lookup("#mainPane");
-        
-        StatusBar statusBar = new StatusBar();
-        statusBar.setId("statusBar");
-        statusBar.setText("Save.Load.PleaseLoad");
-        statusBar.setProgress(0.0);
-        
-        statusBar.getRightItems().add(new Separator(Orientation.VERTICAL));
-        
-        Hyperlink sourceLink = new Hyperlink("Source Code");
-        sourceLink.setOnMouseClicked(event ->
-        {
-            try
-            {
-                Desktop.getDesktop().browse(new URI(SOURCE_CODE_URL));
-            }
-            catch (IOException | URISyntaxException e)
-            {
-                e.printStackTrace();
-            }
-        });
-        statusBar.getRightItems().add(sourceLink);
-        
-        Hyperlink donateLink = new Hyperlink("Donate");
-        donateLink.setOnMouseClicked(event ->
-        {
-            try
-            {
-                Desktop.getDesktop().browse(new URI(DONATE_URL));
-            }
-            catch (IOException | URISyntaxException e)
-            {
-                e.printStackTrace();
-            }
-        });
-        statusBar.getRightItems().add(donateLink);
-        
-        borderPane.setBottom(statusBar);
     }
     
     // ============================================================================================================================================ \\
@@ -242,9 +179,6 @@ public class Main extends Application
     // ============================================================================================================================================ \\
     
     
-    /**
-     * @return The singleton instance of the program for easy access
-     */
     public static Main getInstance()
     {
         return instance;
@@ -253,7 +187,7 @@ public class Main extends Application
     
     public Scene getMainScene()
     {
-        return scene;
+        return mainScene;
     }
     
     // ============================================================================================================================================ \\
