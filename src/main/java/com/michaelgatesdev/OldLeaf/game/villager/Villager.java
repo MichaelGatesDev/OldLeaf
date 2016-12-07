@@ -8,8 +8,8 @@ public final class Villager
     private Species         species;
     private Gender          gender;
     private PersonalityType personality;
-
-
+    
+    
     public Villager(String name, Species species, Gender gender, PersonalityType personality)
     {
         this.name = name;
@@ -17,26 +17,26 @@ public final class Villager
         this.gender = gender;
         this.personality = personality;
     }
-
-
+    
+    
     public String getName()
     {
         return name;
     }
-
-
+    
+    
     public Species getSpecies()
     {
         return species;
     }
-
-
+    
+    
     public Gender getGender()
     {
         return gender;
     }
-
-
+    
+    
     public PersonalityType getPersonality()
     {
         return personality;

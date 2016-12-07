@@ -1,23 +1,3 @@
-/*
- * Copyright (C) Michael Gates (MichaelGatesDev@gmail.com) 2015
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- *
- */
-
-
 package com.michaelgatesdev.OldLeaf.game.player.appearance;
 
 import com.michaelgatesdev.OldLeaf.game.player.Gender;
@@ -44,30 +24,15 @@ public abstract class Characteristic
     // ============================================================================================================================================ \\
     
     
-    public void setThumb(Image thumb)
-    {
-        this.thumb = thumb;
-    }
-    
-    
-    public void setGender(Gender gender)
-    {
-        this.gender = gender;
-    }
-    
-    
-    public void setValue(Byte value)
-    {
-        this.value = value;
-    }
-    
-    
-    // ============================================================================================================================================ \\
-    
-    
     public Image getThumb()
     {
         return thumb;
+    }
+    
+    
+    public void setThumb(Image thumb)
+    {
+        this.thumb = thumb;
     }
     
     
@@ -77,9 +42,24 @@ public abstract class Characteristic
     }
     
     
+    // ============================================================================================================================================ \\
+    
+    
+    public void setGender(Gender gender)
+    {
+        this.gender = gender;
+    }
+    
+    
     public Byte getValue()
     {
         return value;
+    }
+    
+    
+    public void setValue(Byte value)
+    {
+        this.value = value;
     }
     
     

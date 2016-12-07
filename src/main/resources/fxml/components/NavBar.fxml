@@ -19,17 +19,15 @@
   ~
   -->
 
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.BorderPane?>
-
-<TabPane id="navbar"
+<TabPane xmlns:fx="http://javafx.com/fxml/1"
+         id="navbar"
          prefHeight="500.0"
          prefWidth="800.0"
          tabClosingPolicy="UNAVAILABLE"
          BorderPane.alignment="CENTER"
          xmlns="http://javafx.com/javafx/null"
-         xmlns:fx="http://javafx.com/fxml/1"
          fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.NavBarController">
     <Tab id="tab-main"
          text="Main">

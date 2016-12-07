@@ -1,23 +1,3 @@
-/*
- * Copyright (C) Michael Gates (MichaelGatesDev@gmail.com) 2015
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- *
- */
-
-
 package com.michaelgatesdev.OldLeaf.game;
 
 public class GameItem
@@ -50,6 +30,83 @@ public class GameItem
     public boolean isNothing()
     {
         return (value == 0x7FFE);
+    }
+    
+    
+    public byte getFlag1()
+    {
+        return flag1;
+    }
+    
+    // ============================================================================================================================================ \\
+    
+    
+    public void setFlag1(byte flag1)
+    {
+        this.flag1 = flag1;
+    }
+    
+    
+    public byte getFlag2()
+    {
+        return flag2;
+    }
+    
+    
+    public void setFlag2(byte flag2)
+    {
+        this.flag2 = flag2;
+    }
+    
+    
+    public boolean isBuried()
+    {
+        return buried;
+    }
+    
+    
+    public void setBuried(boolean buried)
+    {
+        this.buried = buried;
+    }
+    
+    
+    public boolean isWatered()
+    {
+        return watered;
+    }
+    
+    
+    // ============================================================================================================================================ \\
+    
+    
+    public void setWatered(boolean watered)
+    {
+        this.watered = watered;
+    }
+    
+    
+    public short getValue()
+    {
+        return value;
+    }
+    
+    
+    public void setValue(short value)
+    {
+        this.value = value;
+    }
+    
+    
+    public String getName()
+    {
+        return name;
+    }
+    
+    
+    public void setName(String name)
+    {
+        this.name = name;
     }
     
     
@@ -111,83 +168,6 @@ public class GameItem
         }
         
         
-    }
-    
-    // ============================================================================================================================================ \\
-    
-    
-    public void setFlag1(byte flag1)
-    {
-        this.flag1 = flag1;
-    }
-    
-    
-    public void setFlag2(byte flag2)
-    {
-        this.flag2 = flag2;
-    }
-    
-    
-    public void setBuried(boolean buried)
-    {
-        this.buried = buried;
-    }
-    
-    
-    public void setWatered(boolean watered)
-    {
-        this.watered = watered;
-    }
-    
-    
-    public void setValue(short value)
-    {
-        this.value = value;
-    }
-    
-    
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-    
-    
-    // ============================================================================================================================================ \\
-    
-    
-    public byte getFlag1()
-    {
-        return flag1;
-    }
-    
-    
-    public byte getFlag2()
-    {
-        return flag2;
-    }
-    
-    
-    public boolean isBuried()
-    {
-        return buried;
-    }
-    
-    
-    public boolean isWatered()
-    {
-        return watered;
-    }
-    
-    
-    public short getValue()
-    {
-        return value;
-    }
-    
-    
-    public String getName()
-    {
-        return name;
     }
     
     

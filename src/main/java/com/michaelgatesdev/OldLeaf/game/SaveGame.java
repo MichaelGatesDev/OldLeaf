@@ -1,29 +1,9 @@
-/*
- * Copyright (C) Michael Gates (MichaelGatesDev@gmail.com) 2015
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- *
- */
-
-
 package com.michaelgatesdev.OldLeaf.game;
 
 import com.michaelgatesdev.OldLeaf.exceptions.GameItemAddException;
 import com.michaelgatesdev.OldLeaf.exceptions.SaveSizeInvalidException;
-import com.michaelgatesdev.OldLeaf.game.map.TownMap;
 import com.michaelgatesdev.OldLeaf.game.map.GameMap;
+import com.michaelgatesdev.OldLeaf.game.map.TownMap;
 import com.michaelgatesdev.OldLeaf.game.offsets.OffsetStash;
 import com.michaelgatesdev.OldLeaf.game.player.Gender;
 import com.michaelgatesdev.OldLeaf.game.player.Player;
@@ -77,16 +57,6 @@ public class SaveGame
     }
     
     
-    private enum SaveType
-    {
-        STANDARD,
-        LEGACY,
-        RAM,
-    }
-    
-    // ============================================================================================================================================ \\
-    
-    
     public void load() throws SaveSizeInvalidException
     {
         long fileSize = file.length();
@@ -112,6 +82,8 @@ public class SaveGame
         
         this.readData(saveType);
     }
+    
+    // ============================================================================================================================================ \\
     
     
     private void readData(SaveType type)
@@ -370,13 +342,13 @@ public class SaveGame
         }
     }
     
-    // ============================================================================================================================================ \\
-    
     
     public File getFile()
     {
         return file;
     }
+    
+    // ============================================================================================================================================ \\
     
     
     public SaveType getSaveType()
@@ -448,6 +420,14 @@ public class SaveGame
     public GameMap getIslandMap()
     {
         return islandMap;
+    }
+    
+    
+    private enum SaveType
+    {
+        STANDARD,
+        LEGACY,
+        RAM,
     }
     
     

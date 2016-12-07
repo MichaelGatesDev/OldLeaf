@@ -21,41 +21,15 @@ public class PlayerAppearance
     // ============================================================================================================================================ \\
     
     
-    public void setHairStyle(HairStyle hairStyle)
-    {
-        this.hairStyle = hairStyle;
-    }
-    
-    
-    public void setHairColor(HairColor hairColor)
-    {
-        this.hairColor = hairColor;
-    }
-    
-    
-    public void setEyeColor(EyeColor eyeColor)
-    {
-        this.eyeColor = eyeColor;
-    }
-    
-    
-    public void setFaceStyle(FaceStyle faceStyle)
-    {
-        this.faceStyle = faceStyle;
-    }
-    
-    
-    public void setTan(int tan)
-    {
-        this.tan = tan;
-    }
-    
-    // ============================================================================================================================================ \\
-    
-    
     public HairStyle getHairStyle()
     {
         return hairStyle;
+    }
+    
+    
+    public void setHairStyle(HairStyle hairStyle)
+    {
+        this.hairStyle = hairStyle;
     }
     
     
@@ -65,9 +39,23 @@ public class PlayerAppearance
     }
     
     
+    public void setHairColor(HairColor hairColor)
+    {
+        this.hairColor = hairColor;
+    }
+    
+    
     public EyeColor getEyeColor()
     {
         return eyeColor;
+    }
+    
+    // ============================================================================================================================================ \\
+    
+    
+    public void setEyeColor(EyeColor eyeColor)
+    {
+        this.eyeColor = eyeColor;
     }
     
     
@@ -77,9 +65,21 @@ public class PlayerAppearance
     }
     
     
+    public void setFaceStyle(FaceStyle faceStyle)
+    {
+        this.faceStyle = faceStyle;
+    }
+    
+    
     public int getTan()
     {
         return tan;
+    }
+    
+    
+    public void setTan(int tan)
+    {
+        this.tan = tan;
     }
     
     // ============================================================================================================================================ \\

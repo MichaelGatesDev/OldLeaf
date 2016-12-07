@@ -23,13 +23,13 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
-<ScrollPane fitToHeight="true"
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1"
+            fitToHeight="true"
             fitToWidth="true"
             hbarPolicy="NEVER"
             prefHeight="800.0"
             prefWidth="230.0"
-            xmlns="http://javafx.com/javafx/null"
-            xmlns:fx="http://javafx.com/fxml/1">
+            xmlns="http://javafx.com/javafx/null">
 
     <VBox alignment="TOP_CENTER"
           spacing="15.0">

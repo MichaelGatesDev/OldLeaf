@@ -1,6 +1,5 @@
 package com.michaelgatesdev.OldLeaf.util;
 
-
 import javax.xml.bind.DatatypeConverter;
 
 public class HexUtil

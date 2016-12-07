@@ -125,15 +125,6 @@ public abstract class Grid extends Canvas implements GridEvents
     // ============================================================================================================================================ \\
     
     
-    public void setCells(Cell[][] cells)
-    {
-        this.cells = cells;
-    }
-    
-    
-    // ============================================================================================================================================ \\
-    
-    
     /**
      * @return The number of columns in the grid
      */
@@ -141,6 +132,9 @@ public abstract class Grid extends Canvas implements GridEvents
     {
         return columns;
     }
+    
+    
+    // ============================================================================================================================================ \\
     
     
     /**
@@ -167,6 +161,12 @@ public abstract class Grid extends Canvas implements GridEvents
     public Cell[][] getCells()
     {
         return cells;
+    }
+    
+    
+    public void setCells(Cell[][] cells)
+    {
+        this.cells = cells;
     }
     
     // ============================================================================================================================================ \\

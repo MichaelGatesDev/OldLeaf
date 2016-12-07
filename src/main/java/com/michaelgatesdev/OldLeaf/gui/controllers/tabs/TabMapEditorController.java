@@ -1,23 +1,3 @@
-/*
- * Copyright (C) Michael Gates (MichaelGatesDev@gmail.com) 2015
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- *
- */
-
-
 package com.michaelgatesdev.OldLeaf.gui.controllers.tabs;
 
 import javafx.fxml.FXML;
@@ -38,33 +18,27 @@ import java.util.ResourceBundle;
 public class TabMapEditorController implements Initializable
 {
     // ============================================================================================================================================ \\
-
+    
     private static final Logger logger = Logger.getLogger(TabMapEditorController.class);
-
+    
     @FXML
     Button editTownButton;
-
+    
     @FXML
     Button loadTownButton;
-
+    
     @FXML
     Button saveTownButton;
-
-
     @FXML
     Button editIslandButton;
-
+    
     @FXML
     Button loadIslandButton;
-
+    
     @FXML
-    Button saveIslandButton;
-
-
-    // ============================================================================================================================================ \\
-
-
-    @Override
+    Button saveIslandButton;    // ============================================================================================================================================ \\    @Override
+    
+    
     public void initialize(URL location, ResourceBundle resources)
     {
         editTownButton.setOnMouseClicked(event ->
@@ -85,8 +59,5 @@ public class TabMapEditorController implements Initializable
                 e.printStackTrace();
             }
         });
-    }
-
-
-    // ============================================================================================================================================ \\
+    }    // ============================================================================================================================================ \\
 }

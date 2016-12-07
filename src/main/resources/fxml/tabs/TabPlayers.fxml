@@ -21,12 +21,12 @@
 
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<BorderPane id=""
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            id=""
             prefHeight="500.0"
             prefWidth="800.0"
             styleClass="content-pane"
             xmlns="http://javafx.com/javafx/null"
-            xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.tabs.TabPlayersController">
 
     <stylesheets>
