@@ -272,8 +272,8 @@ public class SaveGame
                 
                 for (int j = 0; j < GameMap.TILES_TOTAL; j++)
                 {
-                    int realX = acreX * 16 + (j % 16) + 0;
-                    int realY = acreY * 16 + (j / 16) + 0;
+                    int realX = acreX * 16 + (j % 16);
+                    int realY = acreY * 16 + (j / 16);
                     
                     logger.debug(String.format("Real X: %d | Real Y: %d", realX, realY));
                     
