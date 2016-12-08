@@ -37,6 +37,8 @@ public class Main extends Application
     
     private File rootDir;
     private File resourcesDir;
+    private File imageResDir;
+    private File textResDir;
     private File backupsDir;
     private File templatesDir;
     private File inventoryTemplatesDir;
@@ -47,6 +49,7 @@ public class Main extends Application
     private SaveGame           saveGame;
     private Map<Short, String> gameItemNames;
     private Map<Short, String> gameStructureNames;
+    private Map<Byte, File>    acreImages;
     
     // ============================================================================================================================================ \\
     
@@ -76,20 +79,15 @@ public class Main extends Application
         locale = ResourceBundle.getBundle("Locale", /*Locale.JAPAN,*/ new UTF8Control());
         
         // Create/Initialize all the directories */
-        rootDir = new File(System.getProperty("user.dir") + "/");
-        resourcesDir = createDirectory(rootDir, "_resources", true);
-        backupsDir = createDirectory(rootDir, "_backups", true);
-        templatesDir = createDirectory(rootDir, "_templates", true);
-        inventoryTemplatesDir = createDirectory(templatesDir, "inventory", true);
-        townTemplatesDir = createDirectory(templatesDir, "town", true);
-        islandTemplatesDir = createDirectory(templatesDir, "island", true);
-        appearanceTemplatesDir = createDirectory(templatesDir, "appearance", true);
+        initializeDirectories();
         
         // Create/Initialize all files
-        File itemsFile = copyResourceFile("text/items.txt", "items.txt", resourcesDir);
+        File itemsFile = new File(textResDir, "items.txt");
         this.gameItemNames = this.loadHexStringMap(itemsFile, "\\|");
-        File structuresFile = copyResourceFile("text/structures.txt", "gameStructureNames.txt", resourcesDir);
+        File structuresFile = new File(textResDir, "structures.txt");
         this.gameStructureNames = this.loadHexStringMap(structuresFile, "\\|");
+        
+        this.loadAcreImages();
         
         
         // Init GUI
@@ -97,21 +95,45 @@ public class Main extends Application
     }
     
     
-    private File copyResourceFile(String resourcePath, String fileName, File dest)
+    private void initializeDirectories()
     {
-        File file = new File(dest, fileName);
-        if (!file.exists())
+        try
         {
-            try
-            {
-                FileUtils.copyURLToFile(this.getResourceURL(resourcePath), file);
-            }
-            catch (IOException e)
-            {
-                e.printStackTrace();
-            }
+            rootDir = new File(System.getProperty("user.dir") + "/");
+            
+            resourcesDir = FileUtil.createDirectory(rootDir, "_resources", true);
+            FileUtils.copyDirectoryToDirectory(FileUtils.toFile(this.getResourceURL("text/")), resourcesDir);
+            textResDir = new File(resourcesDir, "/text/");
+            FileUtils.copyDirectoryToDirectory(FileUtils.toFile(this.getResourceURL("img/")), resourcesDir);
+            imageResDir = new File(resourcesDir, "/img/");
+            
+            backupsDir = FileUtil.createDirectory(rootDir, "_backups", true);
+            
+            templatesDir = FileUtil.createDirectory(rootDir, "_templates", true);
+            inventoryTemplatesDir = FileUtil.createDirectory(templatesDir, "inventory", true);
+            townTemplatesDir = FileUtil.createDirectory(templatesDir, "town", true);
+            islandTemplatesDir = FileUtil.createDirectory(templatesDir, "island", true);
+            appearanceTemplatesDir = FileUtil.createDirectory(templatesDir, "appearance", true);
         }
-        return file;
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+    
+    
+    private void loadAcreImages()
+    {
+        this.acreImages = new HashMap<>();
+        
+        File acreImgDir = new File(imageResDir, "acre/");
+        for (File f : acreImgDir.listFiles())
+        {
+            String name = f.getName().replace(".png", "").replace("0x", "");
+            byte value = (byte) Integer.parseInt(name, 16);
+            
+            acreImages.put(value, f);
+        }
     }
     
     
@@ -142,9 +164,17 @@ public class Main extends Application
     }
     
     
+    // ============================================================================================================================================ \\
+    
+    
+    private URL getResourceURL(String path)
+    {
+        return Main.class.getClassLoader().getResource(path);
+    }
+    
+    
     private Map<Short, String> loadHexStringMap(File file, String delimiter)
     {
-        /* Game items */
         Map<Short, String> map = new HashMap<>();
         Map<String, String> itemsRaw = FileUtil.loadMapFromFile(file, delimiter, "(^[^|]*$)");
         
@@ -160,52 +190,21 @@ public class Main extends Application
     }
     
     
-    // ============================================================================================================================================ \\
-    
-    
-    /**
-     * Creates a {@link File} directory.
-     *
-     * @param destDir the directory which will parent the created directory
-     * @param name    the name of the directory
-     * @param log     log the result to console
-     * @return created directory
-     */
-    private File createDirectory(File destDir, String name, boolean log)
+    public String getItemNameFromValue(short id)
     {
-        if (destDir == null || !destDir.exists())
-        {
-            if (log)
-            {
-                logger.error(String.format(locale.getString("File.Directory.DestinationNonexistent"), destDir));
-            }
-            return null;
-        }
-        
-        File folder = new File(destDir, "/" + name + "/");
-        if (!folder.exists())
-        {
-            boolean result = folder.mkdir();
-            
-            if (log)
-            {
-                if (result)
-                {
-                    logger.info(String.format(locale.getString("File.Directory.Created"), name, destDir.toString()));
-                }
-                else
-                {
-                    logger.error(String.format(locale.getString("File.Directory.ErrorCreating"), name, destDir.toString()));
-                }
-            }
-        }
-        return folder;
+        return this.gameItemNames.get(id);
     }
     
     
-    public URL getResourceURL(String path)
+    public String getStructureNameFromValue(short id)
     {
-        return Main.class.getClassLoader().getResource(path);
+        return this.gameStructureNames.get(id);
+    }
+    
+    
+    public File getAcreImageFromValue(byte value)
+    {
+        return acreImages.get(value);
     }
     
     // ============================================================================================================================================ \\
@@ -243,17 +242,6 @@ public class Main extends Application
         return saveGame;
     }
     
-    
-    public Map<Short, String> getGameItemNames()
-    {
-        return gameItemNames;
-    }
-    
-    
-    public Map<Short, String> getStructureNames()
-    {
-        return gameStructureNames;
-    }
     
     // ============================================================================================================================================ \\
 }

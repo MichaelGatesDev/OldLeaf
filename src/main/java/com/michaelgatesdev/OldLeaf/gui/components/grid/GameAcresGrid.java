@@ -1,6 +1,7 @@
 package com.michaelgatesdev.OldLeaf.gui.components.grid;
 
-import com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor.MapEditorController;
+import com.michaelgatesdev.OldLeaf.game.Acre;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
 import org.apache.log4j.Logger;
@@ -10,8 +11,6 @@ public class GameAcresGrid extends ImageGrid
     // ============================================================================================================================================ \\
     
     private static final Logger logger = Logger.getLogger(GameAcresGrid.class);
-    
-    private MapEditorController mapEditorController;
     
     // ============================================================================================================================================ \\
     
@@ -26,26 +25,29 @@ public class GameAcresGrid extends ImageGrid
     public GameAcresGrid(int columns, int rows, double cellSize, Color separatorColor, double separatorWidth)
     {
         super(columns, rows, cellSize, separatorColor, separatorWidth);
-        
-        this.mockAcres();
     }
     
     // ============================================================================================================================================ \\
     
     
-    private void mockAcres()
+    public void fillImages(Acre[][] acres, int acreColumns, int acreRows)
     {
-//        // Fill grid with random acres
-//        List<Acre> acres = new ArrayList<>(Main.getInstance().getAcres().values());
-//        Cell[][] cells = getCells();
-//        for (Cell[] cellArr : cells)
-//        {
-//            for (Cell cell : cellArr)
-//            {
-//                Image image = acres.get(new Random().nextInt(acres.size() - 1)).getImage();
-//                cell.fillWithImage(image);
-//            }
-//        }
+        for (int x = 0; x < acreColumns; x++)
+        {
+            for (int y = 0; y < acreRows; y++)
+            {
+                Acre acre = acres[x][y];
+                if (acre.getImageFile() == null)
+                {
+                    logger.debug(String.format("Acre image for X:%d | Y: %d is null", x, y));
+                    continue;
+                }
+                Image image = new Image(acre.getImageFile().toURI().toString());
+                
+                ImageCell cell = (ImageCell) this.getCells()[x][y];
+                cell.fillWithImage(image);
+            }
+        }
     }
     
     // ============================================================================================================================================ \\
@@ -54,8 +56,6 @@ public class GameAcresGrid extends ImageGrid
     @Override
     public void onCellClick(MouseButton button, Cell cell, int gridPosX, int gridPosY)
     {
-        // This event can't be fired because there is a thieving grid above it
-        // TODO allow grid to be clicked under another grid
     }
     
     
@@ -63,6 +63,7 @@ public class GameAcresGrid extends ImageGrid
     public void onCellHover(Cell cell, int gridX, int gridY)
     {
     }
+    
     
     // ============================================================================================================================================ \\
 }

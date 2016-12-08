@@ -1,13 +1,13 @@
 package com.michaelgatesdev.OldLeaf.game;
 
-import javafx.scene.image.Image;
+import java.io.File;
 
 public final class Acre
 {
     // ============================================================================================================================================ \\
     
-    private short value;
-    private Image image;
+    private byte value;
+    private File file;
     
     
     // ============================================================================================================================================ \\
@@ -20,13 +20,13 @@ public final class Acre
     // ============================================================================================================================================ \\
     
     
-    public short getValue()
+    public void setImageFile(File file)
     {
-        return value;
+        this.file = file;
     }
     
     
-    public void setValue(short value)
+    public void setValue(byte value)
     {
         this.value = value;
     }
@@ -34,15 +34,15 @@ public final class Acre
     // ============================================================================================================================================ \\
     
     
-    public Image getImage()
+    public File getImageFile()
     {
-        return image;
+        return file;
     }
     
     
-    public void setImage(Image image)
+    public short getValue()
     {
-        this.image = image;
+        return value;
     }
     
     // ============================================================================================================================================ \\

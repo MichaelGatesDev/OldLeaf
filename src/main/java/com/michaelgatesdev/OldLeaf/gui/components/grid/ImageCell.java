@@ -26,10 +26,21 @@ public class ImageCell extends Cell
      */
     public void fillWithImage(Image image)
     {
+        this.image = image;
+        
         this.getGraphics().clearRect(this.getMinX() + 2, this.getMinY() + 2, this.getWidth() - 2, this.getHeight() - 2);
         
         this.getGraphics().drawImage(image, this.getMinX() + 1, this.getMinY() + 1, this.getWidth() - 1, this.getHeight() - 1);
     }
+    
+    // ============================================================================================================================================ \\
+    
+    
+    public Image getImage()
+    {
+        return image;
+    }
+    
     
     // ============================================================================================================================================ \\
 }

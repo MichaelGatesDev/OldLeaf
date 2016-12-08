@@ -43,14 +43,13 @@ public class MapEditorController implements Initializable
         
         acresGrid = new GameAcresGrid(GameMap.TOWN_ACRE_COLUMNS, GameMap.TOWN_ACRE_ROWS, TILE_SIZE * 16, Color.BLACK, 1.0D);
         gridContainer.getChildren().add(acresGrid);
+        acresGrid.fillImages(Main.getInstance().getSaveGame().getTownMap().getAcres(), GameMap.TOWN_ACRE_COLUMNS, GameMap.TOWN_ACRE_ROWS);
         
         int maxCols = GameMap.TOWN_ACRE_COLUMNS * GameMap.TILE_COLUMNS;
         int maxRows = GameMap.TOWN_ACRE_ROWS * GameMap.TILE_ROWS;
         tilesGrid = new GameTilesGrid(maxCols, maxRows, TILE_SIZE, Color.BLACK, 0.25D);
         gridContainer.getChildren().add(tilesGrid);
-        logger.debug("Filling tiles grid...");
         tilesGrid.fillWithItems(Main.getInstance().getSaveGame().getTownMap().getTiles(), maxCols, maxRows);
-        logger.debug("Finished filling tiles grid.");
         
         //TODO buildings grid
         

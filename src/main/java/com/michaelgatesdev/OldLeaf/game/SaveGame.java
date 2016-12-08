@@ -240,12 +240,30 @@ public class SaveGame
             
             // TOWN
             int townItemsOffset = offsets.MAP_ITEMS();
-            townMap = new TownMap();
+            this.townMap = new TownMap();
+            int acreN = 0;
             int townN = 0;
+            int acreShift = 0;
             for (int i = 0; i < GameMap.TOWN_ACRE_COLUMNS * GameMap.TOWN_ACRE_ROWS; i++)
             {
                 int acreX = i % 5;
                 int acreY = i / 5;
+                
+                if (acreN >= 5 && acreN % 5 == 0)
+                {
+                    acreShift += 2;
+                }
+                
+                int acreOffset = offsets.MAP_ACRES() + (8 * 2) + (acreN * 2) + (acreShift * 2);
+                raf.seek(acreOffset);
+                byte acreID = (byte) raf.read();
+                
+                logger.debug("Acre " + acreX + "," + acreY + " = 0x" + Integer.toHexString(acreID));
+                
+                Acre acre = new Acre();
+                acre.setValue(acreID);
+                acre.setImageFile(Main.getInstance().getAcreImageFromValue(acreID));
+                townMap.getAcres()[acreX][acreY] = acre;
                 
                 for (int j = 0; j < GameMap.TILES_TOTAL; j++)
                 {
@@ -258,7 +276,7 @@ public class SaveGame
                     byte flag2 = raf.readByte();
                     
                     GameItem item = new GameItem.Builder()
-                            .withName(Main.getInstance().getGameItemNames().get(id))
+                            .withName(Main.getInstance().getItemNameFromValue(id))
                             .withFlag1(flag1)
                             .withFlag2(flag2)
                             .withShortValue(id)
@@ -267,6 +285,7 @@ public class SaveGame
                     townMap.getTiles()[realX][realY] = item;
                     townN++;
                 }
+                acreN++;
             }
             
             // ISLAND
