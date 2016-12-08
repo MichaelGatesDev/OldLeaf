@@ -1,5 +1,6 @@
 package com.michaelgatesdev.OldLeaf.gui.components.grid;
 
+import com.michaelgatesdev.OldLeaf.Main;
 import com.michaelgatesdev.OldLeaf.game.GameItem;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
@@ -14,6 +15,7 @@ public class GameTilesGrid extends PaintGrid
     private static final Logger logger = Logger.getLogger(GameTilesGrid.class);
     
     private Label coordinatesLabel;
+    private Label objectNameLabel;
     
     // ============================================================================================================================================ \\
     
@@ -48,6 +50,7 @@ public class GameTilesGrid extends PaintGrid
     }
     
     
+    //TODO implement colors
     private Color getItemColor(GameItem item)
     {
         if (item.isNothing())
@@ -86,11 +89,21 @@ public class GameTilesGrid extends PaintGrid
     @Override
     public void onCellHover(Cell cell, int gridX, int gridY)
     {
-        if (!checkCoordinatesLabel())
+        if (!checkLabels())
         {
             return;
         }
         coordinatesLabel.setText(String.format("X: %d Y: %d", gridX + 1, gridY + 1));
+        
+        GameItem item = Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY];
+        if (item != null)
+        {
+            objectNameLabel.setText(item.getName());
+        }
+        else
+        {
+            objectNameLabel.setText("AirF");
+        }
     }
     
     
@@ -99,20 +112,25 @@ public class GameTilesGrid extends PaintGrid
      *
      * @return If coordinatesLabel is not null and is usable
      */
-    private boolean checkCoordinatesLabel()
+    private boolean checkLabels()
     {
         if (coordinatesLabel != null)
         {
             return true;
         }
         
-        Node node = this.getScene().lookup("#coordinatesLabel");
-        if (!(node instanceof Label))
+        Node coordsNode = this.getScene().lookup("#coordinatesLabel");
+        if (coordsNode instanceof Label)
         {
-            return false;
+            coordinatesLabel = (Label) coordsNode;
         }
         
-        coordinatesLabel = (Label) node;
+        Node nameNode = this.getScene().lookup("#objectNameLabel");
+        if (nameNode instanceof Label)
+        {
+            objectNameLabel = (Label) nameNode;
+        }
+        
         return true;
     }
     

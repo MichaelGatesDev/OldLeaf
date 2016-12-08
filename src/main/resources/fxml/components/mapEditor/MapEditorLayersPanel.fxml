@@ -19,36 +19,46 @@
   ~
   -->
 
-<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.HBox?>
-<HBox xmlns:fx="http://javafx.com/fxml/1"
-      alignment="CENTER"
-      prefHeight="40.0"
-      prefWidth="600.0"
-      spacing="50.0"
-      fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor.MapEditorLayersController"
-      xmlns="http://javafx.com/javafx/null">
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0" spacing="50.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor.MapEditorLayersController">
 
     <stylesheets>
     </stylesheets>
 
     <children>
-        <Label text="X: 0 Y: 0"
-               fx:id="coordinatesLabel"/>
-        <Separator orientation="VERTICAL"
-                   prefHeight="200.0"/>
-        <CheckBox mnemonicParsing="false"
-                  selected="true"
-                  text="Acres"/>
-        <CheckBox layoutX="285.0"
-                  layoutY="52.0"
-                  mnemonicParsing="false"
-                  selected="true"
-                  text="Buildings"/>
-        <CheckBox layoutX="335.0"
-                  layoutY="52.0"
-                  mnemonicParsing="false"
-                  selected="true"
-                  text="Items"/>
+      <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0" HBox.hgrow="ALWAYS">
+         <children>
+              <Label fx:id="coordinatesLabel" text="X: 0 Y: 0" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+              <Label fx:id="objectNameLabel" text="Air" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <HBox.margin>
+            <Insets left="50.0" />
+         </HBox.margin>
+      </HBox>
+        <Separator orientation="VERTICAL" prefHeight="200.0" />
+      <HBox alignment="CENTER_RIGHT" spacing="60.0">
+         <children>
+              <CheckBox mnemonicParsing="false" selected="true" text="Acres" />
+              <CheckBox mnemonicParsing="false" selected="true" text="Buildings" />
+              <CheckBox mnemonicParsing="false" selected="true" text="Items" />
+         </children>
+         <HBox.margin>
+            <Insets right="50.0" />
+         </HBox.margin>
+      </HBox>
     </children>
 </HBox>
