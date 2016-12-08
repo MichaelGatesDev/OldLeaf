@@ -102,7 +102,7 @@ public class GameTilesGrid extends PaintGrid
         }
         else
         {
-            objectNameLabel.setText("AirF");
+            objectNameLabel.setText("Air");
         }
     }
     
