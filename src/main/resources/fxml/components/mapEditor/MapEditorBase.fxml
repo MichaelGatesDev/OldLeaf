@@ -23,8 +23,8 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1"
-            prefHeight="500.0"
-            prefWidth="800.0"
+            prefHeight="700.0"
+            prefWidth="1000.0"
             fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor.MapEditorController"
             xmlns="http://javafx.com/javafx/null">
 

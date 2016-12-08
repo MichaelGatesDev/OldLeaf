@@ -257,8 +257,8 @@ public class SaveGame
                 int acreOffset = offsets.MAP_ACRES() + (8 * 2) + (acreN * 2) + (acreShift * 2);
                 raf.seek(acreOffset);
                 byte acreID = (byte) raf.read();
-                
-                logger.debug("Acre " + acreX + "," + acreY + " = 0x" + Integer.toHexString(acreID));
+
+//                logger.debug("Acre " + acreX + "," + acreY + " = 0x" + Integer.toHexString(acreID));
                 
                 Acre acre = new Acre();
                 acre.setValue(acreID);
