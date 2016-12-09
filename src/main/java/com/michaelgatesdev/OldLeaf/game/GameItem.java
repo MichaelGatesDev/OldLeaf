@@ -4,7 +4,7 @@ public class GameItem
 {
     // ============================================================================================================================================ \\
     
-    public static final GameItem EMPTY = new GameItem.Builder().withShortValue((short) 0x7FFE).withName("Empty").build();
+    public static final GameItem AIR = new GameItem.Builder().withShortValue((short) 0x7FFE).withName("Air").build();
     
     private byte    flag1;
     private byte    flag2;

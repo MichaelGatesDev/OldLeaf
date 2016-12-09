@@ -176,12 +176,12 @@ public class Main extends Application
     private Map<Short, String> loadHexStringMap(File file, String delimiter)
     {
         Map<Short, String> map = new HashMap<>();
-        Map<String, String> itemsRaw = FileUtil.loadMapFromFile(file, delimiter, "(^[^|]*$)");
+        Map<String, String> itemsRaw = FileUtil.loadMapFromFile(file, delimiter, "^([A-Fa-f0-9]{4}[|](.*))$");
         
         for (String key : itemsRaw.keySet())
         {
             String value = itemsRaw.get(key);
-            byte[] bytes = HexUtil.toByteArray(key);
+            byte[] bytes = HexUtil.stringToByteArray(key);
             short shortValue = HexUtil.byteArrayToShort(bytes);
             
             map.put(shortValue, value);

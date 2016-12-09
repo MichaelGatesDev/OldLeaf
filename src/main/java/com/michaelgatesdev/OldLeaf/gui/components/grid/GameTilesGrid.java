@@ -17,6 +17,8 @@ public class GameTilesGrid extends PaintGrid
     private Label coordinatesLabel;
     private Label objectNameLabel;
     
+    private GameItem selectedItem;
+    
     // ============================================================================================================================================ \\
     
     
@@ -65,23 +67,32 @@ public class GameTilesGrid extends PaintGrid
     
     
     @Override
-    public void onCellClick(MouseButton button, Cell cell, int gridPosX, int gridPosY)
+    public void onCellClick(MouseButton button, Cell cell, int gridX, int gridY)
     {
         PaintableCell pc = (PaintableCell) cell;
         
+        // TODO: Implement special map editor clicks
         if (button == MouseButton.PRIMARY)
         {
-            if (!pc.isPainted())
-            {
-                pc.paint();
-            }
+            Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY] = selectedItem;
+            pc.paint(getItemColor(selectedItem));
         }
         else if (button == MouseButton.SECONDARY)
         {
             if (pc.isPainted())
             {
+                Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY] = GameItem.AIR;
                 pc.clean();
             }
+        }
+        else if (button == MouseButton.MIDDLE)
+        {
+            if (!pc.isPainted())
+            {
+                return;
+            }
+            
+            this.selectedItem = Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY];
         }
     }
     

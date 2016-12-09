@@ -221,7 +221,7 @@ public class SaveGame
                         imageBytes += HexUtil.toHexString(new byte[]{ raf.readByte() });
                     }
                     
-                    BufferedImage image = ImageIO.read(new ByteArrayInputStream(HexUtil.toByteArray(imageBytes)));
+                    BufferedImage image = ImageIO.read(new ByteArrayInputStream(HexUtil.stringToByteArray(imageBytes)));
                     if (image != null)
                     {
                         ByteArrayOutputStream baos = new ByteArrayOutputStream();

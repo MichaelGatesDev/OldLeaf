@@ -10,7 +10,7 @@ public class HexUtil
     }
     
     
-    public static byte[] toByteArray(String s)
+    public static byte[] stringToByteArray(String s)
     {
         return DatatypeConverter.parseHexBinary(s);
     }
@@ -26,7 +26,7 @@ public class HexUtil
     public static byte[] shortToByteArray(Short s)
     {
         String hex = Integer.toHexString(s & 0xFFFF);
-        return toByteArray(hex);
+        return stringToByteArray(hex);
     }
     
     

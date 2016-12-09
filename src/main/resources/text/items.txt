@@ -1,4 +1,7 @@
-﻿Patterns
+﻿// AIR
+7FFE|Air
+
+Patterns
 --------
 009d|Pattern
 

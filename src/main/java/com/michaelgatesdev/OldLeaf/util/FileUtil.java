@@ -5,13 +5,9 @@ import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 public class FileUtil
 {
@@ -62,7 +58,7 @@ public class FileUtil
     }
     
     
-    public static Map<String, String> loadMapFromFile(File f, String delimiter, String... patternsToIgnore)
+    public static Map<String, String> loadMapFromFile(File f, String delimiter, String patternToMatch)
     {
         Map<String, String> result = new HashMap<>();
         
@@ -70,27 +66,18 @@ public class FileUtil
         {
             try
             {
-                List<Pattern> patterns = Arrays.stream(patternsToIgnore).map(Pattern::compile).collect(Collectors.toList());
-                
                 // Read all lines of file
-                loop:
                 for (Object o : FileUtils.readLines(f))
                 {
                     // current line
                     String line = (String) o;
                     
-                    // check against all patterns
-                    for (Pattern p : patterns)
+                    Pattern p = Pattern.compile(patternToMatch);
+                    
+                    if (!p.matcher(line).matches())
                     {
-                        // if line is blank or a comment
-                        Matcher m = p.matcher(line);
-                        
-                        // If the line is a match
-                        if (m.find())
-                        {
-                            // skip it
-                            continue loop;
-                        }
+                        logger.debug(line);
+                        continue;
                     }
                     
                     // split the string
