@@ -41,7 +41,7 @@ public class MapEditorController implements Initializable
     {
         long startTime = System.currentTimeMillis();
         
-        acresGrid = new GameAcresGrid(GameMap.TOWN_ACRE_COLUMNS, GameMap.TOWN_ACRE_ROWS, TILE_SIZE * 16, Color.BLACK, 1.0D);
+        acresGrid = new GameAcresGrid(GameMap.TOWN_ACRE_COLUMNS, GameMap.TOWN_ACRE_ROWS, TILE_SIZE * 16, Color.BLACK, 1.25D);
         gridContainer.getChildren().add(acresGrid);
         acresGrid.fillImages(Main.getInstance().getSaveGame().getTownMap().getAcres(), GameMap.TOWN_ACRE_COLUMNS, GameMap.TOWN_ACRE_ROWS);
         
