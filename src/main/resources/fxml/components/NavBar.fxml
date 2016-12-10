@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 
+<?import javafx.scene.control.*?>
 <TabPane xmlns:fx="http://javafx.com/fxml/1"
          id="navbar"
          prefHeight="500.0"
          prefWidth="800.0"
          tabClosingPolicy="UNAVAILABLE"
-         BorderPane.alignment="CENTER"
          xmlns="http://javafx.com/javafx/null"
          fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.NavBarController">
     <Tab id="tab-main"
