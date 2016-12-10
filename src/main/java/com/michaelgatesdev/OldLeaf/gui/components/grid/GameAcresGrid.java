@@ -48,6 +48,8 @@ public class GameAcresGrid extends ImageGrid
                 cell.fillWithImage(image);
             }
         }
+        
+        this.redrawLines();
     }
     
     // ============================================================================================================================================ \\
