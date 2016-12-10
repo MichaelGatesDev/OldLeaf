@@ -225,6 +225,12 @@ public class Main extends Application
     }
     
     
+    public ResourceBundle getLocale()
+    {
+        return locale;
+    }
+    
+    
     public static Main getInstance()
     {
         return instance;

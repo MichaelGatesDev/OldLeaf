@@ -22,51 +22,28 @@
 <?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
 <?import java.lang.String?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
-            prefHeight="500.0"
-            prefWidth="160.0"
-            BorderPane.alignment="CENTER"
-            xmlns="http://javafx.com/javafx/null">
+<AnchorPane prefHeight="500.0" prefWidth="160.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.112"
+            xmlns:fx="http://javafx.com/fxml/1">
 
-    <SplitPane dividerPositions="0.8"
-               layoutX="8.0"
-               layoutY="50.0"
-               orientation="VERTICAL"
-               prefHeight="450.0"
-               prefWidth="160.0"
-               AnchorPane.bottomAnchor="0.0"
-               AnchorPane.leftAnchor="0.0"
-               AnchorPane.rightAnchor="0.0"
-               AnchorPane.topAnchor="50.0">
+    <SplitPane dividerPositions="0.8" layoutX="8.0" layoutY="50.0" orientation="VERTICAL" prefHeight="450.0" prefWidth="160.0"
+               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
 
         <stylesheets>
         </stylesheets>
 
         <items>
-            <AnchorPane minHeight="0.0"
-                        minWidth="0.0"
-                        prefHeight="295.0"
-                        prefWidth="158.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="295.0" prefWidth="158.0">
                 <children>
-                    <ScrollPane fitToHeight="true"
-                                fitToWidth="true"
-                                layoutX="-33.0"
-                                layoutY="-9.0"
-                                prefHeight="246.0"
-                                prefWidth="158.0"
-                                AnchorPane.bottomAnchor="0.0"
-                                AnchorPane.leftAnchor="0.0"
-                                AnchorPane.rightAnchor="0.0"
-                                AnchorPane.topAnchor="0.0">
+                    <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="-33.0" layoutY="-9.0" prefHeight="246.0" prefWidth="158.0"
+                                AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                         <content>
                             <Accordion>
                                 <panes>
-                                    <TitledPane animated="false"
-                                                text="Basic">
+                                    <TitledPane animated="false" text="Basic">
                                         <content>
-                                            <ListView prefHeight="200.0"
-                                                      prefWidth="200.0">
+                                            <ListView prefHeight="200.0" prefWidth="200.0">
                                                 <items>
                                                     <FXCollections fx:factory="observableArrayList">
                                                         <String fx:value="Empty"/>
@@ -75,72 +52,34 @@
                                             </ListView>
                                         </content>
                                     </TitledPane>
-                                    <TitledPane animated="false"
-                                                text="Flowers">
-                                        <content>
-                                            <ListView prefHeight="200.0"
-                                                      prefWidth="200.0">
-                                                <items>
-                                                    <FXCollections fx:factory="observableArrayList">
-                                                        <String fx:value="Golden Roses"/>
-                                                    </FXCollections>
-                                                </items>
-                                            </ListView>
-                                        </content>
-                                    </TitledPane>
-                                    <TitledPane animated="false"
-                                                text="Trees">
-                                        <content>
-                                            <AnchorPane minHeight="0.0"
-                                                        minWidth="0.0"
-                                                        prefHeight="180.0"
-                                                        prefWidth="200.0"/>
-                                        </content>
-                                    </TitledPane>
                                 </panes>
                             </Accordion>
                         </content>
                     </ScrollPane>
                 </children>
             </AnchorPane>
-            <AnchorPane minHeight="0.0"
-                        minWidth="0.0"
-                        prefHeight="100.0"
-                        prefWidth="160.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                 <children>
-                    <VBox alignment="CENTER"
-                          layoutX="14.0"
-                          layoutY="91.0"
-                          prefHeight="171.0"
-                          prefWidth="158.0"
-                          AnchorPane.bottomAnchor="0.0"
-                          AnchorPane.leftAnchor="0.0"
-                          AnchorPane.rightAnchor="0.0"
-                          AnchorPane.topAnchor="0.0">
+                    <VBox alignment="CENTER" layoutX="14.0" layoutY="91.0" prefHeight="171.0" prefWidth="158.0" AnchorPane.bottomAnchor="0.0"
+                          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                         <children>
-                            <Label text="0x00"/>
-                            <Label text="Flower"/>
-                            <Label text="1x1"/>
+                            <Label text="Selected Item">
+                                <font>
+                                    <Font name="System Bold" size="12.0"/>
+                                </font>
+                            </Label>
+                            <Label text="0x00" id="selectedItemIDLabel"/>
+                            <Label text="Flower" id="selectedItemNameLabel"/>
                         </children>
                     </VBox>
                 </children>
             </AnchorPane>
         </items>
     </SplitPane>
-    <Pane layoutX="-54.0"
-          layoutY="-75.0"
-          prefHeight="50.0"
-          prefWidth="160.0"
-          AnchorPane.bottomAnchor="450.0"
-          AnchorPane.leftAnchor="0.0"
-          AnchorPane.rightAnchor="0.0"
-          AnchorPane.topAnchor="0.0">
+    <Pane layoutX="-54.0" layoutY="-75.0" prefHeight="50.0" prefWidth="160.0" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <children>
-            <TextField layoutX="11.0"
-                       layoutY="13.0"
-                       prefHeight="25.0"
-                       prefWidth="139.0"
-                       promptText="Search"/>
+            <TextField layoutX="11.0" layoutY="13.0" prefHeight="25.0" prefWidth="139.0" promptText="Search"/>
         </children>
     </Pane>
 

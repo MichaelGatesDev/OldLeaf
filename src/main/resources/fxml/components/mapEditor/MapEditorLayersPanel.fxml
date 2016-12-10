@@ -50,7 +50,7 @@
          </HBox.margin>
       </HBox>
         <Separator orientation="VERTICAL" prefHeight="200.0" />
-      <HBox alignment="CENTER_RIGHT" spacing="60.0">
+      <HBox alignment="CENTER" spacing="60.0">
          <children>
               <CheckBox mnemonicParsing="false" selected="true" text="Acres" />
               <CheckBox mnemonicParsing="false" selected="true" text="Buildings" />

@@ -56,8 +56,6 @@ public class TabMapEditorController implements Initializable
                 stage.setTitle("Map Editor");
                 stage.setScene(new Scene(root));
                 stage.show();
-                
-                logger.debug(stage.getWidth() + " " + stage.getHeight());
             }
             catch (IOException e)
             {

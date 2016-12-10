@@ -2,7 +2,7 @@ package com.michaelgatesdev.OldLeaf.gui.components.grid;
 
 import com.michaelgatesdev.OldLeaf.Main;
 import com.michaelgatesdev.OldLeaf.game.GameItem;
-import javafx.scene.Node;
+import javafx.application.Platform;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
@@ -16,6 +16,8 @@ public class GameTilesGrid extends PaintGrid
     
     private Label coordinatesLabel;
     private Label objectNameLabel;
+    private Label selectedItemIDLabel;
+    private Label selectedItemNameLabel;
     
     private GameItem selectedItem;
     
@@ -32,6 +34,14 @@ public class GameTilesGrid extends PaintGrid
     public GameTilesGrid(int columns, int rows, double cellSize, Color separatorColor, double separatorWidth)
     {
         super(columns, rows, cellSize, separatorColor, separatorWidth);
+        
+        Platform.runLater(() ->
+        {
+            this.coordinatesLabel = (Label) this.getScene().lookup("#coordinatesLabel");
+            this.objectNameLabel = (Label) this.getScene().lookup("#objectNameLabel");
+            this.selectedItemIDLabel = (Label) this.getScene().lookup("#selectedItemIDLabel");
+            this.selectedItemNameLabel = (Label) this.getScene().lookup("#selectedItemNameLabel");
+        });
     }
     
     // ============================================================================================================================================ \\
@@ -71,19 +81,34 @@ public class GameTilesGrid extends PaintGrid
     {
         PaintableCell pc = (PaintableCell) cell;
         
+        if (selectedItem == null)
+        {
+            selectedItem = GameItem.AIR;
+        }
+        
         // TODO: Implement special map editor clicks
         if (button == MouseButton.PRIMARY)
         {
             Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY] = selectedItem;
-            pc.paint(getItemColor(selectedItem));
+            
+            if (selectedItem.isNothing())
+            {
+                pc.clean();
+            }
+            else
+            {
+                pc.paint(getItemColor(selectedItem));
+            }
         }
         else if (button == MouseButton.SECONDARY)
         {
-            if (pc.isPainted())
+            if (!pc.isPainted())
             {
-                Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY] = GameItem.AIR;
-                pc.clean();
+                return;
             }
+            
+            Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY] = GameItem.AIR;
+            pc.clean();
         }
         else if (button == MouseButton.MIDDLE)
         {
@@ -93,6 +118,12 @@ public class GameTilesGrid extends PaintGrid
             }
             
             this.selectedItem = Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY];
+            
+            if (selectedItemIDLabel != null && selectedItemNameLabel != null)
+            {
+                this.selectedItemIDLabel.setText("0x" + String.valueOf(Integer.toString(selectedItem.getValue(), 16)).toUpperCase());
+                this.selectedItemNameLabel.setText(selectedItem.getName());
+            }
         }
     }
     
@@ -100,10 +131,11 @@ public class GameTilesGrid extends PaintGrid
     @Override
     public void onCellHover(Cell cell, int gridX, int gridY)
     {
-        if (!checkLabels())
+        if (coordinatesLabel == null || objectNameLabel == null)
         {
             return;
         }
+        
         coordinatesLabel.setText(String.format("X: %d Y: %d", gridX + 1, gridY + 1));
         
         GameItem item = Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY];
@@ -117,33 +149,6 @@ public class GameTilesGrid extends PaintGrid
         }
     }
     
-    
-    /**
-     * Checks to see if the coordinatesLabel is valid
-     *
-     * @return If coordinatesLabel is not null and is usable
-     */
-    private boolean checkLabels()
-    {
-        if (coordinatesLabel != null)
-        {
-            return true;
-        }
-        
-        Node coordsNode = this.getScene().lookup("#coordinatesLabel");
-        if (coordsNode instanceof Label)
-        {
-            coordinatesLabel = (Label) coordsNode;
-        }
-        
-        Node nameNode = this.getScene().lookup("#objectNameLabel");
-        if (nameNode instanceof Label)
-        {
-            objectNameLabel = (Label) nameNode;
-        }
-        
-        return true;
-    }
     
     // ============================================================================================================================================ \\
 }

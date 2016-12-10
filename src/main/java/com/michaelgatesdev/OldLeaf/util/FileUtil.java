@@ -1,5 +1,6 @@
 package com.michaelgatesdev.OldLeaf.util;
 
+import com.michaelgatesdev.OldLeaf.Main;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 
@@ -7,6 +8,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
 public class FileUtil
@@ -28,11 +30,13 @@ public class FileUtil
      */
     public static File createDirectory(File destDir, String name, boolean log)
     {
+        ResourceBundle locale = Main.getInstance().getLocale();
+        
         if (destDir == null || !destDir.exists())
         {
             if (log)
             {
-//                logger.error(String.format(locale.getString("File.Directory.DestinationNonexistent"), destDir));
+                logger.error(String.format(locale.getString("File.Directory.DestinationNonexistent"), destDir));
             }
             return null;
         }
@@ -46,11 +50,11 @@ public class FileUtil
             {
                 if (result)
                 {
-//                    logger.info(String.format(locale.getString("File.Directory.Created"), name, destDir.toString()));
+                    logger.info(String.format(locale.getString("File.Directory.Created"), name, destDir.toString()));
                 }
                 else
                 {
-//                    logger.error(String.format(locale.getString("File.Directory.ErrorCreating"), name, destDir.toString()));
+                    logger.error(String.format(locale.getString("File.Directory.ErrorCreating"), name, destDir.toString()));
                 }
             }
         }
@@ -76,7 +80,6 @@ public class FileUtil
                     
                     if (!p.matcher(line).matches())
                     {
-                        logger.debug(line);
                         continue;
                     }
                     
