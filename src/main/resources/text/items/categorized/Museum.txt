@@ -1,0 +1,399 @@
+Museum
+
+Bugs
+228e|common butterfly
+228f|yellow butterfly
+2290|tiger butterfly
+2291|peacock butterfly
+2292|monarch butterfly
+2293|emperor butterfly
+2294|agrias butterfly
+2295|Raja B. butterfly
+2296|birdwing butterfly
+2297|moth
+2298|oak silk moth
+2299|honeybee
+229a|bee
+229b|long locust
+229c|migratory locust
+229d|rice grasshopper
+229e|mantis
+229f|orchid mantis
+22a0|brown cicada
+22a1|robust cicada
+22a2|giant cicada
+22a3|walker cicada
+22a4|evening cicada
+22a5|cicada shell
+22a6|lantern fly
+22a7|red dragonfly
+22a8|darner dragonfly
+22a9|banded dragonfly
+22aa|petaltail dragonfly
+22ab|ant
+22ac|pondskater
+22ad|diving beetle
+22ae|stinkbug
+22af|snail
+22b0|cricket
+22b1|bell cricket
+22b2|grasshopper
+22b3|mole cricket
+22b4|walking leaf
+22b5|walking stick
+22b6|bagworm
+22b7|ladybug
+22b8|violin beetle
+22b9|longhorn beetle
+22ba|tiger beetle
+22bb|dung beetle
+22bc|wharf roach
+22bd|hermit crab
+22be|firefly
+22bf|fruit beetle
+22c0|scarab beetle
+22c1|jewel beetle
+22c2|miyama stag
+22c3|saw stag
+22c4|giant stag
+22c5|rainbow stag
+22c6|cyclommatus stag
+22c7|golden stag
+22c8|horned dynastid
+22c9|horned atlas
+22ca|horned elephant
+22cb|horned hercules
+22cc|goliath beetle
+22cd|flea
+22ce|pill bug
+22cf|mosquito
+22d0|fly
+22d1|house centipede
+22d2|centipede
+22d3|spider
+22d4|tarantula
+22d5|scorpion
+22d6|snowflake
+22d7|red feather
+22d8|blue feather
+22d9|green feather
+22da|yellow feather
+22db|purple feather
+22dc|white feather
+22dd|pink feather
+22de|rainbow feather
+22df|good-luck charm **NEW**
+
+Fish
+22e1|bitterling
+22e2|pale chub
+22e3|crucian carp
+22e4|dace
+22e5|barbel steed
+22e6|carp
+22e7|koi
+22e8|goldfish
+22e9|pop-eyed goldfish
+22ea|killifish
+22eb|crawfish
+22ec|soft-shelled turtle
+22ed|tadpole
+22ee|frog
+22ef|freshwater goby
+22f0|loach
+22f1|catfish
+22f2|eel
+22f3|giant snakehead
+22f4|bluegill
+22f5|yellow perch
+22f6|black bass
+22f7|pike
+22f8|pond smelt
+22f9|sweetfish
+22fa|cherry salmon
+22fb|char
+22fc|rainbow trout
+22fd|stringfish
+22fe|salmon
+22ff|king salmon
+2300|mitten crab
+2301|guppy
+2302|nibble fish
+2303|angelfish
+2304|neon tetra
+2305|piranha
+2306|arowana
+2307|dorado
+2308|gar
+2309|arapaima
+230a|saddled bichir
+230b|sea butterfly
+230c|sea horse
+230d|clown fish
+230e|surgeonfish
+230f|butterfly fish
+2310|Napoleonfish
+2311|zebra turkeyfish
+2312|blowfish
+2313|puffer fish
+2314|horse mackerel
+2315|barred knifejaw
+2316|sea bass
+2317|red snapper
+2318|dab
+2319|olive flounder
+231a|squid
+231b|moray eel
+231c|ribbon eel
+231d|football fish
+231e|tuna
+231f|blue marlin
+2320|giant trevally
+2321|ray
+2322|ocean sunfish
+2323|hammerhead shark
+2324|shark
+2325|saw shark
+2326|whale shark
+2327|oarfish
+2328|coelacanth
+2329|empty can
+232a|boot
+232b|old tire
+232c|water egg
+
+Marine
+232d|seaweed
+232e|sea grapes
+232f|sea urchin
+2330|acorn barnacle
+2331|oyster
+2332|turban shell
+2333|abalone
+2334|ear shell
+2335|clam
+2336|pearl oyster
+2337|scallop
+2338|sea anemone
+2339|sea star
+233a|sea cucumber
+233b|sea slug
+233c|flatworm
+233d|mantis shrimp
+233e|sweet shrimp
+233f|tiger prawn
+2340|spiny lobster
+2341|lobster
+2342|snow crab
+2343|horsehair crab
+2344|red king crab
+2345|spider crab
+2346|octopus
+2347|spotted garden eel
+2348|chambered nautilus
+2349|horseshoe crab
+234a|giant isopod
+234b|deep-sea egg
+
+Fossils
+3130|amber
+3131|ammonite
+3132|coprolite
+3133|dinosaur egg
+3134|fern fossil
+3135|dinosaur track
+3136|archaeopteryx
+3137|Peking man
+3138|shark tooth
+3139|trilobite
+313a|T. rex skull
+313b|T. rex torso
+313c|T. rex tail
+313d|tricera skull
+313e|tricera torso
+313f|tricera tail
+3140|mammoth skull
+3141|mammoth torso
+3142|ankylo skull
+3143|ankylo torso
+3144|ankylo tail
+3145|apato skull
+3146|apato torso
+3147|apato tail
+3148|dimetrodon skull
+3149|dimetrodon torso
+314a|dimetrodon tail
+314b|iguanodon skull
+314c|iguanodon torso
+314d|iguanodon tail
+314e|sabertooth skull
+314f|sabertooth torso
+3150|pachysaurus skull
+3151|pachysaurus torso
+3152|pachysaurus tail
+3153|parasaur skull
+3154|parasaur torso
+3155|parasaur tail
+3156|diplo skull
+3157|diplo neck
+3158|diplo chest
+3159|diplo hip
+315a|diplo tail
+315b|plesio skull
+315c|plesio neck
+315d|plesio torso
+315e|stego skull
+315f|stego torso
+3160|stego tail
+3161|ptera skull
+3162|ptera left wing
+3163|ptera right wing
+3164|ichthyo skull
+3165|ichthyo torso
+3166|raptor skull
+3167|raptor torso
+3168|styraco skull
+3169|styraco torso
+316a|styraco tail
+316b|spino skull
+316c|spino torso
+316d|spino tail
+316e|megacero skull
+316f|megacero torso
+3170|megacero tail
+3171|archelon skull
+3172|archelon torso
+3173|T. rex model
+3174|tricera model
+3175|mammoth model
+3176|ankylo model
+3177|apato model
+3178|dimetrodon model
+3179|iguanodon model
+317a|sabertooth model
+317b|pachysaurus model
+317c|parasaur model
+317d|diplo model
+317e|plesio model
+317f|stego model
+3180|ptera model
+3181|ichthyo model
+3182|raptor model
+3183|styraco model
+3184|spino model
+3185|megacero model
+3186|archelon model
+
+Art
+30d2|dynamic painting
+30d3|solemn painting
+30d4|quaint painting
+30d5|basic painting
+30d6|famous painting
+30d7|perfect painting
+30d8|amazing painting
+30d9|nice painting
+30da|moving painting
+30db|common painting
+30dc|flowery painting
+30dd|warm painting
+30de|jolly painting
+30df|fine painting
+30e0|scary painting
+30e1|proper painting
+30e2|neutral painting
+30e3|worthy painting
+30e4|calm painting
+30e5|moody painting
+30e6|wistful painting
+30e7|serene painting
+30e8|scenic painting
+30e9|wild painting
+30ea|graceful painting
+30eb|beautiful statue
+30ec|valiant statue
+30ed|gallant statue
+30ee|robust statue
+30ef|great statue
+30f0|mystic statue
+30f1|ancient statue
+30f2|motherly statue
+30f3|dynamic painting (fake)
+30f4|solemn painting (fake)
+30f5|quaint painting (fake)
+30f6|basic painting (fake)
+30f7|famous painting (fake)
+30f8|amazing painting (fake)
+30f9|moving painting (fake)
+30fa|jolly painting (fake)
+30fb|scary painting (fake)
+30fc|neutral painting (fake)
+30fd|wistful painting (fake)
+30fe|serene painting (fake)
+30ff|wild painting (fake)
+3100|graceful painting (fake)
+3101|beautiful statue (fake)
+3102|valiant statue (fake)
+3103|gallant statue (fake)
+3104|robust statue (fake)
+3105|great statue (fake)
+3106|mystic statue (fake)
+3107|ancient statue (fake)
+3108|motherly statue (fake)
+
+Art (2?)
+3109|dynamic painting (2?)
+310a|solemn painting (2?)
+310b|quaint painting (2?)
+310c|basic painting (2?)
+310d|famous painting (2?)
+310e|perfect painting (2?)
+310f|amazing painting (2?)
+3110|nice painting (2?)
+3111|moving painting (2?)
+3112|common painting (2?)
+3113|flowery painting (2?)
+3114|warm painting (2?)
+3115|jolly painting (2?)
+3116|fine painting (2?)
+3117|scary painting (2?)
+3118|proper painting (2?)
+3119|neutral painting (2?)
+311a|worthy painting (2?)
+311b|calm painting (2?)
+311c|moody painting (2?)
+311d|wistful painting (2?)
+311e|serene painting (2?)
+311f|scenic painting (2?)
+3120|wild painting (2?)
+3121|graceful painting (2?)
+3122|beautiful statue (2?)
+3123|valiant statue (2?)
+3124|gallant statue (2?)
+3125|robust statue (2?)
+3126|great statue (2?)
+3127|mystic statue (2?)
+3128|ancient statue (2?)
+3129|motherly statue (2?)
+312a|dynamic painting (fake) (2?)
+312b|solemn painting (fake) (2?)
+312c|quaint painting (fake) (2?)
+312d|basic painting (fake) (2?)
+312e|famous painting (fake) (2?)
+312f|amazing painting (fake) (2?)
+3130|moving painting (fake) (2?)
+3131|jolly painting (fake) (2?)
+3132|scary painting (fake) (2?)
+3133|neutral painting (fake) (2?)
+3134|wistful painting (fake) (2?)
+3135|serene painting (fake) (2?)
+3136|wild painting (fake) (2?)
+3137|graceful painting (fake) (2?)
+3138|beautiful statue (fake) (2?)
+3139|valiant statue (fake) (2?)
+313a|gallant statue (fake) (2?)
+313b|robust statue (fake) (2?)
+313c|great statue (fake) (2?)
+313d|mystic statue (fake) (2?)
+313e|ancient statue (fake) (2?)
+313f|motherly statue (fake) (2?)

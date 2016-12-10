@@ -1,0 +1,46 @@
+Favorites
+7FFE|Nothing
+20ac|100 Bells
+2117|99,000 Bells
+228c|100 turnips
+209d|famous mushroom
+338c|coffee
+338d|fizzy apple juice
+20a0|tricky pitfall seed
+209f|pitfall seed
+20a1|gold nugget
+20a2|silver nugget
+226c|SMB3 paper
+33c8|Fortune Cookie
+339f|Fountain Firework
+
+Fav. Handhelds
+3353|Gold Net
+3357|Gold Rod
+335b|Gold Shovel
+335f|Golden Can
+3363|Golden Slingshot
+334f|Gold Axe
+3365|Toy Hammer
+339e|tweeter
+338e|beans
+
+Fav. Vegetation
+2053|gold-rose bag
+2051|black-rose bag
+2052|blue-rose bag
+2958|Jacob's ladder
+2959|lucky clovers
+
+Fav. Hats
+285b|royal crown
+285c|crown
+
+Fav. Environment
+2001|Apple
+2018|Apples
+0070|Money Tree
+003e|Apple Tree
+009d|Pattern
+2081|train station locker (1)
+2082|train station locker (2)

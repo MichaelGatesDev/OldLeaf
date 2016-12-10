@@ -17,9 +17,7 @@ import org.apache.log4j.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class Main extends Application
 {
@@ -46,10 +44,11 @@ public class Main extends Application
     private File islandTemplatesDir;
     private File appearanceTemplatesDir;
     
-    private SaveGame           saveGame;
-    private Map<Short, String> gameItemNames;
-    private Map<Short, String> gameStructureNames;
-    private Map<Byte, File>    acreImages;
+    private SaveGame                  saveGame;
+    private Map<Short, String>        gameItemNames;
+    private Map<String, List<String>> gameItemCategories;
+    private Map<Short, String>        gameStructureNames;
+    private Map<Byte, File>           acreImages;
     
     // ============================================================================================================================================ \\
     
@@ -82,10 +81,11 @@ public class Main extends Application
         initializeDirectories();
         
         // Create/Initialize all files
-        File itemsFile = new File(textResDir, "items.txt");
-        this.gameItemNames = this.loadHexStringMap(itemsFile, "\\|");
+        File itemsFile = new File(textResDir, "/items/items.txt");
+        this.gameItemNames = this.loadHexStringMap(itemsFile);
         File structuresFile = new File(textResDir, "structures.txt");
-        this.gameStructureNames = this.loadHexStringMap(structuresFile, "\\|");
+        this.gameStructureNames = this.loadHexStringMap(structuresFile);
+        this.loadGameItemCategories();
         
         this.loadAcreImages();
         
@@ -132,7 +132,28 @@ public class Main extends Application
             String name = f.getName().replace(".png", "").replace("0x", "");
             byte value = (byte) Integer.parseInt(name, 16);
             
-            acreImages.put(value, f);
+            this.acreImages.put(value, f);
+        }
+    }
+    
+    
+    //TODO Use item values instead of item names because a simple change in naming will break this
+    private void loadGameItemCategories()
+    {
+        this.gameItemCategories = new HashMap<>();
+        
+        File dir = new File(textResDir, "/items/categorized/");
+        for (File f : dir.listFiles())
+        {
+            String categoryName = f.getName().replace(".txt", "");
+            
+            Map<Short, String> loadedItems = this.loadHexStringMap(f);
+            List<String> list = new ArrayList<>();
+            
+            list.addAll(loadedItems.values());
+            
+            this.gameItemCategories.put(categoryName, list);
+            logger.debug(String.format("Loaded game item category \"%s\" with [%d] elements.", categoryName, list.size()));
         }
     }
     
@@ -173,10 +194,10 @@ public class Main extends Application
     }
     
     
-    private Map<Short, String> loadHexStringMap(File file, String delimiter)
+    private Map<Short, String> loadHexStringMap(File file)
     {
         Map<Short, String> map = new HashMap<>();
-        Map<String, String> itemsRaw = FileUtil.loadMapFromFile(file, delimiter, "^([A-Fa-f0-9]{4}[|](.*))$");
+        Map<String, String> itemsRaw = FileUtil.loadMapFromFile(file, "\\|", "^([A-Fa-f0-9]{4}[|](.*))$");
         
         for (String key : itemsRaw.keySet())
         {
@@ -248,6 +269,11 @@ public class Main extends Application
         return saveGame;
     }
     
+    
+    public Map<String, List<String>> getGameItemCategories()
+    {
+        return gameItemCategories;
+    }
     
     // ============================================================================================================================================ \\
 }

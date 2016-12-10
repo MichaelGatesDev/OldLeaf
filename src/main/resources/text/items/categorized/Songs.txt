@@ -1,0 +1,278 @@
+Songs
+212b|K.K. Chorale
+212c|K.K. March
+212d|K.K. Waltz
+212e|K.K. Swing
+212f|K.K. Jazz
+2130|K.K. Fusion
+2131|K.K. Étude
+2132|K.K. Lullaby
+2133|K.K. Aria
+2134|K.K. Samba
+2135|K.K. Bossa
+2136|K.K. Calypso
+2137|K.K. Salsa
+2138|K.K. Mambo
+2139|K.K. Reggae
+213a|K.K. Ska
+213b|K.K. Tango
+213c|K.K. Faire
+213d|Aloha K.K.
+213e|Lucky K.K.
+213f|K.K. Condor
+2140|K.K. Steppe
+2141|Imperial K.K.
+2142|K.K. Casbah
+2143|K.K. Safari
+2144|K.K. Folk
+2145|K.K. Rock
+2146|Rockin' K.K.
+2147|K.K. Ragtime
+2148|K.K. Gumbo
+2149|The K. Funk
+214a|K.K. Blues
+214b|Soulful K.K.
+214c|K.K. Soul
+214d|K.K. Cruisin'
+214e|K.K. Love Song
+214f|K.K. D&B
+2150|K.K. Technopop
+2151|DJ K.K.
+2152|Only Me
+2153|K.K. Country
+2154|Surfin' K.K.
+2155|K.K. Ballad
+2156|Comrade K.K.
+2157|K.K. Lament
+2158|Go K.K. Rider
+2159|K.K. Dirge
+215a|K.K. Western
+215b|Mr. K.K.
+215c|Café K.K.
+215d|K.K. Parade
+215e|Señor K.K.
+215f|K.K. Song
+2160|I Love You
+2161|Two Days Ago
+2162|My Place
+2163|Forest Life
+2164|To the Edge
+2165|Pondering
+2166|K.K. Dixie
+2167|K.K. Marathon
+2168|King K.K.
+2169|Mountain Song
+216a|Marine Song 2001
+216b|Neapolitan
+216c|Steep Hill
+216d|K.K. Rockabilly
+216e|Agent K.K.
+216f|K.K. Rally
+2170|K.K. Metal
+2171|Stale Cupcakes
+2172|Spring Blossoms
+2173|Wandering
+2174|K.K. House
+2175|K.K. Sonata
+2176|Hypno K.K.
+2177|K.K. Stroll
+2178|K.K. Island
+2179|Space K.K.
+217a|K.K. Adventure
+217b|K.K. Oasis
+217c|K.K. Bazaar
+217d|K.K. Milonga
+217e|K.K. Groove
+217f|K.K. Jongara
+2180|K.K. Flamenco
+2181|K.K. Moody
+2182|Bubblegum K.K.
+2183|K.K. Synth
+2184|K.K. Disco
+2185|K.K. Birthday
+
+Songs (2)
+2189|K.K. Chorale (1)
+218a|K.K. March (1)
+218b|K.K. Waltz (1)
+218c|K.K. Swing (1)
+218d|K.K. Jazz (1)
+218e|K.K. Fusion (1)
+218f|K.K. Étude (1)
+2190|K.K. Lullaby (1)
+2191|K.K. Aria (1)
+2192|K.K. Samba (1)
+2193|K.K. Bossa (1)
+2194|K.K. Calypso (1)
+2195|K.K. Salsa (1)
+2196|K.K. Mambo (1)
+2197|K.K. Reggae (1)
+2198|K.K. Ska (1)
+2199|K.K. Tango (1)
+219a|K.K. Faire (1)
+219b|Aloha K.K. (1)
+219c|Lucky K.K. (1)
+219d|K.K. Condor (1)
+219e|K.K. Steppe (1)
+219f|Imperial K.K. (1)
+21a0|K.K. Casbah (1)
+21a1|K.K. Safari (1)
+21a2|K.K. Folk (1)
+21a3|K.K. Rock (1)
+21a4|Rockin' K.K. (1)
+21a5|K.K. Ragtime (1)
+21a6|K.K. Gumbo (1)
+21a7|The K. Funk (1)
+21a8|K.K. Blues (1)
+21a9|Soulful K.K. (1)
+21aa|K.K. Soul (1)
+21ab|K.K. Cruisin' (1)
+21ac|K.K. Love Song (1)
+21ad|K.K. D&B (1)
+21ae|K.K. Technopop (1)
+21af|DJ K.K. (1)
+21b0|Only Me (1)
+21b1|K.K. Country (1)
+21b2|Surfin' K.K. (1)
+21b3|K.K. Ballad (1)
+21b4|Comrade K.K. (1)
+21b5|K.K. Lament (1)
+21b6|Go K.K. Rider (1)
+21b7|K.K. Dirge (1)
+21b8|K.K. Western (1)
+21b9|Mr. K.K. (1)
+21ba|Café K.K. (1)
+21bb|K.K. Parade (1)
+21bc|Señor K.K. (1)
+21bd|K.K. Song (1)
+21be|I Love You (1)
+21bf|Two Days Ago (1)
+21c0|My Place (1)
+21c1|Forest Life (1)
+21c2|To the Edge (1)
+21c3|Pondering (1)
+21c4|K.K. Dixie (1)
+21c5|K.K. Marathon (1)
+21c6|King K.K. (1)
+21c7|Mountain Song (1)
+21c8|Marine Song 2001 (1)
+21c9|Neapolitan (1)
+21ca|Steep Hill (1)
+21cb|K.K. Rockabilly (1)
+21cc|Agent K.K. (1)
+21cd|K.K. Rally (1)
+21ce|K.K. Metal (1)
+21cf|Stale Cupcakes (1)
+21d0|Spring Blossoms (1)
+21d1|Wandering (1)
+21d2|K.K. House (1)
+21d3|K.K. Sonata (1)
+21d4|Hypno K.K. (1)
+21d5|K.K. Stroll (1)
+21d6|K.K. Island (1)
+21d7|Space K.K. (1)
+21d8|K.K. Adventure (1)
+21d9|K.K. Oasis (1)
+21da|K.K. Bazaar (1)
+21db|K.K. Milonga (1)
+21dc|K.K. Groove (1)
+21dd|K.K. Jongara (1)
+21de|K.K. Flamenco (1)
+21df|K.K. Moody (1)
+21e0|Bubblegum K.K. (1)
+21e1|K.K. Synth (1)
+21e2|K.K. Disco (1)
+21e3|K.K. Birthday (1)
+
+Songs Inside Seashell Players
+21e4|K.K. Chorale (seashell player)
+21e5|K.K. March (seashell player)
+21e6|K.K. Waltz (seashell player)
+21e7|K.K. Swing (seashell player)
+21e8|K.K. Jazz (seashell player)
+21e9|K.K. Fusion (seashell player)
+21ea|K.K. Étude (seashell player)
+21eb|K.K. Lullaby (seashell player)
+21ec|K.K. Aria (seashell player)
+21ed|K.K. Samba (seashell player)
+21ee|K.K. Bossa (seashell player)
+21ef|K.K. Calypso (seashell player)
+21f0|K.K. Salsa (seashell player)
+21f1|K.K. Mambo (seashell player)
+21f2|K.K. Reggae (seashell player)
+21f3|K.K. Ska (seashell player)
+21f4|K.K. Tango (seashell player)
+21f5|K.K. Faire (seashell player)
+21f6|Aloha K.K. (seashell player)
+21f7|Lucky K.K. (seashell player)
+21f8|K.K. Condor (seashell player)
+21f9|K.K. Steppe (seashell player)
+21fa|Imperial K.K. (seashell player)
+21fb|K.K. Casbah (seashell player)
+21fc|K.K. Safari (seashell player)
+21fd|K.K. Folk (seashell player)
+21fe|K.K. Rock (seashell player)
+21ff|Rockin' K.K. (seashell player)
+2200|K.K. Ragtime (seashell player)
+2201|K.K. Gumbo (seashell player)
+2202|The K. Funk (seashell player)
+2203|K.K. Blues (seashell player)
+2204|Soulful K.K. (seashell player)
+2205|K.K. Soul (seashell player)
+2206|K.K. Cruisin' (seashell player)
+2207|K.K. Love Song (seashell player)
+2208|K.K. D&B (seashell player)
+2209|K.K. Technopop (seashell player)
+220a|DJ K.K. (seashell player)
+220b|Only Me (seashell player)
+220c|K.K. Country (seashell player)
+220d|Surfin' K.K. (seashell player)
+220e|K.K. Ballad (seashell player)
+220f|Comrade K.K. (seashell player)
+2210|K.K. Lament (seashell player)
+2211|Go K.K. Rider (seashell player)
+2212|K.K. Dirge (seashell player)
+2213|K.K. Western (seashell player)
+2214|Mr. K.K. (seashell player)
+2215|Café K.K. (seashell player)
+2216|K.K. Parade (seashell player)
+2217|Señor K.K. (seashell player)
+2218|K.K. Song (seashell player)
+2219|I Love You (seashell player)
+221a|Two Days Ago (seashell player)
+221b|My Place (seashell player)
+221c|Forest Life (seashell player)
+221d|To the Edge (seashell player)
+221e|Pondering (seashell player)
+221f|K.K. Dixie (seashell player)
+2220|K.K. Marathon (seashell player)
+2221|King K.K. (seashell player)
+2222|Mountain Song (seashell player)
+2223|Marine Song 2001 (seashell player)
+2224|Neapolitan (seashell player)
+2225|Steep Hill (seashell player)
+2226|K.K. Rockabilly (seashell player)
+2227|Agent K.K. (seashell player)
+2228|K.K. Rally (seashell player)
+2229|K.K. Metal (seashell player)
+222a|Stale Cupcakes (seashell player)
+222b|Spring Blossoms (seashell player)
+222c|Wandering (seashell player)
+222d|K.K. House (seashell player)
+222e|K.K. Sonata (seashell player)
+222f|Hypno K.K. (seashell player)
+2230|K.K. Stroll (seashell player)
+2231|K.K. Island (seashell player)
+2232|Space K.K. (seashell player)
+2233|K.K. Adventure (seashell player)
+2234|K.K. Oasis (seashell player)
+2235|K.K. Bazaar (seashell player)
+2236|K.K. Milonga (seashell player)
+2237|K.K. Groove (seashell player)
+2238|K.K. Jongara (seashell player)
+2239|K.K. Flamenco (seashell player)
+223a|K.K. Moody (seashell player)
+223b|Bubblegum K.K. (seashell player)
+223c|K.K. Synth (seashell player)
+223d|K.K. Disco (seashell player)
+223e|K.K. Birthday (seashell player)

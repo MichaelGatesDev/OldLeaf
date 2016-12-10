@@ -1,0 +1,180 @@
+Uncategorized
+
+Environment Starters / Gifts
+202a|fossil
+202b|fertilizer
+202c|sapling
+202d|cedar sapling
+202e|holly shoot
+202f|pink azalea shoot
+2030|white azalea shoot
+2031|blue hydrangea shoot
+2032|pink hydrangea shoot
+2033|red hibiscus shoot
+2034|y. hibiscus shoot
+2035|sweet olive shoot
+2036|present
+22038 red-tulip bag
+2039|white-tulip bag
+203a|yellow-tulip bag
+203b|pink-tulip bag
+203c|purple-tulip bag
+203d|black-tulip bag
+203e|orange-tulip bag
+203f|white-pansy bag
+2040|yellow-pansy bag
+2041|red-pansy bag
+2042|purple-pansy bag
+2043|orange-pansy bag
+2044|blue-pansy bag
+2045|white-cosmos bag
+2046|red-cosmos bag
+2047|sun-cosmos bag
+2048|pink-cosmos bag
+2049|orange-cosmos bag
+204a|black-cosmos bag
+204b|red-rose bag
+204c|white-rose bag
+204d|yellow-rose bag
+204e|pink-rose bag
+204f|orange-rose bag
+2050|purple-rose bag
+2051|black-rose bag
+2052|blue-rose bag
+2053|gold-rose bag
+2054|red-carnation bag
+2055|pink-carnation bag
+2056|white-carnation bag
+2057|white-lily bag
+2058|yellow-lily bag
+2059|red-lily bag
+205a|orange-lily bag
+205b|pink-lily bag
+205c|black-lily bag
+205d|purple-violet bag
+205e|blue-violet bag
+205f|white-violet bag
+2060|yellow-violet bag
+2089|wrapping paper
+208a|medicine
+208b|chocolate heart
+
+Shells / Candy
+208c|pearl-oyster shell
+208d|conch shell
+208e|giant-clam shell
+208f|coral
+2090|venus-comb shell
+2091|scallop shell
+2092|sea-snail shell
+2093|cowrie shell
+2094|sand dollar
+2095|oyster shell
+2096|candy
+2097|lollipop
+
+Mushrooms / Traps
+2098|elegant mushroom
+2099|round mushroom
+209a|skinny mushroom
+209b|flat mushroom
+209c|rare mushroom
+209d|famous mushroom
+209e|beehive
+209f|pitfall seed
+20a0|tricky pitfall seed
+
+Ores
+20a1|gold nugget
+20a2|silver nugget
+20a3|ruby
+20a4|sapphire
+20a5|emerald
+20a6|amethyst
+
+Ingredients
+20a7|butter
+20a8|milk
+20a9|vinegar
+20aa|flour
+20ab|sugar
+
+Prizes
+2118|earth egg
+2119|tree egg
+211a|stone egg
+211b|sky egg
+211c|winning ticket
+211d|grand-prize ticket
+
+Mannequins
+30cc|mannequin 1
+30cd|mannequin 2
+30ce|mannequin 3
+30cf|mannequin 4
+
+Drinks
+338c|coffee
+338d|fizzy apple juice
+338e|beans
+338f|good-luck roll
+3390|vanilla soft-serve
+3391|choco soft-serve
+3392|matcha soft-serve
+3393|swirl soft-serve
+3394|vanilla ice cream
+3395|strawberry ice cream
+3396|lemon double scoop
+3397|mint double scoop
+
+Custom Stuff
+33a7|custom shirt
+33a8|custom pattern (easel)
+33a9|custom pattern (frame)
+
+Wands / Fireworks / Celebration
+3398|blue glow wand
+3399|green glow wand
+339a|pink glow wand
+339b|yellow glow wand
+339c|Flower Fairy wand **NEW**
+339d|Kiki and Lala wand **NEW**
+339e|tweeter
+339f|fountain firework
+33a0|used firework
+33a1|Santa bag
+33a2|mystery bag
+
+Coffee Beans
+33a3|normal coffee beans
+33a4|good coffee beans
+33a5|superb coffee beans
+33a6|chocolate coin
+
+Villager Items
+33b7|signature sheet
+33b8|petition form
+33b9|paper scrap
+33ba|lost item (book)
+33bb|lost item (pouch)
+33bc|lost item (mitten)
+33bd|lost item (paper bag)
+33be|towel
+
+Festival Prizes
+3402|Redd's cookie
+3403|dud ticket
+3404|flash ticket
+3405|bang ticket
+3406|sparkle ticket
+3407|whiz ticket
+3408|pow ticket
+3409|crackle ticket
+340a|kaboom ticket
+340b|pop ticket
+
+In-Game Events
+341a|bingo card
+341b|expired bingo card
+341c|time capsule
+341d|scavenger-hunt list

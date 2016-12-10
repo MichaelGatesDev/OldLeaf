@@ -1,0 +1,44 @@
+Fruit
+2001|apple
+2002|orange
+2003|pear
+2004|peach
+2005|cherry
+2006|coconut
+2007|durian
+2008|lemon
+2009|lychee
+200a|mango
+200b|persimmon
+200c|banana
+200d|bamboo shoot
+200e|perfect apple
+200f|perfect orange
+2010|perfect pear
+2011|perfect peach
+2012|perfect cherry
+2013|rotten apple
+2014|rotten orange
+2015|rotten pear
+2016|rotten peach
+2017|rotten cherry
+
+Fruits
+2018|apples
+2019|oranges
+201a|pears
+201b|peaches
+201c|cherries
+201d|coconuts
+201e|durians
+201f|lemons
+2020|lychees
+2021|mangoes
+2022|persimmons
+2023|bananas
+2024|bamboo shoots
+2025|perfect apples
+2026|perfect oranges
+2027|perfect pears
+2028|perfect peaches
+2029|perfect cherries

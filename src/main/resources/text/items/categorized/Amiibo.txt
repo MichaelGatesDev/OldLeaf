@@ -1,0 +1,797 @@
+Amiibo Update
+
+227f|campground paper **NEW**
+2280|Nook's Homes paper **NEW**
+2281|Nintendo paper **NEW**
+
+22df|good-luck charm **NEW**
+
+23d1|basic wall **NEW**
+23d2|hallway wall **NEW**
+23d3|white tile wall **NEW**
+23d4|stadium wall **NEW**
+23d5|train-window wall **NEW**
+23d6|waiting-room wall **NEW**
+23d7|steel-frame wall **NEW**
+23d8|café-curtain wall **NEW**
+23d9|white brick wall **NEW**
+23da|bamboo-grove wall **NEW**
+23db|rice-paddy wall **NEW**
+23dc|magma-cavern wall **NEW**
+23dd|ocean-horizon wall **NEW**
+23de|Hello Kitty wall **NEW**
+23df|My Melody wall **NEW**
+23e0|Pompompurin wall **NEW**
+23e1|Kiki and Lala wall **NEW**
+23e2|Cinnamoroll wall **NEW**
+23e3|Kerokerokeroppi wall **NEW**
+23e4|Hyrule wall **NEW**
+23e5|ink-splattered wall **NEW**
+23e6|Inkopolis wall **NEW**
+23e7|fruit-panel wall **NEW**
+23e8|Fueki wall **NEW**
+23e9|polka-dot wall **NEW**
+
+246a|terrace rug **NEW**
+246b|yellow flooring **NEW**
+246c|monochrome floor **NEW**
+246d|pink wood floor **NEW**
+246e|natural wood floor **NEW**
+246f|stone-tile floor **NEW**
+2470|parquet floor **NEW**
+2471|white tile floor **NEW**
+2472|panel carpet floor **NEW**
+2473|arched brick floor **NEW**
+2474|flagstone floor **NEW**
+2475|terra-cotta floor **NEW**
+2476|tatami floor **NEW**
+2477|herringbone floor **NEW**
+2478|school-hall floor **NEW**
+2479|water floor **NEW**
+247a|pavement floor **NEW**
+247b|lobby floor **NEW**
+247c|field floor **NEW**
+247d|galaxy floor **NEW**
+247e|lava floor **NEW**
+247f|oil-stained floor **NEW**
+2480|fancy tile floor **NEW**
+2481|block flooring **NEW**
+2482|sandy-beach floor **NEW**
+2483|dirt floor **NEW**
+2484|wooden-deck floor **NEW**
+2485|white wood floor **NEW**
+2486|Hello Kitty floor **NEW**
+2487|My Melody floor **NEW**
+2488|Pompompurin floor **NEW**
+2489|Kiki and Lala floor **NEW**
+248a|Cinnamoroll floor **NEW**
+248b|gray patterned floor **NEW**
+248c|Zelda floor **NEW**
+248d|ink-splattered floor **NEW**
+248e|Inkopolis floor **NEW**
+248f|fruit-panel floor **NEW**
+2490|Fueki floor **NEW**
+2491|gallery floor **NEW**
+2492|observatory floor **NEW**
+
+2659|men's recruit suit **NEW**
+265a|women's recruit suit **NEW**
+265b|stylish suit **NEW**
+265c|polo shirt **NEW**
+265d|women's office suit **NEW**
+265e|blue nurse's uniform **NEW**
+265f|flashy suit **NEW**
+2660|sushi chef's outfit **NEW**
+2661|comedian's outfit **NEW**
+2662|rubber apron **NEW**
+2663|frilly apron **NEW**
+2664|Felyne outfit **NEW**
+2665|HHA women's jacket **NEW**
+2666|good-fortune clothes **NEW**
+2667|Link outfit **NEW**
+2668|Ganondorf outfit **NEW**
+2669|Ganon outfit **NEW**
+266a|Medli outfit **NEW**
+266b|Epona outfit **NEW**
+266c|Wolf Link outfit **NEW**
+266d|new hero's outfit **NEW**
+266e|black anchor tee **NEW**
+266f|Cinnamoroll jacket **NEW**
+2670|suspenders shirt **NEW**
+2671|Hello Kitty outfit **NEW**
+2672|My Melody outfit **NEW**
+2673|Kiki and Lala outfit **NEW**
+2674|Pompompurin outfit **NEW**
+2675|Cinnamoroll outfit **NEW**
+2676|Kerokerokeroppi top **NEW**
+2677|HHA raincoat **NEW**
+2678|Callie shirt **NEW**
+2679|Marie shirt **NEW**
+267a|Callie fashion top **NEW**
+267b|high-spirits shirt **NEW**
+267c|town-hall spring top **NEW**
+267d|town-hall winter top **NEW**
+267e|jacquard fleece **NEW**
+2680|Sheik outfit **NEW**
+
+26e4|blue ballet outfit **NEW**
+26e5|musician's outfit **NEW**
+26e6|Princess Zelda dress **NEW**
+26e7|Marie dress **NEW**
+26e8|Hello Kitty dress **NEW**
+26e9|My Melody dress **NEW**
+26ea|Kiki and Lala dress **NEW**
+26eb|Pompompurin dress **NEW**
+26ec|Flower Fairy dress **NEW**
+
+2772|Ganondorf pants **NEW**
+2773|green gingham shorts **NEW**
+2774|Callie pants **NEW**
+2775|high-spirits pants **NEW**
+2776|Sheik pants **NEW**
+
+279b|Callie tights **NEW**
+279c|Marie tights **NEW**
+279d|Kiki and Lala socks **NEW**
+279e|red striped socks **NEW**
+
+27dd|Callie shoes **NEW**
+27de|Marie shoes **NEW**
+27df|Hello Kitty shoes **NEW**
+27e0|My Melody shoes **NEW**
+27e1|Kiki and Lala shoes **NEW**
+27e2|Pompompurin shoes **NEW**
+27e3|Cinnamoroll shoes **NEW**
+27e4|green loafers **NEW**
+27e5|Flower Fairy boots **NEW**
+
+280a|fruit-panel umbrella **NEW**
+
+287e|Takoroka mesh **NEW**
+287f|Hello Kitty hat **NEW**
+2880|My Melody hat **NEW**
+2881|Kiki and Lala pin **NEW**
+2882|Cinnamoroll hat **NEW**
+2883|Kerokerokeroppi pins **NEW**
+2884|high-spirits hat **NEW**
+2885|Celeste ribbon **NEW**
+2886|driver's hat **NEW**
+
+28e7|Link hat **NEW**
+28e8|Ganondorf wig **NEW**
+28e9|Sheik mask **NEW**
+28ea|Zelda wig **NEW**
+28eb|new hero wig **NEW**
+28ec|Callie wig **NEW**
+28ed|Marie wig **NEW**
+28ee|pilot goggles **NEW**
+28ef|studio headphones **NEW**
+28f0|Flower Fairy wig **NEW**
+28f1|Nabiru mask **NEW**
+28f2|Pompompurin hat **NEW**
+28f3|Lottie's bun **NEW**
+
+2ed6|toy piano **NEW**
+2ed7|exam table **NEW**
+2ed8|office phone **NEW**
+2ed9|desk bell **NEW**
+2eda|wooden bucket **NEW**
+2edb|coconut juice **NEW**
+2edc|ramen cup **NEW**
+2edd|firewood **NEW**
+2ede|burger meal **NEW**
+2edf|candelabra **NEW**
+2ee0|metal box **NEW**
+2ee1|standing sink **NEW**
+2ee2|ring **NEW**
+2ee3|air purifier **NEW**
+2ee4|classic screen **NEW**
+2ee5|sushi tray **NEW**
+2ee6|synthesizer **NEW**
+2ee7|toolbox **NEW**
+2ee8|towel basket **NEW**
+2ee9|hanging strap **NEW**
+2eea|yarn basket **NEW**
+2eeb|basic teacher's desk **NEW**
+2eec|train seat **NEW**
+2eed|whole pizza **NEW**
+2eee|plant partition **NEW**
+2eef|ramen **NEW**
+2ef0|tart **NEW**
+2ef1|fancy tea set **NEW**
+2ef2|ringtoss **NEW**
+2ef3|moss ball **NEW**
+2ef4|hose reel **NEW**
+2ef5|greenhouse box **NEW**
+2ef6|tractor **NEW**
+2ef7|wooden bear **NEW**
+2ef8|lucky doll **NEW**
+2ef9|zen desk **NEW**
+2efa|ikebana display **NEW**
+2efb|rolling cart **NEW**
+2efc|antique shelf **NEW**
+2efd|conveyor belt **NEW**
+2efe|air pump **NEW**
+2eff|stack of books **NEW**
+2f00|bread basket **NEW**
+2f01|light breakfast **NEW**
+2f02|hearty breakfast **NEW**
+2f03|pancakes **NEW**
+2f04|ice-cream display **NEW**
+2f05|tin watering can **NEW**
+2f06|first-aid kit **NEW**
+2f07|milk canister **NEW**
+2f08|rice balls **NEW**
+2f09|pile of cash **NEW**
+2f0a|silver teapot **NEW**
+2f0b|sushi container **NEW**
+2f0c|rice bales **NEW**
+2f0d|pitcher plant **NEW**
+2f0e|futon mattress **NEW**
+2f0f|zen tea set **NEW**
+2f10|trellis **NEW**
+2f11|Boston bag **NEW**
+2f12|kick scooter **NEW**
+2f13|lunch box **NEW**
+2f14|milk carton **NEW**
+2f15|bistro table **NEW**
+2f16|plastic canister **NEW**
+2f17|forklift **NEW**
+2f18|pylon set **NEW**
+2f19|barbell **NEW**
+2f1a|laboratory capsule **NEW**
+2f1b|file cabinet (L) **NEW**
+2f1c|file cabinet (M) **NEW**
+2f1d|rolling file cart **NEW**
+2f1e|accordion screen **NEW**
+2f1f|metal-and-wood chair **NEW**
+2f20|jail bars **NEW**
+2f21|modern cash register **NEW**
+2f22|changing room **NEW**
+2f23|roasted dino meat **NEW**
+2f24|villager statue **NEW**
+2f25|wooden duckboards **NEW**
+2f26|sparrow's nest **NEW**
+2f27|swinging bench **NEW**
+2f28|desktop TV **NEW**
+2f29|platform **NEW**
+2f2a|balance beam **NEW**
+2f2b|exercise ball **NEW**
+2f2c|table with cloth **NEW**
+2f2d|dinnerware **NEW**
+2f2e|drafting table **NEW**
+2f2f|hanger rack **NEW**
+2f30|pastel low table **NEW**
+2f31|fish on a board **NEW**
+2f32|menu chalkboard **NEW**
+2f33|wooden counter **NEW**
+2f34|unicycle **NEW**
+2f35|towel rack **NEW**
+2f36|metal-and-wood table **NEW**
+2f37|rolling closet **NEW**
+2f38|metal flagpole **NEW**
+2f39|cornstalks **NEW**
+2f3a|bowl sink **NEW**
+2f3b|ball **NEW**
+2f3c|glass partition **NEW**
+2f3d|cypress plant **NEW**
+2f3e|flower display case **NEW**
+2f3f|tong-and-tray stand **NEW**
+2f40|potato gratin **NEW**
+2f41|umbrella stand **NEW**
+2f42|metal can **NEW**
+2f43|salon mirror stand **NEW**
+2f44|garden chair **NEW**
+2f45|shopping bag **NEW**
+2f46|zen phone stand **NEW**
+2f47|flower bed **NEW**
+2f48|sandbox **NEW**
+2f49|garden table **NEW**
+2f4a|do-not-enter sign **NEW**
+2f4b|handwashing area **NEW**
+2f4c|book stands **NEW**
+2f4d|operating-room cart **NEW**
+2f4e|modern hospital bed **NEW**
+2f4f|modern office chair **NEW**
+2f50|trash bags **NEW**
+2f51|lecture-hall bench **NEW**
+2f52|lecture-hall desk **NEW**
+2f53|meeting-room table **NEW**
+2f54|box-shaped seat **NEW**
+2f55|worktable **NEW**
+2f56|minifridge **NEW**
+2f57|stretcher **NEW**
+2f58|office cabinet **NEW**
+2f59|crayons **NEW**
+2f5a|black phone **NEW**
+2f5b|cable spool **NEW**
+2f5c|baseball set **NEW**
+2f5d|office clock **NEW**
+2f5e|flower wreath **NEW**
+2f5f|succulent plant **NEW**
+2f60|meeting-room chair **NEW**
+2f61|public telephone **NEW**
+2f62|beauty-salon cart **NEW**
+2f63|money box **NEW**
+2f64|zen low table **NEW**
+2f65|operating table **NEW**
+2f66|merchandise table **NEW**
+2f67|doctor's desk **NEW**
+2f68|tennis racket **NEW**
+2f69|cash tray **NEW**
+2f6a|desktop mic **NEW**
+2f6b|tire stack **NEW**
+2f6c|school locker **NEW**
+2f6d|coin locker **NEW**
+2f6e|lectern with mic **NEW**
+2f6f|gift pile **NEW**
+2f70|zen backpack **NEW**
+2f71|fancy display case **NEW**
+2f72|popcorn **NEW**
+2f73|counter seat **NEW**
+2f74|zen chair **NEW**
+2f75|glass screen **NEW**
+2f76|busing station **NEW**
+2f77|round-cloth table **NEW**
+2f78|waiting-room bench **NEW**
+2f79|square minitable **NEW**
+2f7a|metal-rim table **NEW**
+2f7b|green net **NEW**
+2f7c|wood-plank table **NEW**
+2f7d|plastic file box **NEW**
+2f7e|iron garden chair **NEW**
+2f7f|iron garden table **NEW**
+2f80|kiddie meal **NEW**
+2f81|wall-mounted TV **NEW**
+2f82|billboard **NEW**
+2f83|water pot **NEW**
+2f84|stack of clothes **NEW**
+2f85|snack machine **NEW**
+2f86|alto saxophone **NEW**
+2f87|retro sink **NEW**
+2f88|perfume bottles **NEW**
+2f89|cans **NEW**
+2f8a|propane tanks **NEW**
+2f8b|zen screen **NEW**
+2f8c|bamboo fence **NEW**
+2f8d|massage recliner **NEW**
+2f8e|zen barrel **NEW**
+2f8f|reception chair **NEW**
+2f90|drink machine **NEW**
+2f91|snare drum **NEW**
+2f92|Wii U console **NEW**
+2f93|document stack **NEW**
+2f94|imperial chair **NEW**
+2f95|fruit drink **NEW**
+2f96|shaved ice **NEW**
+2f97|theater seat **NEW**
+2f98|garbage bin **NEW**
+2f99|slipper rack **NEW**
+2f9a|teppanyaki grill **NEW**
+2f9b|red cash register **NEW**
+2f9c|brick oven **NEW**
+2f9d|handbag **NEW**
+2f9e|silver mic **NEW**
+2f9f|organ **NEW**
+2fa0|xylophone **NEW**
+2fa1|trumpet **NEW**
+2fa2|sound mixer **NEW**
+2fa3|kitchen counter **NEW**
+2fa4|kitchen refrigerator **NEW**
+2fa5|sushi menu **NEW**
+2fa6|electric bass **NEW**
+2fa7|cafeteria table **NEW**
+2fa8|serving cart **NEW**
+2fa9|reception counter **NEW**
+2faa|outdoor sign **NEW**
+2fab|stacked magazines **NEW**
+2fac|narrow clock **NEW**
+2fad|pen-case chair **NEW**
+2fae|wood display stand **NEW**
+2faf|casual display stand **NEW**
+2fb0|fancy display stand **NEW**
+2fb1|basic display stand **NEW**
+2fb2|store shelf **NEW**
+2fb3|floor light **NEW**
+2fb4|brown seat **NEW**
+2fb5|lunch pack **NEW**
+2fb6|set lunch **NEW**
+2fb7|skateboard rack **NEW**
+2fb8|white office desk **NEW**
+2fb9|basic trash can **NEW**
+2fba|salon chair **NEW**
+2fbb|daimyo's tray **NEW**
+2fbc|single rose **NEW**
+2fbd|mug **NEW**
+2fbe|record box **NEW**
+2fbf|cruiser bike **NEW**
+2fc0|big amp **NEW**
+2fc1|video camera **NEW**
+2fc2|speaker **NEW**
+2fc3|kitchen dishwasher **NEW**
+2fc4|medicine cabinet **NEW**
+2fc5|sausage **NEW**
+2fc6|chain divider **NEW**
+2fc7|garden tools **NEW**
+2fc8|tool cart **NEW**
+2fc9|soccer goal **NEW**
+2fca|electric sign **NEW**
+2fcb|round electric sign **NEW**
+2fcc|desk mirror **NEW**
+2fcd|locker stack **NEW**
+2fce|garden faucet **NEW**
+2fcf|barrel planter **NEW**
+2fd0|garden rock **NEW**
+2fd1|tall garden rock **NEW**
+2fd2|natural bench **NEW**
+2fd3|natural chair **NEW**
+2fd4|natural table **NEW**
+2fd5|natural low table **NEW**
+2fd6|natural lamp **NEW**
+2fd7|elegant chair **NEW**
+2fd8|elegant bench **NEW**
+2fd9|compact car **NEW**
+2fda|sports car **NEW**
+2fdb|fish and chips **NEW**
+2fdc|pasta **NEW**
+2fdd|cheese **NEW**
+2fde|tacos **NEW**
+2fdf|kaiseki meal **NEW**
+2fe0|ivy partition **NEW**
+2fe1|cup of tea **NEW**
+2fe2|donburi **NEW**
+2fe3|simple panel **NEW**
+2fe4|cutting-board set **NEW**
+2fe5|bread-making set **NEW**
+2fe6|kitchen stove **NEW**
+2fe7|sample case **NEW**
+2fe8|counter table **NEW**
+2fe9|jewelry case **NEW**
+2fea|decoy duck **NEW**
+2feb|curry plate **NEW**
+2fec|modern wash station **NEW**
+2fed|autograph cards **NEW**
+2fee|decorative plate **NEW**
+2fef|tile screen **NEW**
+2ff0|floor monitor **NEW**
+2ff1|strapped books **NEW**
+2ff2|board game **NEW**
+2ff3|tool shelf **NEW**
+2ff4|bath set **NEW**
+2ff5|EKG machine **NEW**
+2ff6|zen cupboard **NEW**
+2ff7|Casablanca lilies **NEW**
+2ff8|udon soup **NEW**
+2ff9|donut box **NEW**
+2ffa|blowfish sashimi **NEW**
+2ffb|watermelon **NEW**
+2ffc|steamed lobster **NEW**
+2ffd|omelet **NEW**
+2ffe|paella **NEW**
+2fff|retro screen **NEW**
+3000|bamboo bench **NEW**
+3001|bus-stop stand **NEW**
+3002|shoe locker **NEW**
+3003|reception window **NEW**
+3004|warming buffet **NEW**
+3005|cupcake **NEW**
+3006|glass teapot **NEW**
+3007|espresso machine **NEW**
+3008|floor seat **NEW**
+3009|imperial pot **NEW**
+300a|console table **NEW**
+300b|round pillow **NEW**
+300c|hanging chair **NEW**
+300d|garden lantern **NEW**
+300e|bathroom shelf **NEW**
+300f|scooter **NEW**
+3010|round cushion **NEW**
+3011|basket chair **NEW**
+3012|zen cushion **NEW**
+3013|scattered papers **NEW**
+3014|large tea table **NEW**
+3015|New Nintendo 3DS **NEW**
+3016|New Nintendo 3DS XL **NEW**
+3017|Wii U Station **NEW**
+3018|Nintendo 3DS Station **NEW**
+3019|Wii U game shelf **NEW**
+301a|Nintendo 3DS shelf **NEW**
+301b|amiibo shelf **NEW**
+301c|Disk Writer **NEW**
+301d|giant Game Boy **NEW**
+301e|barbecue spit **NEW**
+301f|Wyvern eggs **NEW**
+3020|hunter **NEW**
+3021|Red Wing **NEW**
+3022|Felyne Guardian **NEW**
+3023|hunter's cart **NEW**
+3024|Palico board **NEW**
+3025|item box **NEW**
+3026|Poogie **NEW**
+3027|hunter's hive **NEW**
+3028|sushi bench **NEW**
+3029|shop ice-cream case **NEW**
+302a|24-hour-shop baskets **NEW**
+302b|24-hour-shop banner **NEW**
+302c|hot-snack case **NEW**
+302d|shop coffee machine **NEW**
+302e|massive cake **NEW**
+302f|candy house **NEW**
+3030|UFO **NEW**
+3031|giant ant **NEW**
+3032|mountain **NEW**
+3033|iceberg **NEW**
+3034|sun **NEW**
+3035|mountain of money **NEW**
+3036|giant stew pot **NEW**
+3037|carriage **NEW**
+3038|teacup ride **NEW**
+3039|giant teddy bear **NEW**
+303a|robot hero **NEW**
+303b|monitor tower **NEW**
+303c|tent **NEW**
+303d|propeller plane **NEW**
+303e|submarine **NEW**
+303f|luxury car **NEW**
+3040|large egg **NEW**
+3041|inflatable Resetti **NEW**
+3042|sapling clock **NEW**
+3043|Super Sea Snail **NEW**
+3044|Inkopolis sign **NEW**
+3045|Inkopolis table **NEW**
+3046|Splatoon tower **NEW**
+3047|squid bumper **NEW**
+3048|Inkopolis chair **NEW**
+3049|Splattershot **NEW**
+304a|left Splatfest sign **NEW**
+304b|right Splatfest sign **NEW**
+304c|Splatoon spawn point **NEW**
+304d|standing TV **NEW**
+304e|Desert Island map **NEW**
+304f|frying pan **NEW**
+3050|Desert Island table **NEW**
+3051|Desert Island stool **NEW**
+3052|Hello Kitty drawers **NEW**
+3053|Hello Kitty planter **NEW**
+3054|Hello Kitty bed **NEW**
+3055|Hello Kitty table **NEW**
+3056|Hello Kitty chair **NEW**
+3057|Hello Kitty clock **NEW**
+3058|Hello Kitty clock **NEW**
+3059|My Melody bed **NEW**
+305a|My Melody clock **NEW**
+305b|My Melody clock **NEW**
+305c|My Melody chair **NEW**
+305d|My Melody dresser **NEW**
+305e|My Melody table **NEW**
+305f|Pompompurin bed **NEW**
+3060|Pompompurin chair **NEW**
+3061|Pompompurin rack **NEW**
+3062|Pompompurin table **NEW**
+3063|Pompompurin pudding **NEW**
+3064|Pompompurin TV **NEW**
+3065|Pompompurin TV **NEW**
+3066|Kiki and Lala bed **NEW**
+3067|Kiki and Lala clock **NEW**
+3068|Kiki and Lala clock **NEW**
+3069|Kiki and Lala table **NEW**
+306a|Kiki and Lala sofa **NEW**
+306b|cloud-making machine **NEW**
+306c|Cinnamoroll table **NEW**
+306d|Cinnamoroll parasol **NEW**
+306e|Cinnamoroll sofa **NEW**
+306f|Cinnamoroll sign **NEW**
+3070|Cinnamoroll stool **NEW**
+3071|Cinnamoroll tray **NEW**
+3072|Kerokerokeroppi tray **NEW**
+3073|Kerokerokeroppi cake **NEW**
+3074|stone lantern **NEW**
+3075|tranquil bridge **NEW**
+3076|shoji bench **NEW**
+3077|Kerokerokeroppi doll **NEW**
+3078|New 3DS XL - HHD **NEW**
+3079|New 3DS - Isabelle **NEW**
+307a|New 3DS - Mabel **NEW**
+307b|New 3DS - Sable **NEW**
+307c|New 3DS - K.K. **NEW**
+307d|New 3DS - T&T **NEW**
+307e|Nook's Homes car **NEW**
+307f|Isabelle scooter **NEW**
+3080|bomb **NEW**
+3081|fairy bottle **NEW**
+3082|Hyrulean treasure **NEW**
+3083|Cucco ornament **NEW**
+3084|Gossip Stone **NEW**
+3085|Heart **NEW**
+3086|Heart Container **NEW**
+3087|Piece of Heart **NEW**
+3088|Lon Lon milk **NEW**
+3089|Termina's moon **NEW**
+308a|Hylian shield **NEW**
+308b|Hero of Time scroll **NEW**
+308c|Rupee **NEW**
+308d|model bus **NEW**
+308e|model sailor **NEW**
+308f|Nintendo bench **NEW**
+3090|Chihuahua ornament **NEW**
+3091|Dalmatian ornament **NEW**
+3092|Dachshund ornament **NEW**
+3093|Labrador ornament **NEW**
+3094|GameCube drawer **NEW**
+3095|Wii Remote cabinet **NEW**
+3096|NDS Lite bench **NEW**
+3097|Nintendo DSi bench **NEW**
+3098|lotus pond **NEW**
+3099|24-hour-shop clock **NEW**
+309a|donut cushion **NEW**
+309b|Otomon egg **NEW**
+309c|Nabiru ornament **NEW**
+309d|Fueki pot **NEW**
+309e|Fueki chair **NEW**
+309f|Fueki drawers **NEW**
+30a0|Fueki stereo **NEW**
+30a1|Fueki table **NEW**
+30a2|fruit-panel cushion **NEW**
+30a8|sewing kit **NEW**
+30a9|quilted tapestry **NEW**
+30aa|durian flower basket **NEW**
+30ab|banana flower basket **NEW**
+30ac|retro sign **NEW**
+30ad|cart return **NEW**
+30ae|box with helmet **NEW**
+30af|half-eaten pizza **NEW**
+30b0|overflowing trash **NEW**
+30b1|Rover suitcase **NEW**
+30b4|2017 cake **NEW**
+30b5|white festive tree **NEW**
+30b6|heavy tome **NEW**
+30b7|museum clock **NEW**
+30b8|gadget shelf **NEW**
+30b9|sacks of money **NEW**
+30ba|sales graph **NEW**
+30bb|Nook's Homes mat **NEW**
+30bc|Re-Tail clock **NEW**
+30bd|Re-Tail mat **NEW**
+30be|carpentry set **NEW**
+30bf|tool stand **NEW**
+30c0|Kicks mat **NEW**
+30c1|shoe boxes **NEW**
+30c2|shoe-polishing set **NEW**
+30c3|PA system **NEW**
+30c4|blueprints **NEW**
+30c5|DJ K.K. booth **NEW**
+30c6|guitar case **NEW**
+30c7|shop mat **NEW**
+30c8|museum mat **NEW**
+30c9|Nook's Homes model **NEW**
+30ca|Wendell's painting **NEW**
+30cb|instruction manual **NEW**
+
+318b|pic of Snooty **NEW**
+3195|pic of Ursala **NEW**
+3198|pic of Ike **NEW**
+31a1|pic of Piper **NEW**
+31a2|pic of Admiral **NEW**
+31a4|pic of Jakey **NEW**
+31a9|pic of Medli **NEW**
+31ac|pic of Stu **NEW**
+31c6|pic of Felyne **NEW**
+31ce|pic of Murphy **NEW**
+31cf|pic of Olive **NEW**
+31d1|pic of June **NEW**
+31d6|pic of Marty **NEW**
+31dc|pic of Plucky **NEW**
+31e2|pic of Norma **NEW**
+31e6|pic of Boots **NEW**
+31f5|pic of Chelsea **NEW**
+31ff|pic of Maddie **NEW**
+3200|pic of Bea **NEW**
+3211|pic of Weber **NEW**
+3213|pic of Ketchup **NEW**
+321c|pic of Paolo **NEW**
+321e|pic of Ellie **NEW**
+3221|pic of Chai **NEW**
+322a|pic of Tad **NEW**
+322c|pic of Huck **NEW**
+322f|pic of Raddle **NEW**
+3236|pic of Billy **NEW**
+323e|pic of Louie **NEW**
+323f|pic of Boyd **NEW**
+3244|pic of Rilla **NEW**
+3252|pic of Bitty **NEW**
+325c|pic of Cleo **NEW**
+3264|pic of Epona **NEW**
+3269|pic of Gonzo **NEW**
+3270|pic of Carrie **NEW**
+3278|pic of Rex **NEW**
+3279|pic of Leopold **NEW**
+328b|pic of Candi **NEW**
+3297|pic of Inkwell **NEW**
+329a|pic of Sandy **NEW**
+329b|pic of Sprocket **NEW**
+329c|pic of Julia **NEW**
+32a5|pic of Buzz **NEW**
+32b2|pic of Wade **NEW**
+32bf|pic of Boris **NEW**
+32c0|pic of Maggie **NEW**
+32c7|pic of Ganon **NEW**
+32d3|pic of Claude **NEW**
+32d6|pic of Hopkins **NEW**
+32dc|pic of Toby **NEW**
+32df|pic of Spike **NEW**
+32e0|pic of Hornsby **NEW**
+32e6|pic of Stella **NEW**
+32e7|pic of Cashmere **NEW**
+32ef|pic of Étoile **NEW**
+32fc|pic of Tasha **NEW**
+32fd|pic of Sylvana **NEW**
+3302|pic of Cece **NEW**
+3303|pic of Viché **NEW**
+3306|pic of Tybalt **NEW**
+330f|pic of Dobie **NEW**
+3312|pic of Vivian **NEW**
+3315|pic of Wolf Link **NEW**
+
+Pics (special)
+-------------
+3316|pic of Cyrus **NEW**
+3317|pic of Reese **NEW**
+3318|pic of Chip **NEW**
+3319|pic of Phineas **NEW**
+331a|pic of Joan **NEW**
+331b|pic of Katrina **NEW**
+331c|pic of Nat **NEW**
+331d|pic of Saharah **NEW**
+331f|pic of Redd **NEW**
+3320|pic of Gracie **NEW**
+3321|pic of Labelle **NEW**
+3322|pic of Mabel **NEW**
+3323|pic of Sable **NEW**
+3324|pic of Grams **NEW**
+3325|pic of Leilani **NEW**
+3326|pic of Kapp'n **NEW**
+3327|pic of Leila **NEW**
+3328|pic of Tommy **NEW**
+3329|pic of Timmy **NEW**
+332a|pic of Porter **NEW**
+332d|pic of Lyle **NEW**
+332e|pic of Blathers **NEW**
+332f|pic of Celeste **NEW**
+3330|pic of Pavé **NEW**
+3331|pic of Pelly **NEW**
+3332|pic of Phyllis **NEW**
+3333|pic of Brewster **NEW**
+3334|pic of Jack **NEW**
+3335|pic of Booker **NEW**
+3336|pic of Pete **NEW**
+3337|pic of Copper **NEW**
+3338|pic of Harriet **NEW**
+3339|pic of Tom Nook **NEW**
+333a|pic of Gulliver **NEW**
+333b|pic of Pascal **NEW**
+333c|pic of Kicks **NEW**
+333d|pic of Isabelle **NEW**
+333e|pic of Tortimer **NEW**
+333f|pic of Franklin **NEW**
+3340|pic of Shrunk **NEW**
+3341|pic of Rover **NEW**
+3342|pic of Leif **NEW**
+3344|pic of Luna **NEW**
+3345|pic of DJ KK **NEW**
+3349|pic of Digby **NEW**
+334a|pic of Wendell **NEW**
+334b|pic of Lottie **NEW**
+
+339c|Flower Fairy wand **NEW**
+339d|Kiki and Lala wand **NEW**
+
+33fb|fortune #51 **NEW**
+33fc|fortune #52 **NEW**
+33fd|fortune #53 **NEW**
+33fe|fortune #54 **NEW**
+33ff|fortune #55 **NEW**
+3400|fortune #56 **NEW**
+3401|fortune #57 **NEW**
+
+3726|magic lamp **NEW**
+372a|Ikada trophy **NEW**
