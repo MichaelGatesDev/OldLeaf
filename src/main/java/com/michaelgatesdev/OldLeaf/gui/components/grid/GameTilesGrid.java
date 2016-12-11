@@ -63,7 +63,6 @@ public class GameTilesGrid extends PaintGrid
     }
     
     
-    //TODO implement colors
     private Color getItemColor(GameItem item)
     {
         if (item.isNothing())
@@ -72,7 +71,8 @@ public class GameTilesGrid extends PaintGrid
         }
         else
         {
-            return Color.RED;
+            String category = Main.getInstance().getGameItemCategory(item);
+            return Main.getInstance().getGameItemCategoryColors().get(category);
         }
     }
     

@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
@@ -50,6 +51,7 @@ public class Main extends Application
     private SaveGame                        saveGame;
     private Map<Short, String>              gameItemNames;
     private Map<String, Map<Short, String>> gameItemCategories;
+    private Map<String, Color>              gameItemCategoryColors;
     private Map<Short, String>              gameStructureNames;
     private Map<Byte, File>                 acreImages;
     
@@ -140,13 +142,25 @@ public class Main extends Application
     }
     
     
-    //TODO Use item values instead of item names because a simple change in naming will break this
     private void loadGameItemCategories()
     {
         this.gameItemCategories = new HashMap<>();
         
         File f = new File(textResDir, "/items.txt");
         this.gameItemCategories = this.loadTitledHexList(f);
+        
+        
+        gameItemCategoryColors = new HashMap<>();
+        double offsetAmt = 360.0 / gameItemCategories.keySet().size();
+        int n = 0;
+        for (String s : gameItemCategories.keySet())
+        {
+            Color color = Color.hsb(offsetAmt * n, 1.0, 1.0);
+            gameItemCategoryColors.put(s, color);
+            n++;
+        }
+        
+        logger.debug(gameItemCategoryColors);
     }
     
     
@@ -253,6 +267,19 @@ public class Main extends Application
     }
     
     
+    public String getGameItemCategory(GameItem item)
+    {
+        for (String category : this.gameItemCategories.keySet())
+        {
+            if (this.gameItemCategories.get(category).keySet().contains(item.getValue()))
+            {
+                return category;
+            }
+        }
+        return null;
+    }
+    
+    
     public String getStructureNameFromValue(short id)
     {
         return this.gameStructureNames.get(id);
@@ -316,6 +343,13 @@ public class Main extends Application
     {
         return gameItemNames;
     }
+    
+    
+    public Map<String, Color> getGameItemCategoryColors()
+    {
+        return gameItemCategoryColors;
+    }
+    
     
     // ============================================================================================================================================ \\
 }
