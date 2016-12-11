@@ -312,5 +312,10 @@ public class Main extends Application
     }
     
     
+    public Map<Short, String> getGameItemNames()
+    {
+        return gameItemNames;
+    }
+    
     // ============================================================================================================================================ \\
 }

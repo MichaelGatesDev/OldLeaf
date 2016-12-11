@@ -6,8 +6,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import org.apache.log4j.Logger;
+import org.controlsfx.control.textfield.AutoCompletionBinding;
+import org.controlsfx.control.textfield.TextFields;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -24,6 +27,9 @@ public class MapEditorItemsPanelController implements Initializable
     @FXML
     public Accordion itemCatalogAccordion;
     
+    @FXML
+    private TextField searchBox;
+    
     // ============================================================================================================================================ \\
     
     
@@ -37,6 +43,17 @@ public class MapEditorItemsPanelController implements Initializable
         {
             itemCatalogAccordion.getPanes().add(this.createCategoryPane(key, new ArrayList<>(categories.get(key).values())));
         }
+        
+        AutoCompletionBinding<String> binding = TextFields.bindAutoCompletion(searchBox, Main.getInstance().getGameItemNames().values());
+        binding.setOnAutoCompleted(event ->
+        {
+            String completion = event.getCompletion();
+            
+            this.updateSelectedItem(completion);
+            
+            searchBox.clear();
+            searchBox.getParent().requestFocus();
+        });
     }
     
     // ============================================================================================================================================ \\
@@ -55,12 +72,19 @@ public class MapEditorItemsPanelController implements Initializable
         {
             String item = view.getSelectionModel().getSelectedItem();
             
-            GameTilesGrid grid = (GameTilesGrid) itemCatalogAccordion.getScene().lookup("GameTilesGrid");
-            grid.setSelectedItem(Main.getInstance().getItemFromName(item));
+            this.updateSelectedItem(item);
         });
         
         return pane;
     }
+    
+    
+    private void updateSelectedItem(String item)
+    {
+        GameTilesGrid grid = (GameTilesGrid) itemCatalogAccordion.getScene().lookup("GameTilesGrid");
+        grid.setSelectedItem(Main.getInstance().getItemFromName(item));
+    }
+    
     
     // ============================================================================================================================================ \\
 }
