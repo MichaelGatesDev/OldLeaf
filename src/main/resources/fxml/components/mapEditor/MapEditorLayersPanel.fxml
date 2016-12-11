@@ -1,45 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-
-<HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="600.0" spacing="50.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor.MapEditorLayersController">
-
-    <stylesheets>
-    </stylesheets>
-
-    <children>
-        <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0" HBox.hgrow="ALWAYS">
-            <children>
-                <Label fx:id="coordinatesLabel" text="X: 0 Y: 0" HBox.hgrow="ALWAYS">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-                <Label fx:id="objectNameLabel" text="Air" HBox.hgrow="ALWAYS">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-            </children>
-            <HBox.margin>
-                <Insets left="50.0" />
-            </HBox.margin>
-        </HBox>
-        <Separator orientation="VERTICAL" prefHeight="200.0" />
-        <HBox alignment="CENTER" spacing="60.0">
-            <children>
-                <CheckBox mnemonicParsing="false" selected="true" text="Acres" />
-                <CheckBox mnemonicParsing="false" selected="true" text="Buildings" />
-                <CheckBox mnemonicParsing="false" selected="true" text="Items" />
-            </children>
-            <HBox.margin>
-                <Insets right="50.0" />
-            </HBox.margin>
-        </HBox>
-    </children>
-</HBox>
+<AnchorPane pickOnBounds="false" prefHeight="500.0" prefWidth="160.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.112"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor.MapEditorLayersController">
+    <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <bottom>
+            <VBox alignment="CENTER" prefHeight="80.0" BorderPane.alignment="CENTER">
+                <children>
+                    <Label fx:id="coordinatesLabel" text="X: 0 Y: 0">
+                        <font>
+                            <Font size="14.0"/>
+                        </font>
+                    </Label>
+                    <Label fx:id="objectNameLabel" text="Air">
+                        <font>
+                            <Font size="14.0"/>
+                        </font>
+                    </Label>
+                </children>
+            </VBox>
+        </bottom>
+        <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+                <children>
+                    <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                AnchorPane.topAnchor="0.0">
+                        <top>
+                            <Label text="Layers" BorderPane.alignment="CENTER">
+                                <font>
+                                    <Font size="20.0"/>
+                                </font>
+                                <BorderPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                                </BorderPane.margin>
+                            </Label>
+                        </top>
+                        <center>
+                            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                <children>
+                                    <CheckBox mnemonicParsing="false" selected="true" text="Items"/>
+                                    <CheckBox layoutX="65.0" layoutY="10.0" mnemonicParsing="false" selected="true" text="Buildings"/>
+                                    <CheckBox disable="true" layoutX="55.0" layoutY="27.0" mnemonicParsing="false" selected="true" text="Acres"/>
+                                </children>
+                                <BorderPane.margin>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                                </BorderPane.margin>
+                            </VBox>
+                        </center>
+                    </BorderPane>
+                </children>
+            </AnchorPane>
+        </center>
+    </BorderPane>
+</AnchorPane>
