@@ -150,17 +150,15 @@ public class Main extends Application
         this.gameItemCategories = this.loadTitledHexList(f);
         
         
-        gameItemCategoryColors = new HashMap<>();
-        double offsetAmt = 360.0 / gameItemCategories.keySet().size();
+        this.gameItemCategoryColors = new HashMap<>();
+        double offsetAmt = 360.0 / this.gameItemCategories.keySet().size();
         int n = 0;
-        for (String s : gameItemCategories.keySet())
+        for (String s : this.gameItemCategories.keySet())
         {
             Color color = Color.hsb(offsetAmt * n, 1.0, 1.0);
-            gameItemCategoryColors.put(s, color);
+            this.gameItemCategoryColors.put(s, color);
             n++;
         }
-        
-        logger.debug(gameItemCategoryColors);
     }
     
     
