@@ -37,6 +37,7 @@ public class GameTilesGrid extends PaintGrid
         
         Platform.runLater(() ->
         {
+            this.setId("GameTilesGrid");
             this.coordinatesLabel = (Label) this.getScene().lookup("#coordinatesLabel");
             this.objectNameLabel = (Label) this.getScene().lookup("#objectNameLabel");
             this.selectedItemIDLabel = (Label) this.getScene().lookup("#selectedItemIDLabel");
@@ -86,7 +87,6 @@ public class GameTilesGrid extends PaintGrid
             selectedItem = GameItem.AIR;
         }
         
-        // TODO: Implement special map editor clicks
         if (button == MouseButton.PRIMARY)
         {
             Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY] = selectedItem;
@@ -121,8 +121,7 @@ public class GameTilesGrid extends PaintGrid
             
             if (selectedItemIDLabel != null && selectedItemNameLabel != null)
             {
-                this.selectedItemIDLabel.setText("0x" + String.valueOf(Integer.toString(selectedItem.getValue(), 16)).toUpperCase());
-                this.selectedItemNameLabel.setText(selectedItem.getName());
+                this.setSelectedItem(selectedItem);
             }
         }
     }
@@ -147,6 +146,17 @@ public class GameTilesGrid extends PaintGrid
         {
             objectNameLabel.setText("Air");
         }
+    }
+    
+    
+    // ============================================================================================================================================ \\
+    
+    
+    public void setSelectedItem(GameItem selectedItem)
+    {
+        this.selectedItem = selectedItem;
+        this.selectedItemIDLabel.setText("0x" + String.valueOf(Integer.toString(selectedItem.getValue(), 16)).toUpperCase());
+        this.selectedItemNameLabel.setText(selectedItem.getName());
     }
     
     

@@ -13,7 +13,9 @@ public class MapEditorLayersController implements Initializable
     private static final Logger logger = Logger.getLogger(MapEditorLayersController.class);
     
     
-    // ============================================================================================================================================ \\    @Override
+    // ============================================================================================================================================ \\
+    
+    @Override
     public void initialize(URL location, ResourceBundle resources)
     {
     }

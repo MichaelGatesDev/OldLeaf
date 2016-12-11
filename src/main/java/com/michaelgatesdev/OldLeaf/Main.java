@@ -1,5 +1,6 @@
 package com.michaelgatesdev.OldLeaf;
 
+import com.michaelgatesdev.OldLeaf.game.GameItem;
 import com.michaelgatesdev.OldLeaf.game.SaveGame;
 import com.michaelgatesdev.OldLeaf.gui.GuiManager;
 import com.michaelgatesdev.OldLeaf.locale.UTF8Control;
@@ -237,6 +238,21 @@ public class Main extends Application
     }
     
     
+    public GameItem getItemFromName(String item)
+    {
+        short v = 0x7FFE;
+        for (short key : this.gameItemNames.keySet())
+        {
+            if (this.gameItemNames.get(key).equalsIgnoreCase(item))
+            {
+                v = key;
+                break;
+            }
+        }
+        return new GameItem.Builder().withName(item).withShortValue(v).build();
+    }
+    
+    
     public String getStructureNameFromValue(short id)
     {
         return this.gameStructureNames.get(id);
@@ -294,6 +310,7 @@ public class Main extends Application
     {
         return gameItemCategories;
     }
+    
     
     // ============================================================================================================================================ \\
 }

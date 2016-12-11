@@ -1,11 +1,13 @@
 package com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor;
 
 import com.michaelgatesdev.OldLeaf.Main;
+import com.michaelgatesdev.OldLeaf.gui.components.grid.GameTilesGrid;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TitledPane;
+import org.apache.log4j.Logger;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -15,8 +17,14 @@ import java.util.ResourceBundle;
 
 public class MapEditorItemsPanelController implements Initializable
 {
+    // ============================================================================================================================================ \\
+    
+    private static final Logger logger = Logger.getLogger(MapEditorItemsPanelController.class);
+    
     @FXML
     public Accordion itemCatalogAccordion;
+    
+    // ============================================================================================================================================ \\
     
     
     @Override
@@ -31,6 +39,8 @@ public class MapEditorItemsPanelController implements Initializable
         }
     }
     
+    // ============================================================================================================================================ \\
+    
     
     private TitledPane createCategoryPane(String title, List<String> strings)
     {
@@ -41,6 +51,16 @@ public class MapEditorItemsPanelController implements Initializable
         view.getItems().addAll(strings);
         pane.setContent(view);
         
+        view.setOnMouseClicked(event ->
+        {
+            String item = view.getSelectionModel().getSelectedItem();
+            
+            GameTilesGrid grid = (GameTilesGrid) itemCatalogAccordion.getScene().lookup("GameTilesGrid");
+            grid.setSelectedItem(Main.getInstance().getItemFromName(item));
+        });
+        
         return pane;
     }
+    
+    // ============================================================================================================================================ \\
 }
