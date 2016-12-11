@@ -1,45 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
-<BorderPane xmlns:fx="http://javafx.com/fxml/1"
-            prefHeight="700.0"
-            prefWidth="1000.0"
-            fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor.MapEditorController"
-            xmlns="http://javafx.com/javafx/null">
+
+<BorderPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor.MapEditorController">
 
     <stylesheets>
     </stylesheets>
 
     <left>
         <!-- Left Item Select Panel -->
-        <fx:include source="MapEditorItemsPanel.fxml"/>
+        <fx:include source="MapEditorItemsPanel.fxml" />
     </left>
 
     <center>
-        <!-- Have to nest the BorderPane in order to see the bottom panel on the bottom center and not have it cut off -->
-        <BorderPane prefHeight="200.0"
-                    prefWidth="200.0"
-                    BorderPane.alignment="CENTER">
-            <center>
-                <ScrollPane fitToHeight="true"
-                            fitToWidth="true"
-                            nodeOrientation="LEFT_TO_RIGHT"
-                            prefWidth="600.0">
-                    <content>
-                        <StackPane fx:id="gridContainer"
-                                   prefHeight="150.0"
-                                   prefWidth="200.0"/>
-                    </content>
-                </ScrollPane>
-            </center>
-            <bottom>
-                <!-- Bottom layers panel -->
-                <fx:include source="MapEditorLayersPanel.fxml"/>
-            </bottom>
-        </BorderPane>
+          <ScrollPane fitToHeight="true" fitToWidth="true" nodeOrientation="LEFT_TO_RIGHT" prefWidth="600.0">
+              <content>
+                  <StackPane fx:id="gridContainer" prefHeight="150.0" prefWidth="200.0" />
+              </content>
+          </ScrollPane>
     </center>
+    <bottom>
+        <!-- Bottom layers panel -->
+        <fx:include source="MapEditorLayersPanel.fxml" />
+    </bottom>
 
 </BorderPane>
