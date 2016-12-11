@@ -97,5 +97,56 @@ public class FileUtil
         return result;
     }
     
+    
+    public static Map<String, Map<String, String>> loadTitledList(File f, String delimiter, String itemRegex, String titleRegex)
+    {
+        Map<String, Map<String, String>> map = new HashMap<>();
+        
+        String currentKey = "";
+        if (f != null && f.exists())
+        {
+            try
+            {
+                // Read all lines of file
+                for (Object o : FileUtils.readLines(f))
+                {
+                    // current line
+                    String line = (String) o;
+                    
+                    Pattern titlePattern = Pattern.compile(titleRegex);
+                    
+                    if (titlePattern.matcher(line).matches())
+                    {
+                        currentKey = line;
+                        continue;
+                    }
+                    
+                    Pattern itemPattern = Pattern.compile(itemRegex);
+                    
+                    if (!itemPattern.matcher(line).matches())
+                    {
+                        continue;
+                    }
+                    
+                    if (!map.containsKey(currentKey))
+                    {
+                        map.put(currentKey, new HashMap<>());
+                    }
+                    
+                    // split the string
+                    String[] ss = line.split(delimiter);
+                    
+                    map.get(currentKey).put(ss[0], ss[1]);
+                }
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
+        return map;
+    }
+    
+    
     // ============================================================================================================================================ \\
 }

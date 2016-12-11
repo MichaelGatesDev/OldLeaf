@@ -6,8 +6,7 @@
 <?import javafx.scene.text.Font?>
 <?import java.lang.String?>
 <AnchorPane pickOnBounds="false" prefHeight="500.0" prefWidth="160.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.112"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor.MapEditorItemsPanelController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor.MapEditorItemsPanelController">
 
     <Pane layoutX="-54.0" layoutY="-75.0" prefHeight="50.0" prefWidth="160.0" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="0.0"
           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -15,17 +14,12 @@
             <TextField layoutX="11.0" layoutY="13.0" prefHeight="25.0" prefWidth="139.0" promptText="Search"/>
         </children>
     </Pane>
-
-    <SplitPane dividerPositions="0.8" layoutX="8.0" layoutY="50.0" orientation="VERTICAL" prefHeight="450.0" prefWidth="160.0"
-               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
-
-        <stylesheets>
-        </stylesheets>
-
-        <items>
+    <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <center>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="295.0" prefWidth="158.0">
                 <children>
-                    <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="-33.0" layoutY="-9.0" prefHeight="246.0" prefWidth="158.0"
+                    <ScrollPane fitToWidth="true" layoutX="-33.0" layoutY="-9.0" prefHeight="1000.0" prefWidth="158.0"
                                 AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                         <content>
                             <Accordion fx:id="itemCatalogAccordion">
@@ -47,7 +41,9 @@
                     </ScrollPane>
                 </children>
             </AnchorPane>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+        </center>
+        <bottom>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" BorderPane.alignment="CENTER">
                 <children>
                     <VBox alignment="CENTER" layoutX="14.0" layoutY="91.0" prefHeight="171.0" prefWidth="158.0" AnchorPane.bottomAnchor="0.0"
                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -63,7 +59,7 @@
                     </VBox>
                 </children>
             </AnchorPane>
-        </items>
-    </SplitPane>
+        </bottom>
+    </BorderPane>
 
 </AnchorPane>

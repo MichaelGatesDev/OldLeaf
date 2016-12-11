@@ -8,6 +8,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TitledPane;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -23,10 +24,10 @@ public class MapEditorItemsPanelController implements Initializable
     {
         itemCatalogAccordion.getPanes().clear();
         
-        Map<String, List<String>> categories = Main.getInstance().getGameItemCategories();
+        Map<String, Map<Short, String>> categories = Main.getInstance().getGameItemCategories();
         for (String key : categories.keySet())
         {
-            itemCatalogAccordion.getPanes().add(this.createCategoryPane(key, categories.get(key)));
+            itemCatalogAccordion.getPanes().add(this.createCategoryPane(key, new ArrayList<>(categories.get(key).values())));
         }
     }
     

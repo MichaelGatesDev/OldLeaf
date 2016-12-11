@@ -17,7 +17,9 @@ import org.apache.log4j.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.ResourceBundle;
 
 public class Main extends Application
 {
@@ -44,11 +46,11 @@ public class Main extends Application
     private File islandTemplatesDir;
     private File appearanceTemplatesDir;
     
-    private SaveGame                  saveGame;
-    private Map<Short, String>        gameItemNames;
-    private Map<String, List<String>> gameItemCategories;
-    private Map<Short, String>        gameStructureNames;
-    private Map<Byte, File>           acreImages;
+    private SaveGame                        saveGame;
+    private Map<Short, String>              gameItemNames;
+    private Map<String, Map<Short, String>> gameItemCategories;
+    private Map<Short, String>              gameStructureNames;
+    private Map<Byte, File>                 acreImages;
     
     // ============================================================================================================================================ \\
     
@@ -81,7 +83,7 @@ public class Main extends Application
         initializeDirectories();
         
         // Create/Initialize all files
-        File itemsFile = new File(textResDir, "/items/items.txt");
+        File itemsFile = new File(textResDir, "/items.txt");
         this.gameItemNames = this.loadHexStringMap(itemsFile);
         File structuresFile = new File(textResDir, "structures.txt");
         this.gameStructureNames = this.loadHexStringMap(structuresFile);
@@ -142,19 +144,8 @@ public class Main extends Application
     {
         this.gameItemCategories = new HashMap<>();
         
-        File dir = new File(textResDir, "/items/categorized/");
-        for (File f : dir.listFiles())
-        {
-            String categoryName = f.getName().replace(".txt", "");
-            
-            Map<Short, String> loadedItems = this.loadHexStringMap(f);
-            List<String> list = new ArrayList<>();
-            
-            list.addAll(loadedItems.values());
-            
-            this.gameItemCategories.put(categoryName, list);
-            logger.debug(String.format("Loaded game item category \"%s\" with [%d] elements.", categoryName, list.size()));
-        }
+        File f = new File(textResDir, "/items.txt");
+        this.gameItemCategories = this.loadTitledHexList(f);
     }
     
     
@@ -208,6 +199,35 @@ public class Main extends Application
             map.put(shortValue, value);
         }
         return map;
+    }
+    
+    
+    private Map<String, Map<Short, String>> loadTitledHexList(File file)
+    {
+        Map<String, Map<Short, String>> result = new HashMap<>();
+        Map<String, Map<String, String>> itemsRaw = FileUtil.loadTitledList(file, "\\|", "^([A-Fa-f0-9]{4}[|](.*))$", "^([\\w]+)$");
+        
+        for (String title : itemsRaw.keySet())
+        {
+            Map<String, String> rawV = itemsRaw.get(title);
+            
+            if (!result.containsKey(title))
+            {
+                result.put(title, new HashMap<>());
+            }
+            
+            for (String key : rawV.keySet())
+            {
+                String value = rawV.get(key);
+                
+                byte[] bytes = HexUtil.stringToByteArray(key);
+                short shortValue = HexUtil.byteArrayToShort(bytes);
+                
+                result.get(title).put(shortValue, value);
+            }
+        }
+        
+        return result;
     }
     
     
@@ -270,7 +290,7 @@ public class Main extends Application
     }
     
     
-    public Map<String, List<String>> getGameItemCategories()
+    public Map<String, Map<Short, String>> getGameItemCategories()
     {
         return gameItemCategories;
     }
