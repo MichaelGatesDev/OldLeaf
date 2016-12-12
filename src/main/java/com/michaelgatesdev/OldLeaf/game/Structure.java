@@ -6,12 +6,11 @@ public class Structure
     
     public static final Structure NOTHING = new Structure.Builder().withValue((short) 0x00F8).withName("(Nothing)").build();
     
-    private short  value;
-    private String name;
-    private int    x;
-    private int    y;
-    private int    length;
-    private int    width;
+    private short         value;
+    private String        name;
+    private int           x;
+    private int           y;
+    private GridDimension size;
     
     // ============================================================================================================================================ \\
     
@@ -22,8 +21,7 @@ public class Structure
         this.name = b.name;
         this.x = b.x;
         this.y = b.y;
-        this.length = b.length;
-        this.width = b.width;
+        this.size = b.size;
     }
     
     
@@ -38,12 +36,11 @@ public class Structure
     
     public static class Builder
     {
-        private short  value;
-        private String name;
-        private int    x;
-        private int    y;
-        private int    length;
-        private int    width;
+        private short         value;
+        private String        name;
+        private int           x;
+        private int           y;
+        private GridDimension size;
         
         
         public Structure.Builder withValue(short value)
@@ -68,10 +65,9 @@ public class Structure
         }
         
         
-        public Structure.Builder withSize(int length, int width)
+        public Structure.Builder withSize(GridDimension size)
         {
-            this.length = length;
-            this.width = width;
+            this.size = size;
             return this;
         }
         
@@ -98,15 +94,9 @@ public class Structure
     }
     
     
-    public void setLength(int length)
+    public void setSize(GridDimension size)
     {
-        this.length = length;
-    }
-    
-    
-    public void setWidth(int width)
-    {
-        this.width = width;
+        this.size = size;
     }
     
     
@@ -136,15 +126,9 @@ public class Structure
     }
     
     
-    public int getLength()
+    public GridDimension getSize()
     {
-        return length;
-    }
-    
-    
-    public int getWidth()
-    {
-        return width;
+        return size;
     }
     
     

@@ -260,7 +260,7 @@ public class SaveGame
                 
                 Acre acre = new Acre();
                 acre.setValue(acreID);
-                acre.setImageFile(Main.getInstance().getAcreImageFromValue(acreID));
+                acre.setImageFile(Main.getInstance().getAcreImage(acreID));
                 townMap.getAcres()[acreX][acreY] = acre;
                 
                 for (int j = 0; j < GameMap.TILES_TOTAL; j++)
@@ -274,7 +274,7 @@ public class SaveGame
                     byte flag2 = raf.readByte();
                     
                     GameItem item = new GameItem.Builder()
-                            .withName(Main.getInstance().getItemNameFromValue(id))
+                            .withName(Main.getInstance().getItemName(id))
                             .withFlag1(flag1)
                             .withFlag2(flag2)
                             .withShortValue(id)
@@ -302,7 +302,8 @@ public class SaveGame
                 Structure structure = new Structure.Builder()
                         .atPosition(x, y)
                         .withValue(value)
-                        .withName(Main.getInstance().getStructureNameFromValue(value))
+                        .withName(Main.getInstance().getStructureName(value))
+                        .withSize(Main.getInstance().getStructureSize(value))
                         .build();
                 
                 townMap.getStructures()[x - 15][y - 15] = structure;

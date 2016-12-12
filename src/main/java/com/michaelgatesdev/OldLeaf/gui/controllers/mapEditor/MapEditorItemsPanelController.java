@@ -82,7 +82,7 @@ public class MapEditorItemsPanelController implements Initializable
     private void updateSelectedItem(String item)
     {
         GameTilesGrid grid = (GameTilesGrid) itemCatalogAccordion.getScene().lookup("GameTilesGrid");
-        grid.setSelectedItem(Main.getInstance().getItemFromName(item));
+        grid.setSelectedItem(Main.getInstance().getItem(item));
     }
     
     

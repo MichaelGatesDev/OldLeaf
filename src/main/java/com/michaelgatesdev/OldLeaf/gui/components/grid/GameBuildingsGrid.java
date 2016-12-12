@@ -1,6 +1,7 @@
 package com.michaelgatesdev.OldLeaf.gui.components.grid;
 
 import com.michaelgatesdev.OldLeaf.Main;
+import com.michaelgatesdev.OldLeaf.game.GridDimension;
 import com.michaelgatesdev.OldLeaf.game.Structure;
 import javafx.application.Platform;
 import javafx.scene.control.Label;
@@ -50,6 +51,9 @@ public class GameBuildingsGrid extends PaintGrid
     
     public void fillWithStructures(Structure[][] structures, int maxCols, int maxRows)
     {
+        Color centerColor = Color.color(Color.GRAY.getRed(), Color.GRAY.getGreen(), Color.GRAY.getBlue(), 0.90);
+        Color mainColor = Color.color(Color.DARKGRAY.getRed(), Color.DARKGRAY.getGreen(), Color.DARKGRAY.getBlue(), 0.90);
+        
         for (int x = 0; x < maxCols; x++)
         {
             for (int y = 0; y < maxRows; y++)
@@ -61,10 +65,24 @@ public class GameBuildingsGrid extends PaintGrid
                     continue;
                 }
                 
-                Color c = Color.color(Color.WHITESMOKE.getRed(), Color.WHITESMOKE.getGreen(), Color.WHITESMOKE.getBlue(), 0.75);
+                GridDimension size = structure.getSize();
                 
-                PaintableCell pc = (PaintableCell) this.getCells()[x][y];
-                pc.paint(c);
+                int startX = (x - (size.getWidth() / 2));
+                int endX = (x + (size.getWidth() / 2));
+                int startY = (y - (size.getHeight() / 2));
+                int endY = (y + (size.getHeight() / 2));
+                
+                
+                for (int x2 = startX; x2 <= endX; x2++)
+                {
+                    for (int y2 = startY; y2 <= endY; y2++)
+                    {
+                        PaintableCell pc = (PaintableCell) this.getCells()[x2][y2];
+                        
+                        pc.paint(x2 == x && y2 == y ? centerColor : mainColor);
+                    }
+                }
+                
             }
         }
     }

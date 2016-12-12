@@ -1,6 +1,7 @@
 package com.michaelgatesdev.OldLeaf;
 
 import com.michaelgatesdev.OldLeaf.game.GameItem;
+import com.michaelgatesdev.OldLeaf.game.GridDimension;
 import com.michaelgatesdev.OldLeaf.game.SaveGame;
 import com.michaelgatesdev.OldLeaf.gui.GuiManager;
 import com.michaelgatesdev.OldLeaf.locale.UTF8Control;
@@ -53,6 +54,7 @@ public class Main extends Application
     private Map<String, Map<Short, String>> gameItemCategories;
     private Map<String, Color>              gameItemCategoryColors;
     private Map<Short, String>              gameStructureNames;
+    private Map<Short, GridDimension>       gameStructureSizes;
     private Map<Byte, File>                 acreImages;
     
     // ============================================================================================================================================ \\
@@ -86,13 +88,33 @@ public class Main extends Application
         initializeDirectories();
         
         // Create/Initialize all files
+        
+        // items
         File itemsFile = new File(textResDir, "/items.txt");
         this.gameItemNames = this.loadHexStringMap(itemsFile);
-        File structuresFile = new File(textResDir, "/structures.txt");
-        this.gameStructureNames = this.loadHexStringMap(structuresFile);
-        
         this.loadGameItemCategories();
         
+        // structures
+        File structuresFile = new File(textResDir, "/structures.txt");
+        Map<Short, String> structuresTemp = this.loadHexStringMap(structuresFile);
+        this.gameStructureNames = new HashMap<>();
+        this.gameStructureSizes = new HashMap<>();
+        for (short key : structuresTemp.keySet())
+        {
+            String value = structuresTemp.get(key);
+            String[] ss = value.split(";");
+            String name = ss[0];
+            String rawSize = ss[1];
+            String[] ss2 = rawSize.split("x");
+            
+            int width = Integer.parseInt(ss2[0]);
+            int height = Integer.parseInt(ss2[1]);
+            
+            this.gameStructureNames.put(key, name);
+            this.gameStructureSizes.put(key, new GridDimension(width, height));
+        }
+        
+        // acres
         this.loadAcreImages();
         
         
@@ -245,13 +267,13 @@ public class Main extends Application
     }
     
     
-    public String getItemNameFromValue(short id)
+    public String getItemName(short id)
     {
         return this.gameItemNames.get(id);
     }
     
     
-    public GameItem getItemFromName(String item)
+    public GameItem getItem(String item)
     {
         short v = 0x7FFE;
         for (short key : this.gameItemNames.keySet())
@@ -279,13 +301,19 @@ public class Main extends Application
     }
     
     
-    public String getStructureNameFromValue(short id)
+    public String getStructureName(short id)
     {
         return this.gameStructureNames.get(id);
     }
     
     
-    public File getAcreImageFromValue(byte value)
+    public GridDimension getStructureSize(short id)
+    {
+        return this.gameStructureSizes.get(id);
+    }
+    
+    
+    public File getAcreImage(byte value)
     {
         return acreImages.get(value);
     }
