@@ -18,7 +18,7 @@
                             <Font size="14.0" />
                         </font>
                     </Label>
-                    <Label fx:id="objectNameLabel" text="Air">
+                    <Label fx:id="objectNameLabel" text="Air" wrapText="true">
                         <font>
                             <Font size="14.0" />
                         </font>

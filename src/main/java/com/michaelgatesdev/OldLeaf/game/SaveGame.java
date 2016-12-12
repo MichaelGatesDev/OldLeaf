@@ -257,8 +257,6 @@ public class SaveGame
                 int acreOffset = offsets.MAP_ACRES() + (8 * 2) + (acreN * 2) + (acreShift * 2);
                 raf.seek(acreOffset);
                 byte acreID = (byte) raf.read();
-
-//                logger.debug("Acre " + acreX + "," + acreY + " = 0x" + Integer.toHexString(acreID));
                 
                 Acre acre = new Acre();
                 acre.setValue(acreID);
@@ -287,8 +285,30 @@ public class SaveGame
                 }
                 acreN++;
             }
+            // TOWN BUILDINGS/
+            for (int i = 0; i < 58; i++)
+            {
+                raf.seek(offsets.MAP_BUILDINGS() + (i * 4));
+                
+                short value = Short.reverseBytes(raf.readShort());
+                int x = raf.readByte();
+                int y = raf.readByte();
+                
+                if (x == 0 || y == 0)
+                {
+                    continue;
+                }
+                
+                Structure structure = new Structure.Builder()
+                        .atPosition(x, y)
+                        .withValue(value)
+                        .withName(Main.getInstance().getStructureNameFromValue(value))
+                        .build();
+                
+                townMap.getStructures()[x - 15][y - 15] = structure;
+            }
             
-            // ISLAND
+            // TODO ISLAND
             
             
             logger.info("Finished loading the save");

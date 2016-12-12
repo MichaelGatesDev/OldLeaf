@@ -19,6 +19,8 @@ public class GameBuildingsGrid extends PaintGrid
     private Label selectedItemIDLabel;
     private Label selectedItemNameLabel;
     
+    private Structure selectedStructure;
+    
     // ============================================================================================================================================ \\
     
     
@@ -46,9 +48,25 @@ public class GameBuildingsGrid extends PaintGrid
     // ============================================================================================================================================ \\
     
     
-    public void fillWithStructures(Structure[][] tiles, int maxCols, int maxRows)
+    public void fillWithStructures(Structure[][] structures, int maxCols, int maxRows)
     {
-        
+        for (int x = 0; x < maxCols; x++)
+        {
+            for (int y = 0; y < maxRows; y++)
+            {
+                Structure structure = structures[x][y];
+                
+                if (structure == null || structure.isNothing())
+                {
+                    continue;
+                }
+                
+                Color c = Color.color(Color.WHITESMOKE.getRed(), Color.WHITESMOKE.getGreen(), Color.WHITESMOKE.getBlue(), 0.75);
+                
+                PaintableCell pc = (PaintableCell) this.getCells()[x][y];
+                pc.paint(c);
+            }
+        }
     }
     
     
@@ -86,7 +104,7 @@ public class GameBuildingsGrid extends PaintGrid
         }
         else
         {
-            objectNameLabel.setText("Air");
+            objectNameLabel.setText("(Nothing)");
         }
     }
     

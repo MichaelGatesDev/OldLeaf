@@ -88,8 +88,9 @@ public class Main extends Application
         // Create/Initialize all files
         File itemsFile = new File(textResDir, "/items.txt");
         this.gameItemNames = this.loadHexStringMap(itemsFile);
-        File structuresFile = new File(textResDir, "structures.txt");
+        File structuresFile = new File(textResDir, "/structures.txt");
         this.gameStructureNames = this.loadHexStringMap(structuresFile);
+        
         this.loadGameItemCategories();
         
         this.loadAcreImages();

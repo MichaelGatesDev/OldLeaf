@@ -49,7 +49,7 @@ public class MapEditorController implements Initializable
         
         int maxCols = GameMap.TOWN_ACRE_COLUMNS * GameMap.TILE_COLUMNS;
         int maxRows = GameMap.TOWN_ACRE_ROWS * GameMap.TILE_ROWS;
-        
+    
         buildingsGrid = new GameBuildingsGrid(maxCols, maxRows, TILE_SIZE, Color.BLACK, 0.25D);
         gridContainer.getChildren().add(buildingsGrid);
         buildingsGrid.fillWithStructures(Main.getInstance().getSaveGame().getTownMap().getStructures(), maxCols, maxRows);

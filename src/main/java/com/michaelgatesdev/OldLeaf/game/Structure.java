@@ -4,8 +4,12 @@ public class Structure
 {
     // ============================================================================================================================================ \\
     
+    public static final Structure NOTHING = new Structure.Builder().withValue((short) 0x00F8).withName("(Nothing)").build();
+    
     private short  value;
     private String name;
+    private int    x;
+    private int    y;
     private int    length;
     private int    width;
     
@@ -16,8 +20,16 @@ public class Structure
     {
         this.value = b.value;
         this.name = b.name;
+        this.x = b.x;
+        this.y = b.y;
         this.length = b.length;
         this.width = b.width;
+    }
+    
+    
+    public boolean isNothing()
+    {
+        return this.value == NOTHING.getValue();
     }
     
     
@@ -28,6 +40,8 @@ public class Structure
     {
         private short  value;
         private String name;
+        private int    x;
+        private int    y;
         private int    length;
         private int    width;
         
@@ -42,6 +56,14 @@ public class Structure
         public Structure.Builder withName(String name)
         {
             this.name = name;
+            return this;
+        }
+        
+        
+        public Structure.Builder atPosition(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
             return this;
         }
         
@@ -64,7 +86,7 @@ public class Structure
     // ============================================================================================================================================ \\
     
     
-    public void setValue(byte value)
+    public void setValue(short value)
     {
         this.value = value;
     }
@@ -87,6 +109,17 @@ public class Structure
         this.width = width;
     }
     
+    
+    public void setX(int x)
+    {
+        this.x = x;
+    }
+    
+    
+    public void setY(int y)
+    {
+        this.y = y;
+    }
     
     // ============================================================================================================================================ \\
     
@@ -114,6 +147,17 @@ public class Structure
         return width;
     }
     
+    
+    public int getX()
+    {
+        return x;
+    }
+    
+    
+    public int getY()
+    {
+        return y;
+    }
     
     // ============================================================================================================================================ \\
 }
