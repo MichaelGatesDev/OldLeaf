@@ -26,89 +26,7 @@ public class GameItem
         this.name = b.name;
     }
     
-    
-    public boolean isNothing()
-    {
-        return (value == 0x7FFE);
-    }
-    
-    
-    public byte getFlag1()
-    {
-        return flag1;
-    }
-    
     // ============================================================================================================================================ \\
-    
-    
-    public void setFlag1(byte flag1)
-    {
-        this.flag1 = flag1;
-    }
-    
-    
-    public byte getFlag2()
-    {
-        return flag2;
-    }
-    
-    
-    public void setFlag2(byte flag2)
-    {
-        this.flag2 = flag2;
-    }
-    
-    
-    public boolean isBuried()
-    {
-        return buried;
-    }
-    
-    
-    public void setBuried(boolean buried)
-    {
-        this.buried = buried;
-    }
-    
-    
-    public boolean isWatered()
-    {
-        return watered;
-    }
-    
-    
-    // ============================================================================================================================================ \\
-    
-    
-    public void setWatered(boolean watered)
-    {
-        this.watered = watered;
-    }
-    
-    
-    public short getValue()
-    {
-        return value;
-    }
-    
-    
-    public void setValue(short value)
-    {
-        this.value = value;
-    }
-    
-    
-    public String getName()
-    {
-        return name;
-    }
-    
-    
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-    
     
     public static class Builder
     {
@@ -170,6 +88,93 @@ public class GameItem
         
     }
     
+    // ============================================================================================================================================ \\
+    
+    
+    public void setFlag1(byte flag1)
+    {
+        this.flag1 = flag1;
+    }
+    
+    
+    public void setFlag2(byte flag2)
+    {
+        this.flag2 = flag2;
+    }
+    
+    
+    public void setBuried(boolean buried)
+    {
+        this.buried = buried;
+    }
+    
+    
+    public void setWatered(boolean watered)
+    {
+        this.watered = watered;
+    }
+    
+    
+    public void setValue(short value)
+    {
+        this.value = value;
+    }
+    
+    
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+    
+    // ============================================================================================================================================ \\
+    
+    
+    public static GameItem getAIR()
+    {
+        return AIR;
+    }
+    
+    
+    public byte getFlag1()
+    {
+        return flag1;
+    }
+    
+    
+    public byte getFlag2()
+    {
+        return flag2;
+    }
+    
+    
+    public boolean isBuried()
+    {
+        return buried;
+    }
+    
+    
+    public boolean isWatered()
+    {
+        return watered;
+    }
+    
+    
+    public short getValue()
+    {
+        return value;
+    }
+    
+    
+    public String getName()
+    {
+        return name;
+    }
+    
+    
+    public boolean isNothing()
+    {
+        return (value == 0x7FFE);
+    }
     
     // ============================================================================================================================================ \\
 }
