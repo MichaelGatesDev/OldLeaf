@@ -1,6 +1,7 @@
 package com.michaelgatesdev.OldLeaf.gui.components.grid;
 
 import com.michaelgatesdev.OldLeaf.game.Acre;
+import javafx.application.Platform;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
@@ -25,6 +26,11 @@ public class GameAcresGrid extends ImageGrid
     public GameAcresGrid(int columns, int rows, double cellSize, Color separatorColor, double separatorWidth)
     {
         super(columns, rows, cellSize, separatorColor, separatorWidth);
+        
+        Platform.runLater(() ->
+        {
+            this.setId("GameAcresGrid");
+        });
     }
     
     // ============================================================================================================================================ \\
@@ -39,7 +45,7 @@ public class GameAcresGrid extends ImageGrid
                 Acre acre = acres[x][y];
                 if (acre.getImageFile() == null)
                 {
-                    logger.debug(String.format("Acre image for X:%d | Y: %d is null", x, y));
+                    logger.error(String.format("Acre image for X:%d | Y: %d is null", x, y));
                     continue;
                 }
                 Image image = new Image(acre.getImageFile().toURI().toString());
@@ -51,8 +57,6 @@ public class GameAcresGrid extends ImageGrid
         
         this.redrawLines();
     }
-    
-    // ============================================================================================================================================ \\
     
     
     @Override

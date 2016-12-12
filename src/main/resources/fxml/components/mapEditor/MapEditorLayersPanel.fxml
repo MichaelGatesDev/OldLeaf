@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<AnchorPane pickOnBounds="false" prefHeight="500.0" prefWidth="160.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.112"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor.MapEditorLayersController">
+
+<AnchorPane pickOnBounds="false" prefHeight="500.0" prefWidth="160.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor.MapEditorLayersController">
     <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <bottom>
             <VBox alignment="CENTER" prefHeight="80.0" BorderPane.alignment="CENTER">
                 <children>
                     <Label fx:id="coordinatesLabel" text="X: 0 Y: 0">
                         <font>
-                            <Font size="14.0"/>
+                            <Font size="14.0" />
                         </font>
                     </Label>
                     <Label fx:id="objectNameLabel" text="Air">
                         <font>
-                            <Font size="14.0"/>
+                            <Font size="14.0" />
                         </font>
                     </Label>
                 </children>
@@ -26,27 +29,26 @@
         <center>
             <AnchorPane BorderPane.alignment="CENTER">
                 <children>
-                    <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-                                AnchorPane.topAnchor="0.0">
+                    <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                         <top>
                             <Label text="Layers" BorderPane.alignment="CENTER">
                                 <font>
-                                    <Font size="20.0"/>
+                                    <Font size="20.0" />
                                 </font>
                                 <BorderPane.margin>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                 </BorderPane.margin>
                             </Label>
                         </top>
                         <center>
                             <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
                                 <children>
-                                    <CheckBox mnemonicParsing="false" selected="true" text="Items"/>
-                                    <CheckBox layoutX="65.0" layoutY="10.0" mnemonicParsing="false" selected="true" text="Buildings"/>
-                                    <CheckBox disable="true" layoutX="55.0" layoutY="27.0" mnemonicParsing="false" selected="true" text="Acres"/>
+                                    <CheckBox fx:id="itemsLayerCheckBox" mnemonicParsing="false" selected="true" text="Items" />
+                                    <CheckBox fx:id="buildingsLayerCheckBox" disable="true" layoutX="65.0" layoutY="10.0" mnemonicParsing="false" selected="true" text="Buildings" />
+                                    <CheckBox fx:id="acresLayerCheckBox" disable="true" layoutX="55.0" layoutY="27.0" mnemonicParsing="false" selected="true" text="Acres" />
                                 </children>
                                 <BorderPane.margin>
-                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                                 </BorderPane.margin>
                             </VBox>
                         </center>

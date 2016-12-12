@@ -87,42 +87,42 @@ public class GameTilesGrid extends PaintGrid
             selectedItem = GameItem.AIR;
         }
         
-        if (button == MouseButton.PRIMARY)
+        switch (button)
         {
-            Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY] = selectedItem;
-            
-            if (selectedItem.isNothing())
-            {
+            case PRIMARY:
+                Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY] = selectedItem;
+                
+                if (selectedItem.isNothing())
+                {
+                    pc.clean();
+                }
+                else
+                {
+                    pc.paint(getItemColor(selectedItem));
+                }
+                break;
+            case SECONDARY:
+                if (!pc.isPainted())
+                {
+                    return;
+                }
+                
+                Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY] = GameItem.AIR;
                 pc.clean();
-            }
-            else
-            {
-                pc.paint(getItemColor(selectedItem));
-            }
-        }
-        else if (button == MouseButton.SECONDARY)
-        {
-            if (!pc.isPainted())
-            {
-                return;
-            }
-            
-            Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY] = GameItem.AIR;
-            pc.clean();
-        }
-        else if (button == MouseButton.MIDDLE)
-        {
-            if (!pc.isPainted())
-            {
-                return;
-            }
-            
-            this.selectedItem = Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY];
-            
-            if (selectedItemIDLabel != null && selectedItemNameLabel != null)
-            {
-                this.setSelectedItem(selectedItem);
-            }
+                break;
+            case MIDDLE:
+                if (!pc.isPainted())
+                {
+                    return;
+                }
+                
+                this.selectedItem = Main.getInstance().getSaveGame().getTownMap().getTiles()[gridX][gridY];
+                
+                if (selectedItemIDLabel != null && selectedItemNameLabel != null)
+                {
+                    this.setSelectedItem(selectedItem);
+                }
+                break;
         }
     }
     

@@ -3,6 +3,7 @@ package com.michaelgatesdev.OldLeaf.gui.controllers.mapEditor;
 import com.michaelgatesdev.OldLeaf.Main;
 import com.michaelgatesdev.OldLeaf.game.map.GameMap;
 import com.michaelgatesdev.OldLeaf.gui.components.grid.GameAcresGrid;
+import com.michaelgatesdev.OldLeaf.gui.components.grid.GameBuildingsGrid;
 import com.michaelgatesdev.OldLeaf.gui.components.grid.GameTilesGrid;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -24,8 +25,9 @@ public class MapEditorController implements Initializable
     @FXML
     StackPane gridContainer;
     
-    private GameAcresGrid acresGrid;
-    private GameTilesGrid tilesGrid;
+    private GameAcresGrid     acresGrid;
+    private GameBuildingsGrid buildingsGrid;
+    private GameTilesGrid     tilesGrid;
     
     // ============================================================================================================================================ \\
     
@@ -47,11 +49,14 @@ public class MapEditorController implements Initializable
         
         int maxCols = GameMap.TOWN_ACRE_COLUMNS * GameMap.TILE_COLUMNS;
         int maxRows = GameMap.TOWN_ACRE_ROWS * GameMap.TILE_ROWS;
+        
+        buildingsGrid = new GameBuildingsGrid(maxCols, maxRows, TILE_SIZE, Color.BLACK, 0.25D);
+        gridContainer.getChildren().add(buildingsGrid);
+        buildingsGrid.fillWithStructures(Main.getInstance().getSaveGame().getTownMap().getStructures(), maxCols, maxRows);
+        
         tilesGrid = new GameTilesGrid(maxCols, maxRows, TILE_SIZE, Color.BLACK, 0.25D);
         gridContainer.getChildren().add(tilesGrid);
         tilesGrid.fillWithItems(Main.getInstance().getSaveGame().getTownMap().getTiles(), maxCols, maxRows);
-        
-        //TODO buildings grid
         
         long finishTime = System.currentTimeMillis();
         
@@ -64,6 +69,12 @@ public class MapEditorController implements Initializable
     public GameTilesGrid getTilesGrid()
     {
         return tilesGrid;
+    }
+    
+    
+    public GameBuildingsGrid getBuildingsGrid()
+    {
+        return buildingsGrid;
     }
     
     
