@@ -49,6 +49,7 @@ public class GameBuildingsGrid extends PaintGrid
     // ============================================================================================================================================ \\
     
     
+    //TODO fix structure sizes and origins
     public void fillWithStructures(Structure[][] structures, int maxCols, int maxRows)
     {
         Color centerColor = Color.color(Color.GRAY.getRed(), Color.GRAY.getGreen(), Color.GRAY.getBlue(), 0.90);
