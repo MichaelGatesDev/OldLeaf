@@ -1,5 +1,10 @@
 package com.michaelgatesdev.OldLeaf.game;
 
+import com.michaelgatesdev.OldLeaf.exceptions.InvalidGridDimensionFormatException;
+import com.michaelgatesdev.OldLeaf.util.RegexUtil;
+
+import java.util.regex.Matcher;
+
 public class GridDimension
 {
     // ============================================================================================================================================ \\
@@ -42,6 +47,20 @@ public class GridDimension
     public int getHeight()
     {
         return height;
+    }
+    
+    
+    public static GridDimension fromString(String size) throws InvalidGridDimensionFormatException
+    {
+        Matcher m = RegexUtil.SIZE_PATTERN.matcher(size);
+        if (!m.matches() || m.groupCount() < 3)
+        {
+            throw new InvalidGridDimensionFormatException("Invalid dimension string! Should be like \"0x0\", \"13x21\".");
+        }
+        int width = Integer.parseInt(m.group(1));
+        int height = Integer.parseInt(m.group(2));
+        
+        return new GridDimension(width, height);
     }
     
     // ============================================================================================================================================ \\

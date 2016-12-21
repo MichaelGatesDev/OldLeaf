@@ -11,9 +11,9 @@
             fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.MainController">
 
     <stylesheets>
-        <!--<URL value="@../css/Main.css"/>-->
-        <!--<URL value="@../css/Flat.css"/>-->
-        <!--<URL value="@../css/FlatColors.css"/>-->
+        <!--<URL id="@../css/Main.css"/>-->
+        <!--<URL id="@../css/Flat.css"/>-->
+        <!--<URL id="@../css/FlatColors.css"/>-->
     </stylesheets>
 
     <center>

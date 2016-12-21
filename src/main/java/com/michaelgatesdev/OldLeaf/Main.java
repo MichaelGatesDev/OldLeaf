@@ -1,8 +1,6 @@
 package com.michaelgatesdev.OldLeaf;
 
-import com.michaelgatesdev.OldLeaf.game.GameItem;
-import com.michaelgatesdev.OldLeaf.game.GridDimension;
-import com.michaelgatesdev.OldLeaf.game.SaveGame;
+import com.michaelgatesdev.OldLeaf.game.*;
 import com.michaelgatesdev.OldLeaf.gui.GuiManager;
 import com.michaelgatesdev.OldLeaf.locale.UTF8Control;
 import com.michaelgatesdev.OldLeaf.util.FileUtil;
@@ -12,17 +10,20 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class Main extends Application
 {
@@ -49,13 +50,17 @@ public class Main extends Application
     private File islandTemplatesDir;
     private File appearanceTemplatesDir;
     
-    private SaveGame                        saveGame;
-    private Map<Short, String>              gameItemNames;
-    private Map<String, Map<Short, String>> gameItemCategories;
-    private Map<String, Color>              gameItemCategoryColors;
-    private Map<Short, String>              gameStructureNames;
-    private Map<Short, GridDimension>       gameStructureSizes;
-    private Map<Byte, File>                 acreImages;
+    private SaveGame saveGame;
+    
+    private Set<GameItem> gameItems;
+    private Set<String>   gameItemNames;
+    private Set<String>   gameItemCategories;
+    
+    private Set<Structure> gameStructures;
+    private Set<String>    gameStructureNames;
+    private Set<String>    gameStructureCategories;
+    
+    private Map<Byte, File> acreImages;
     
     // ============================================================================================================================================ \\
     
@@ -87,32 +92,13 @@ public class Main extends Application
         // Create/Initialize all the directories */
         initializeDirectories();
         
-        // Create/Initialize all files
-        
-        // items
-        File itemsFile = new File(textResDir, "/items.txt");
-        this.gameItemNames = this.loadHexStringMap(itemsFile);
-        this.loadGameItemCategories();
+        // load items
+        File itemsFile = new File(textResDir, "/items.xml");
+        this.loadItems(itemsFile);
         
         // structures
-        File structuresFile = new File(textResDir, "/structures.txt");
-        Map<Short, String> structuresTemp = this.loadHexStringMap(structuresFile);
-        this.gameStructureNames = new HashMap<>();
-        this.gameStructureSizes = new HashMap<>();
-        for (short key : structuresTemp.keySet())
-        {
-            String value = structuresTemp.get(key);
-            String[] ss = value.split(";");
-            String name = ss[0];
-            String rawSize = ss[1];
-            String[] ss2 = rawSize.split("x");
-            
-            int width = Integer.parseInt(ss2[0]);
-            int height = Integer.parseInt(ss2[1]);
-            
-            this.gameStructureNames.put(key, name);
-            this.gameStructureSizes.put(key, new GridDimension(width, height));
-        }
+        File structuresFile = new File(textResDir, "/structures.xml");
+        this.loadStructures(structuresFile);
         
         // acres
         this.loadAcreImages();
@@ -165,22 +151,112 @@ public class Main extends Application
     }
     
     
-    private void loadGameItemCategories()
+    private void loadItems(File file)
     {
-        this.gameItemCategories = new HashMap<>();
-        
-        File f = new File(textResDir, "/items.txt");
-        this.gameItemCategories = this.loadTitledHexList(f);
-        
-        
-        this.gameItemCategoryColors = new HashMap<>();
-        double offsetAmt = 360.0 / this.gameItemCategories.keySet().size();
-        int n = 0;
-        for (String s : this.gameItemCategories.keySet())
+        this.gameItems = new HashSet<>();
+        this.gameItemNames = new HashSet<>();
+        this.gameItemCategories = new HashSet<>();
+        try
         {
-            Color color = Color.hsb(offsetAmt * n, 1.0, 1.0);
-            this.gameItemCategoryColors.put(s, color);
-            n++;
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(file);
+            
+            NodeList nodes = doc.getElementsByTagName("GameItem");
+            
+            for (int temp = 0; temp < nodes.getLength(); temp++)
+            {
+                Node node = nodes.item(temp);
+                
+                if (node.getNodeType() == Node.ELEMENT_NODE)
+                {
+                    Element e = (Element) node;
+                    
+                    String itemName = e.getElementsByTagName("name").item(0).getTextContent();
+                    String itemCategory = e.getElementsByTagName("category").item(0).getTextContent();
+                    String rawID = e.getElementsByTagName("id").item(0).getTextContent();
+                    
+                    byte[] bytes = HexUtil.stringToByteArray(rawID.replace("0x", ""));
+                    short itemID = HexUtil.byteArrayToShort(bytes);
+                    
+                    if (!gameItemCategories.contains(itemCategory))
+                    {
+                        gameItemCategories.add(itemCategory);
+                    }
+                    
+                    gameItemNames.add(itemName);
+                    
+                    gameItems.add(new GameItem.Builder()
+                            .withName(itemName)
+                            .withCategory(itemCategory)
+                            .withID(itemID)
+                            .build()
+                    );
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+    
+    
+    private void loadStructures(File file)
+    {
+        this.gameStructures = new HashSet<>();
+        this.gameStructureNames = new HashSet<>();
+        this.gameStructureCategories = new HashSet<>();
+        try
+        {
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(file);
+            
+            NodeList nodes = doc.getElementsByTagName("Structure");
+            
+            for (int temp = 0; temp < nodes.getLength(); temp++)
+            {
+                Node node = nodes.item(temp);
+                
+                if (node.getNodeType() == Node.ELEMENT_NODE)
+                {
+                    Element e = (Element) node;
+                    
+                    String rawID = e.getElementsByTagName("id").item(0).getTextContent();
+                    byte[] bytes = HexUtil.stringToByteArray(rawID.replace("0x", ""));
+                    short structureID = HexUtil.byteArrayToShort(bytes);
+                    
+                    String structureName = e.getElementsByTagName("name").item(0).getTextContent();
+                    String structureCategory = e.getElementsByTagName("category").item(0).getTextContent();
+                    
+                    String rawSize = e.getElementsByTagName("size").item(0).getTextContent();
+                    GridDimension structureSize = GridDimension.fromString(rawSize);
+                    
+                    String rawLayout = e.getElementsByTagName("layout").item(0).getTextContent();
+                    GridLayout layout = GridLayout.fromString(rawLayout);
+                    
+                    if (!gameStructureCategories.contains(structureCategory))
+                    {
+                        gameStructureCategories.add(structureCategory);
+                    }
+                    
+                    gameStructureNames.add(structureName);
+                    
+                    gameStructures.add(new Structure.Builder()
+                            .withName(structureName)
+                            .withID(structureID)
+                            .withSize(structureSize)
+                            .withCategory(structureCategory)
+                            .withLayout(layout)
+                            .build()
+                    );
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
         }
     }
     
@@ -221,80 +297,19 @@ public class Main extends Application
     }
     
     
-    private Map<Short, String> loadHexStringMap(File file)
+    public File getAcreImage(byte value)
     {
-        Map<Short, String> map = new HashMap<>();
-        Map<String, String> itemsRaw = FileUtil.loadMapFromFile(file, "\\|", "^([A-Fa-f0-9]{4}[|](.*))$");
-        
-        for (String key : itemsRaw.keySet())
-        {
-            String value = itemsRaw.get(key);
-            byte[] bytes = HexUtil.stringToByteArray(key);
-            short shortValue = HexUtil.byteArrayToShort(bytes);
-            
-            map.put(shortValue, value);
-        }
-        return map;
-    }
-    
-    
-    private Map<String, Map<Short, String>> loadTitledHexList(File file)
-    {
-        Map<String, Map<Short, String>> result = new HashMap<>();
-        Map<String, Map<String, String>> itemsRaw = FileUtil.loadTitledList(file, "\\|", "^([A-Fa-f0-9]{4}[|](.*))$", "^([\\w]+)$");
-        
-        for (String title : itemsRaw.keySet())
-        {
-            Map<String, String> rawV = itemsRaw.get(title);
-            
-            if (!result.containsKey(title))
-            {
-                result.put(title, new HashMap<>());
-            }
-            
-            for (String key : rawV.keySet())
-            {
-                String value = rawV.get(key);
-                
-                byte[] bytes = HexUtil.stringToByteArray(key);
-                short shortValue = HexUtil.byteArrayToShort(bytes);
-                
-                result.get(title).put(shortValue, value);
-            }
-        }
-        
-        return result;
+        return acreImages.get(value);
     }
     
     
     public String getItemName(short id)
     {
-        return this.gameItemNames.get(id);
-    }
-    
-    
-    public GameItem getItem(String item)
-    {
-        short v = 0x7FFE;
-        for (short key : this.gameItemNames.keySet())
+        for (GameItem item : gameItems)
         {
-            if (this.gameItemNames.get(key).equalsIgnoreCase(item))
+            if (item.getID() == id)
             {
-                v = key;
-                break;
-            }
-        }
-        return new GameItem.Builder().withName(item).withShortValue(v).build();
-    }
-    
-    
-    public String getGameItemCategory(GameItem item)
-    {
-        for (String category : this.gameItemCategories.keySet())
-        {
-            if (this.gameItemCategories.get(category).keySet().contains(item.getValue()))
-            {
-                return category;
+                return item.getName();
             }
         }
         return null;
@@ -303,20 +318,69 @@ public class Main extends Application
     
     public String getStructureName(short id)
     {
-        return this.gameStructureNames.get(id);
+        for (Structure s : gameStructures)
+        {
+            if (s.getID() == id)
+            {
+                return s.getName();
+            }
+        }
+        return null;
     }
     
     
     public GridDimension getStructureSize(short id)
     {
-        return this.gameStructureSizes.get(id);
+        for (Structure s : gameStructures)
+        {
+            if (s.getID() == id)
+            {
+                return s.getSize();
+            }
+        }
+        return null;
     }
     
     
-    public File getAcreImage(byte value)
+    public List<String> getItemNamesInCategory(String key)
     {
-        return acreImages.get(value);
+        List<String> list = new ArrayList<>();
+        for (GameItem item : gameItems)
+        {
+            if (item.getCategory().equals(key))
+            {
+                list.add(item.getName());
+            }
+        }
+        return list;
     }
+    
+    
+    public GameItem getItemFromName(String itemName)
+    {
+        for (GameItem item : gameItems)
+        {
+            if (item.getName().equals(itemName))
+            {
+                return item;
+            }
+        }
+        return null;
+    }
+    
+    
+    public String getItemCategory(short id)
+    {
+        for (GameItem item : gameItems)
+        {
+            if (item.getID() == id)
+            {
+                return item.getCategory();
+            }
+        }
+        return null;
+    }
+    
     
     // ============================================================================================================================================ \\
     
@@ -360,23 +424,40 @@ public class Main extends Application
     }
     
     
-    public Map<String, Map<Short, String>> getGameItemCategories()
+    public Set<String> getGameItemCategories()
     {
         return gameItemCategories;
     }
     
     
-    public Map<Short, String> getGameItemNames()
+    public Set<String> getGameStructureCategories()
+    {
+        return gameStructureCategories;
+    }
+    
+    
+    public Set<GameItem> getGameItems()
+    {
+        return gameItems;
+    }
+    
+    
+    public Set<String> getGameItemNames()
     {
         return gameItemNames;
     }
     
     
-    public Map<String, Color> getGameItemCategoryColors()
+    public Set<Structure> getGameStructures()
     {
-        return gameItemCategoryColors;
+        return gameStructures;
     }
     
+    
+    public Set<String> getGameStructureNames()
+    {
+        return gameStructureNames;
+    }
     
     // ============================================================================================================================================ \\
 }

@@ -13,10 +13,9 @@ import org.controlsfx.control.textfield.AutoCompletionBinding;
 import org.controlsfx.control.textfield.TextFields;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 public class MapEditorItemsPanelController implements Initializable
 {
@@ -38,13 +37,13 @@ public class MapEditorItemsPanelController implements Initializable
     {
         itemCatalogAccordion.getPanes().clear();
         
-        Map<String, Map<Short, String>> categories = Main.getInstance().getGameItemCategories();
-        for (String key : categories.keySet())
+        Set<String> categories = Main.getInstance().getGameItemCategories();
+        for (String key : categories)
         {
-            itemCatalogAccordion.getPanes().add(this.createCategoryPane(key, new ArrayList<>(categories.get(key).values())));
+            itemCatalogAccordion.getPanes().add(this.createCategoryPane(key, Main.getInstance().getItemNamesInCategory(key)));
         }
         
-        AutoCompletionBinding<String> binding = TextFields.bindAutoCompletion(searchBox, Main.getInstance().getGameItemNames().values());
+        AutoCompletionBinding<String> binding = TextFields.bindAutoCompletion(searchBox, Main.getInstance().getGameItemNames());
         binding.setOnAutoCompleted(event ->
         {
             String completion = event.getCompletion();
@@ -79,10 +78,10 @@ public class MapEditorItemsPanelController implements Initializable
     }
     
     
-    private void updateSelectedItem(String item)
+    private void updateSelectedItem(String itemName)
     {
         GameTilesGrid grid = (GameTilesGrid) itemCatalogAccordion.getScene().lookup("GameTilesGrid");
-        grid.setSelectedItem(Main.getInstance().getItem(item));
+        grid.setSelectedItem(Main.getInstance().getItemFromName(itemName));
     }
     
     

@@ -4,14 +4,17 @@ public class GameItem
 {
     // ============================================================================================================================================ \\
     
-    public static final GameItem AIR = new GameItem.Builder().withShortValue((short) 0x7FFE).withName("Air").build();
+    public static final GameItem AIR = new GameItem.Builder().withID((short) 0x7FFE).withName("Air").build();
+    
+    private String name;
+    private String category;
     
     private byte    flag1;
     private byte    flag2;
     private boolean buried;
     private boolean watered;
     private short   value;
-    private String  name;
+    
     
     // ============================================================================================================================================ \\
     
@@ -24,23 +27,32 @@ public class GameItem
         this.watered = b.watered;
         this.value = b.id;
         this.name = b.name;
+        this.category = b.category;
     }
     
     // ============================================================================================================================================ \\
     
     public static class Builder
     {
+        private String  name;
+        private String  category;
         private byte    flag1;
         private byte    flag2;
         private boolean buried;
         private boolean watered;
         private short   id;
-        private String  name;
         
         
         public Builder withName(String name)
         {
             this.name = name;
+            return this;
+        }
+        
+        
+        public Builder withCategory(String category)
+        {
+            this.category = category;
             return this;
         }
         
@@ -73,7 +85,7 @@ public class GameItem
         }
         
         
-        public Builder withShortValue(short s)
+        public Builder withID(short s)
         {
             this.id = s;
             return this;
@@ -88,51 +100,8 @@ public class GameItem
         
     }
     
-    // ============================================================================================================================================ \\
-    
-    
-    public void setFlag1(byte flag1)
-    {
-        this.flag1 = flag1;
-    }
-    
-    
-    public void setFlag2(byte flag2)
-    {
-        this.flag2 = flag2;
-    }
-    
-    
-    public void setBuried(boolean buried)
-    {
-        this.buried = buried;
-    }
-    
-    
-    public void setWatered(boolean watered)
-    {
-        this.watered = watered;
-    }
-    
-    
-    public void setValue(short value)
-    {
-        this.value = value;
-    }
-    
-    
-    public void setName(String name)
-    {
-        this.name = name;
-    }
     
     // ============================================================================================================================================ \\
-    
-    
-    public static GameItem getAIR()
-    {
-        return AIR;
-    }
     
     
     public byte getFlag1()
@@ -159,7 +128,7 @@ public class GameItem
     }
     
     
-    public short getValue()
+    public short getID()
     {
         return value;
     }
@@ -168,6 +137,12 @@ public class GameItem
     public String getName()
     {
         return name;
+    }
+    
+    
+    public String getCategory()
+    {
+        return category;
     }
     
     

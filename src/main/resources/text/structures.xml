@@ -1,0 +1,1993 @@
+<?xml version="1.0"?>
+<!-- http://66.media.tumblr.com/c3b584e5543bc1d7d480203dd7955e1a/tumblr_nu6jqh0uF61tsfqtoo6_1280.jpg -->
+<!-- http://66.media.tumblr.com/9c455ccb18cde82bbbadf5d7b6d4514f/tumblr_inline_nu6jkuKIKy1szb4fk_500.jpg -->
+<!-- https://s-media-cache-ak0.pinimg.com/564x/6c/4f/32/6c4f322011cc08b71dee833148a23330.jpg -->
+<Structures>
+    <!-- Police Stations -->
+    <Structure>
+        <id>0x004C</id>
+        <name>Modern Police Station</name>
+        <size>3x3</size>
+        <category>Police Stations</category>
+        <layout>
+            111
+            111
+            121
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x004D</id>
+        <name>Classic Police Station</name>
+        <size>3x3</size>
+        <category>Police Stations</category>
+        <layout>
+            111
+            111
+            121
+        </layout>
+    </Structure>
+
+    <!-- ???? -->
+    <Structure>
+        <id>0x004E</id>
+        <name>Cafe</name>
+        <size>5x3</size>
+        <category>Null</category>
+        <layout>
+            11111
+            11111
+            01211
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x004F</id>
+        <name>Reset Center</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+
+    <!-- Benches -->
+    <Structure>
+        <id>0x00A6</id>
+        <name>Yellow Bench</name>
+        <size>2x1</size>
+        <category>Benches</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00A7</id>
+        <name>Blue Bench</name>
+        <size>2x1</size>
+        <category>Benches</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00A8</id>
+        <name>Wood Bench</name>
+        <size>2x1</size>
+        <category>Benches</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00A9</id>
+        <name>Metal Bench</name>
+        <size>2x1</size>
+        <category>Benches</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00AA</id>
+        <name>Log Bench</name>
+        <size>2x1</size>
+        <category>Benches</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00AB</id>
+        <name>Modern Bench</name>
+        <size>2x1</size>
+        <category>Benches</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00AC</id>
+        <name>Fairy-Tale Bench</name>
+        <size>2x1</size>
+        <category>Benches</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00AD</id>
+        <name>Zen Bench</name>
+        <size>2x1</size>
+        <category>Benches</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+
+    <!-- ???? -->
+    <Structure>
+        <id>0x00AE</id>
+        <name>Flower Bed</name>
+        <size>2x2</size>
+        <category>Null</category>
+        <layout>
+            11
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00AF</id>
+        <name>Water Fountain</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00B0</id>
+        <name>Instrument Shelter</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00B1</id>
+        <name>Sandbox</name>
+        <size>2x2</size>
+        <category>Null</category>
+        <layout>
+            11
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00B2</id>
+        <name>Garbage Can</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00B3</id>
+        <name>Pile of Pipes</name>
+        <size>2x1</size>
+        <category>Null</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00B4</id>
+        <name>Water Well</name>
+        <size>2x2</size>
+        <category>Null</category>
+        <layout>
+            11
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00B5</id>
+        <name>Fountain</name>
+        <size>3x3</size>
+        <category>Null</category>
+        <layout>
+            111
+            121
+            111
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00B6</id>
+        <name>Tire Toy</name>
+        <size>2x1</size>
+        <category>Null</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00B7</id>
+        <name>Jungle Gym</name>
+        <size>2x2</size>
+        <category>Null</category>
+        <layout>
+            11
+            21
+        </layout>
+    </Structure>
+
+    <!-- Clocks -->
+    <Structure>
+        <id>0x00B8</id>
+        <name>Park Clock</name>
+        <size>1x1</size>
+        <category>Clocks</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00B9</id>
+        <name>Modern Clock</name>
+        <size>1x1</size>
+        <category>Clocks</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00BA</id>
+        <name>Fairy-Tale Clock</name>
+        <size>1x1</size>
+        <category>Clocks</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00BB</id>
+        <name>Zen Clock</name>
+        <size>1x1</size>
+        <category>Clocks</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+
+    <!-- Lamps -->
+    <Structure>
+        <id>0x00BC</id>
+        <name>Street Lamp</name>
+        <size>1x1</size>
+        <category>Lamps</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00BD</id>
+        <name>Round Streetlight</name>
+        <size>1x1</size>
+        <category>Lamps</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00BE</id>
+        <name>Streetlight</name>
+        <size>1x1</size>
+        <category>Lamps</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00BF</id>
+        <name>Modern Streetlight</name>
+        <size>1x1</size>
+        <category>Lamps</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00C0</id>
+        <name>Fairy-Tale Streetlight</name>
+        <size>1x1</size>
+        <category>Lamps</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00C1</id>
+        <name>Zen Streetlight</name>
+        <size>1x1</size>
+        <category>Lamps</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+
+    <Structure>
+        <id>0x00C2</id>
+        <name>Balloon Arch</name>
+        <size>3x1</size>
+        <category>Arches</category>
+        <layout>
+            121
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00C3</id>
+        <name>Flower Arch</name>
+        <size>3x1</size>
+        <category>Arches</category>
+        <layout>
+            121
+        </layout>
+    </Structure>
+
+    <Structure>
+        <id>0x00C4</id>
+        <name>Campsite</name>
+        <size>3x3</size>
+        <category>Null</category>
+        <layout>
+            111
+            121
+            111
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00C5</id>
+        <name>Picnic Blanket</name>
+        <size>2x3</size>
+        <category>Null</category>
+        <layout>
+            11
+            11
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00C6</id>
+        <name>Hammock</name>
+        <size>2x1</size>
+        <category>Null</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00C7</id>
+        <name>Fire Pit</name>
+        <size>2x2</size>
+        <category>Null</category>
+        <layout>
+            11
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00C8</id>
+        <name>Camping Cot</name>
+        <size>1x2</size>
+        <category>Null</category>
+        <layout>
+            1
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00C9</id>
+        <name>Outdoor Chair</name>
+        <size>1x2</size>
+        <category>Null</category>
+        <layout>
+            1
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00CA</id>
+        <name>Torch</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00CB</id>
+        <name>Zen Garden</name>
+        <size>3x3</size>
+        <category>Null</category>
+        <layout>
+            111
+            111
+            121
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00CC</id>
+        <name>Hot Spring</name>
+        <size>3x2</size>
+        <category>Null</category>
+        <layout>
+            111
+            121
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00CD</id>
+        <name>Geyser</name>
+        <size>2x2</size>
+        <category>Null</category>
+        <layout>
+            11
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00CE</id>
+        <name>Statue Fountain</name>
+        <size>2x2</size>
+        <category>Null</category>
+        <layout>
+            11
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00CF</id>
+        <name>Stone Tablet</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00D0</id>
+        <name>Water Pump</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00D1</id>
+        <name>Wisteria Trellis</name>
+        <size>3x3</size>
+        <category>Null</category>
+        <layout>
+            111
+            111
+            211
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00D2</id>
+        <name>Bell</name>
+        <size>2x2</size>
+        <category>Null</category>
+        <layout>
+            11
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00D3</id>
+        <name>Zen Bell</name>
+        <size>2x2</size>
+        <category>Null</category>
+        <layout>
+            11
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00D4</id>
+        <name>Scarecrow</name>
+        <size>2x1</size>
+        <category>Null</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00D5</id>
+        <name>Rack of Rice</name>
+        <size>2x1</size>
+        <category>Null</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00D6</id>
+        <name>Fence</name>
+        <size>5x4</size>
+        <category>Null</category>
+        <layout>
+            11111
+            11111
+            11111
+            11211
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00D7</id>
+        <name>Bus Stop</name>
+        <size>4x2</size>
+        <category>Null</category>
+        <layout>
+            1111
+            1211
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00D8</id>
+        <name>Fire Hydrant</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00D9</id>
+        <name>Traffic Signal</name>
+        <size>2x1</size>
+        <category>Null</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00DA</id>
+        <name>Custom-Design Sign</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00DB</id>
+        <name>Face-Cutout Standee</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00DC</id>
+        <name>Caution Sign</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00DD</id>
+        <name>Do-Not-Enter Sign</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00DE</id>
+        <name>Yield Sign</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+
+    <Structure>
+        <id>0x00DF</id>
+        <name>Cube Sculpture</name>
+        <size>2x2</size>
+        <category>Sculptures</category>
+        <layout>
+            11
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00E0</id>
+        <name>Archway Sculpture</name>
+        <size>3x3</size>
+        <category>Sculptures</category>
+        <layout>
+            111
+            121
+            111
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00E1</id>
+        <name>Chair Sculpture</name>
+        <size>2x2</size>
+        <category>Sculptures</category>
+        <layout>
+            11
+            21
+        </layout>
+    </Structure>
+
+    <Structure>
+        <id>0x00E2</id>
+        <name>Illuminated Heart</name>
+        <size>2x1</size>
+        <category>Illuminated</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00E3</id>
+        <name>Illuminated Arch</name>
+        <size>3x1</size>
+        <category>Illuminated</category>
+        <layout>
+            121
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00E4</id>
+        <name>Illuminated Clock</name>
+        <size>3x3</size>
+        <category>Illuminated</category>
+        <layout>
+            111
+            121
+            111
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00E5</id>
+        <name>Illuminated Tree</name>
+        <size>1x1</size>
+        <category>Illuminated</category>
+        <layout>
+            2
+        </layout>
+    </Structure>
+
+    <Structure>
+        <id>0x00E6</id>
+        <name>Stadium Light</name>
+        <size>2x1</size>
+        <category>Null</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00E7</id>
+        <name>Video Screen</name>
+        <size>2x1</size>
+        <category>Null</category>
+        <layout>
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00E8</id>
+        <name>Drilling Rig</name>
+        <size>3x3</size>
+        <category>Null</category>
+        <layout>
+            111
+            121
+            111
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00E9</id>
+        <name>Parabolic Antenna</name>
+        <size>2x2</size>
+        <category>Null</category>
+        <layout>
+            11
+            21
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00EA</id>
+        <name>Solar Panels</name>
+        <size>3x2</size>
+        <category>Null</category>
+        <layout>
+            111
+            121
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00EB</id>
+        <name>Wind Turbine</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            1
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00EC</id>
+        <name>Windmill</name>
+        <size>2x2</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00ED</id>
+        <name>Lighthouse</name>
+        <size>2x2</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00EE</id>
+        <name>Tower</name>
+        <size>2x2</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00EF</id>
+        <name>Stonehenge</name>
+        <size>3x3</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00F0</id>
+        <name>Totem Pole</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00F1</id>
+        <name>Moai Statue</name>
+        <size>2x2</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00F2</id>
+        <name>Pyramid</name>
+        <size>3x3</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00F3</id>
+        <name>Sphinx</name>
+        <size>3x2</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00F4</id>
+        <name>Circle Topiary</name>
+        <size>2x2</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00F5</id>
+        <name>Square Topiary</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00F6</id>
+        <name>Tulip Topiary</name>
+        <size>2x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00F7</id>
+        <name>Flower Clock</name>
+        <size>3x3</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+
+    <Structure>
+        <id>0x008E</id>
+        <name>cobblestone bridge (N-S)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x008F</id>
+        <name>cobblestone bridge (SW-NE)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0090</id>
+        <name>cobblestone bridge (NW-SE)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0091</id>
+        <name>cobblestone bridge (W-E)</name>
+        <size>4x2</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0092</id>
+        <name>suspension bridge (N-S)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0093</id>
+        <name>suspension bridge (SW-NE)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0094</id>
+        <name>suspension bridge (NW-SE)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0095</id>
+        <name>suspension bridge (W-E)</name>
+        <size>4x2</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0096</id>
+        <name>brick bridge (N-S)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0097</id>
+        <name>brick bridge (SW-NE)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0098</id>
+        <name>brick bridge (NW-SE)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0099</id>
+        <name>brick bridge (W-E)</name>
+        <size>4x2</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x009A</id>
+        <name>modern bridge (N-S)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x009B</id>
+        <name>modern bridge (SW-NE)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x009C</id>
+        <name>modern bridge (NW-SE)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x009D</id>
+        <name>modern bridge (W-E)</name>
+        <size>4x2</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x009E</id>
+        <name>zen bridge (N-S)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x009F</id>
+        <name>zen bridge (SW-NE)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00A0</id>
+        <name>zen bridge (NW-SE)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00A1</id>
+        <name>zen bridge (W-E)</name>
+        <size>4x2</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00A2</id>
+        <name>fairy tale bridge (N-S)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00A3</id>
+        <name>fairy tale bridge (SW-NE)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00A4</id>
+        <name>fairy tale bridge (NW-SE)</name>
+        <size>2x4</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00A5</id>
+        <name>fairy tale bridge (W-E)</name>
+        <size>4x2</size>
+        <category>Bridges</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+
+    <Structure>
+        <id>0x0000</id>
+        <name>Player 1 House</name>
+        <size>4x4</size>
+        <category>Player Houses</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0001</id>
+        <name>Player 2 House</name>
+        <size>4x4</size>
+        <category>Player Houses</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0002</id>
+        <name>Player 3 House</name>
+        <size>4x4</size>
+        <category>Player Houses</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0003</id>
+        <name>Player 4 House</name>
+        <size>4x4</size>
+        <category>Player Houses</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+
+    <Structure>
+        <id>0x0004</id>
+        <name>Mailbox Only (Player 1)</name>
+        <size>1x1</size>
+        <category>Player Mailboxes</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0005</id>
+        <name>Mailbox Only (Player 2)</name>
+        <size>1x1</size>
+        <category>Player Mailboxes</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0006</id>
+        <name>Mailbox Only (Player 3)</name>
+        <size>1x1</size>
+        <category>Player Mailboxes</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0007</id>
+        <name>Mailbox Only (Player 4)</name>
+        <size>1x1</size>
+        <category>Player Mailboxes</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+
+    <Structure>
+        <id>0x0008</id>
+        <name>Villager 1</name>
+        <size>3x3</size>
+        <category>Villager Houses</category>
+        <layout>
+            111
+            111
+            121
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0009</id>
+        <name>Villager 2</name>
+        <size>3x3</size>
+        <category>Villager Houses</category>
+        <layout>
+            111
+            111
+            121
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x000A</id>
+        <name>Villager 3</name>
+        <size>3x3</size>
+        <category>Villager Houses</category>
+        <layout>
+            111
+            111
+            121
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x000B</id>
+        <name>Villager 4</name>
+        <size>3x3</size>
+        <category>Villager Houses</category>
+        <layout>
+            111
+            111
+            121
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x000C</id>
+        <name>Villager 5</name>
+        <size>3x3</size>
+        <category>Villager Houses</category>
+        <layout>
+            111
+            111
+            121
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x000D</id>
+        <name>Villager 6</name>
+        <size>3x3</size>
+        <category>Villager Houses</category>
+        <layout>
+            111
+            111
+            121
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x000E</id>
+        <name>Villager 7</name>
+        <size>3x3</size>
+        <category>Villager Houses</category>
+        <layout>
+            111
+            111
+            121
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x000F</id>
+        <name>Villager 8</name>
+        <size>3x3</size>
+        <category>Villager Houses</category>
+        <layout>
+            111
+            111
+            121
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0010</id>
+        <name>Villager 9</name>
+        <size>3x3</size>
+        <category>Villager Houses</category>
+        <layout>
+            111
+            111
+            121
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0011</id>
+        <name>Villager 10</name>
+        <size>3x3</size>
+        <category>Villager Houses</category>
+        <layout>
+            111
+            111
+            121
+        </layout>
+    </Structure>
+
+    <Structure>
+        <id>0x0050</id>
+        <name>classic town hall</name>
+        <size>7x4</size>
+        <category>Town Halls</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0051</id>
+        <name>zen town hall</name>
+        <size>7x4</size>
+        <category>Town Halls</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0052</id>
+        <name>fairy-tale town hall</name>
+        <size>7x4</size>
+        <category>Town Halls</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0053</id>
+        <name>modern town hall</name>
+        <size>7x4</size>
+        <category>Town Halls</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+
+    <Structure>
+        <id>0x0054</id>
+        <name>classic train station</name>
+        <size>5x3</size>
+        <category>Train Stations</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0055</id>
+        <name>zen train station</name>
+        <size>5x3</size>
+        <category>Train Stations</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0056</id>
+        <name>fairy-tale train station</name>
+        <size>5x3</size>
+        <category>Train Stations</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0057</id>
+        <name>modern train station</name>
+        <size>5x3</size>
+        <category>Train Stations</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+
+    <Structure>
+        <id>0x0058</id>
+        <name>recycle shop</name>
+        <size>5x3</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0059</id>
+        <name>town plaza</name>
+        <size>3x3</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x005A</id>
+        <name>railroad crossing arms</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x005B</id>
+        <name>bulletin board</name>
+        <size>2x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x005C</id>
+        <name>island storage bin</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x005D</id>
+        <name>dock</name>
+        <size>2x4</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+
+    <Structure>
+        <id>0x005E</id>
+        <name>Katrina's Tent</name>
+        <size>3x3</size>
+        <category>Special Tents</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x005F</id>
+        <name>Camper's Tent</name>
+        <size>3x3</size>
+        <category>Special Tents</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0060</id>
+        <name>Redd's Tent</name>
+        <size>3x3</size>
+        <category>Special Tents</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0061</id>
+        <name>Chip's Tent</name>
+        <size>3x3</size>
+        <category>Special Tents</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0062</id>
+        <name>Nat's Tent</name>
+        <size>3x3</size>
+        <category>Special Tents</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+
+    <Structure>
+        <id>0x0063</id>
+        <name>Franklin's Table</name>
+        <size>3x2</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0064</id>
+        <name>Pav�'s Dance Stage</name>
+        <size>3x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0065</id>
+        <name>Countdown Board</name>
+        <size>3x2</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0066</id>
+        <name>Redd's Stand</name>
+        <size>3x2</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0067</id>
+        <name>Dream World Bed</name>
+        <size>1x2</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x006B</id>
+        <name>New Years Day face cutout standee</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x006C</id>
+        <name>??? face cutout standee (6C)</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x006D</id>
+        <name>??? face cutout standee (6D)</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x006E</id>
+        <name>Groundhog Day face cutout standee</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x006F</id>
+        <name>Bean day? face cutout standee</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0070</id>
+        <name>??? face cutout standee (70)</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0071</id>
+        <name>Empty?</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0072</id>
+        <name>St. Patrick's Day face cutout standee</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0073</id>
+        <name>??? face cutout standee (73)</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0074</id>
+        <name>Earth Day face cutout standee</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0075</id>
+        <name>Carp Banner? face cutout standee</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0076</id>
+        <name>??? face cutout standee (76)</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0077</id>
+        <name>Flowers face cutout standee</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0078</id>
+        <name>??? face cutout standee (78)</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0079</id>
+        <name>??? face cutout standee (79)</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x007A</id>
+        <name>Labor Day face cutout standee</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x007B</id>
+        <name>??? face cutout standee (7B)</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x007C</id>
+        <name>??? face cutout standee (7C)</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x007D</id>
+        <name>Explorer's Day face cutout standee</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x007E</id>
+        <name>Toy Day? face cutout standee</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x007F</id>
+        <name>??? face cutout standee (7F)</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0080</id>
+        <name>Dream Suite door</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0081</id>
+        <name>Main Street door? (81)</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0082</id>
+        <name>Main Street door? (82)</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0083</id>
+        <name>Nookling Junction door</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0084</id>
+        <name>Museum donation board</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0085</id>
+        <name>Garden Shop door</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0086</id>
+        <name>Main Street door? (86)</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0087</id>
+        <name>Able Sisters door</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0088</id>
+        <name>Labelle's door</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x0089</id>
+        <name>Nook's Homes door</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x008A</id>
+        <name>Post Office door</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x008B</id>
+        <name>Photo Booth</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x008C</id>
+        <name>Main Street lamp</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x008D</id>
+        <name>Main Street bench (facing right)</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+    <Structure>
+        <id>0x00F8</id>
+        <name>(None)</name>
+        <size>1x1</size>
+        <category>Null</category>
+        <layout>
+            00111
+            01110
+            11100
+        </layout>
+    </Structure>
+</Structures>

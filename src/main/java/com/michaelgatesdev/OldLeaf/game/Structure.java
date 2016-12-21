@@ -4,30 +4,34 @@ public class Structure
 {
     // ============================================================================================================================================ \\
     
-    public static final Structure NOTHING = new Structure.Builder().withValue((short) 0x00F8).withName("(Nothing)").build();
+    public static final Structure NOTHING = new Structure.Builder().withID((short) 0x00F8).withName("(Nothing)").build();
     
-    private short         value;
     private String        name;
+    private String        category;
+    private short         id;
     private int           x;
     private int           y;
     private GridDimension size;
+    private GridLayout    layout;
     
     // ============================================================================================================================================ \\
     
     
     private Structure(Structure.Builder b)
     {
-        this.value = b.value;
         this.name = b.name;
+        this.category = b.category;
+        this.id = b.id;
         this.x = b.x;
         this.y = b.y;
         this.size = b.size;
+        this.layout = b.layout;
     }
     
     
     public boolean isNothing()
     {
-        return this.value == NOTHING.getValue();
+        return this.id == NOTHING.getID();
     }
     
     
@@ -36,16 +40,18 @@ public class Structure
     
     public static class Builder
     {
-        private short         value;
         private String        name;
+        private String        category;
+        private short         id;
         private int           x;
         private int           y;
         private GridDimension size;
+        private GridLayout    layout;
         
         
-        public Structure.Builder withValue(short value)
+        public Structure.Builder withID(short id)
         {
-            this.value = value;
+            this.id = id;
             return this;
         }
         
@@ -57,10 +63,24 @@ public class Structure
         }
         
         
+        public Structure.Builder withCategory(String category)
+        {
+            this.category = category;
+            return this;
+        }
+        
+        
         public Structure.Builder atPosition(int x, int y)
         {
             this.x = x;
             this.y = y;
+            return this;
+        }
+        
+        
+        public Structure.Builder withLayout(GridLayout layout)
+        {
+            this.layout = layout;
             return this;
         }
         
@@ -78,51 +98,30 @@ public class Structure
         }
     }
     
-    
     // ============================================================================================================================================ \\
     
     
-    public void setValue(short value)
+    public short getID()
     {
-        this.value = value;
-    }
-    
-    
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-    
-    
-    public void setSize(GridDimension size)
-    {
-        this.size = size;
-    }
-    
-    
-    public void setX(int x)
-    {
-        this.x = x;
-    }
-    
-    
-    public void setY(int y)
-    {
-        this.y = y;
-    }
-    
-    // ============================================================================================================================================ \\
-    
-    
-    public short getValue()
-    {
-        return value;
+        return id;
     }
     
     
     public String getName()
     {
         return name;
+    }
+    
+    
+    public String getCategory()
+    {
+        return category;
+    }
+    
+    
+    public GridLayout getLayout()
+    {
+        return layout;
     }
     
     

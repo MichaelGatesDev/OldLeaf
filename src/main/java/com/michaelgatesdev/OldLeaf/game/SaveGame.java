@@ -275,9 +275,10 @@ public class SaveGame
                     
                     GameItem item = new GameItem.Builder()
                             .withName(Main.getInstance().getItemName(id))
+                            .withCategory(Main.getInstance().getItemCategory(id))
                             .withFlag1(flag1)
                             .withFlag2(flag2)
-                            .withShortValue(id)
+                            .withID(id)
                             .build();
                     
                     townMap.getTiles()[realX][realY] = item;
@@ -301,7 +302,7 @@ public class SaveGame
                 
                 Structure structure = new Structure.Builder()
                         .atPosition(x, y)
-                        .withValue(value)
+                        .withID(value)
                         .withName(Main.getInstance().getStructureName(value))
                         .withSize(Main.getInstance().getStructureSize(value))
                         .build();
@@ -338,7 +339,7 @@ public class SaveGame
                         .withName("")
                         .withFlag1(flag1)
                         .withFlag2(flag2)
-                        .withShortValue(id)
+                        .withID(id)
                         .build();
                 
                 try

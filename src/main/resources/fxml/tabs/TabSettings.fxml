@@ -12,9 +12,9 @@
             fx:controller="com.michaelgatesdev.OldLeaf.gui.controllers.tabs.TabSettingsController">
 
     <stylesheets>
-        <!--<URL value="@../../css/tabs/TabSettings.css"/>-->
-        <!--<URL value="@../../css/Flat.css"/>-->
-        <!--<URL value="@../../css/FlatColors.css"/>-->
+        <!--<URL id="@../../css/tabs/TabSettings.css"/>-->
+        <!--<URL id="@../../css/Flat.css"/>-->
+        <!--<URL id="@../../css/FlatColors.css"/>-->
     </stylesheets>
 
     <center>

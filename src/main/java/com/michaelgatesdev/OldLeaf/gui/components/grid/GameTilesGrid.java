@@ -71,8 +71,10 @@ public class GameTilesGrid extends PaintGrid
         }
         else
         {
-            String category = Main.getInstance().getGameItemCategory(item);
-            return Main.getInstance().getGameItemCategoryColors().get(category);
+            String category = item.getCategory();
+            //TODO fix
+            return Color.CYAN;
+//            return Main.getInstance().getGameItemCategoryColors().get(category);
         }
     }
     
@@ -155,7 +157,7 @@ public class GameTilesGrid extends PaintGrid
     public void setSelectedItem(GameItem selectedItem)
     {
         this.selectedItem = selectedItem;
-        this.selectedItemIDLabel.setText("0x" + String.valueOf(Integer.toString(selectedItem.getValue(), 16)).toUpperCase());
+        this.selectedItemIDLabel.setText("0x" + String.valueOf(Integer.toString(selectedItem.getID(), 16)).toUpperCase());
         this.selectedItemNameLabel.setText(selectedItem.getName());
     }
     

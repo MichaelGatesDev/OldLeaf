@@ -22,7 +22,7 @@
                                             <ListView prefHeight="200.0" prefWidth="200.0">
                                                 <items>
                                                     <FXCollections fx:factory="observableArrayList">
-                                                        <String fx:value="Empty"/>
+                                                        <String fx:id="Empty"/>
                                                     </FXCollections>
                                                 </items>
                                             </ListView>
