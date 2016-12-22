@@ -305,9 +305,10 @@ public class SaveGame
                         .withID(value)
                         .withName(Main.getInstance().getStructureName(value))
                         .withSize(Main.getInstance().getStructureSize(value))
+                        .withLayout(Main.getInstance().getStructureLayout(value))
                         .build();
                 
-                townMap.getStructures()[x - 15][y - 15] = structure;
+                townMap.getStructures()[x - 16][y - 16] = structure;
             }
             
             // TODO ISLAND

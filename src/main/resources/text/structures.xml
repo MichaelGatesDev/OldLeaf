@@ -860,59 +860,65 @@
         </layout>
     </Structure>
 
+    <!-- Bridges -->
     <Structure>
         <id>0x008E</id>
         <name>cobblestone bridge (N-S)</name>
-        <size>2x4</size>
+        <size>4x4</size>
         <category>Bridges</category>
         <layout>
-            00111
-            01110
-            11100
+            1111
+            1111
+            1211
+            1111
         </layout>
     </Structure>
     <Structure>
         <id>0x008F</id>
         <name>cobblestone bridge (SW-NE)</name>
-        <size>2x4</size>
+        <size>7x4</size>
         <category>Bridges</category>
         <layout>
-            00111
-            01110
-            11100
+            0001111
+            0011210
+            0111100
+            1111000
         </layout>
     </Structure>
     <Structure>
         <id>0x0090</id>
         <name>cobblestone bridge (NW-SE)</name>
-        <size>2x4</size>
+        <size>7x4</size>
         <category>Bridges</category>
         <layout>
-            00111
-            01110
-            11100
+            1111000
+            0121100
+            0011110
+            0001111
         </layout>
     </Structure>
     <Structure>
         <id>0x0091</id>
         <name>cobblestone bridge (W-E)</name>
-        <size>4x2</size>
+        <size>4x4</size>
         <category>Bridges</category>
         <layout>
-            00111
-            01110
-            11100
+            1111
+            1111
+            1211
+            1111
         </layout>
     </Structure>
     <Structure>
         <id>0x0092</id>
         <name>suspension bridge (N-S)</name>
-        <size>2x4</size>
+        <size>4x4</size>
         <category>Bridges</category>
         <layout>
-            00111
-            01110
-            11100
+            1111
+            1111
+            1211
+            1111
         </layout>
     </Structure>
     <Structure>
@@ -951,12 +957,13 @@
     <Structure>
         <id>0x0096</id>
         <name>brick bridge (N-S)</name>
-        <size>2x4</size>
+        <size>4x4</size>
         <category>Bridges</category>
         <layout>
-            00111
-            01110
-            11100
+            1211
+            1111
+            1111
+            1111
         </layout>
     </Structure>
     <Structure>
@@ -995,12 +1002,13 @@
     <Structure>
         <id>0x009A</id>
         <name>modern bridge (N-S)</name>
-        <size>2x4</size>
+        <size>4x4</size>
         <category>Bridges</category>
         <layout>
-            00111
-            01110
-            11100
+            1211
+            1111
+            1111
+            1111
         </layout>
     </Structure>
     <Structure>
@@ -1039,12 +1047,13 @@
     <Structure>
         <id>0x009E</id>
         <name>zen bridge (N-S)</name>
-        <size>2x4</size>
+        <size>4x4</size>
         <category>Bridges</category>
         <layout>
-            00111
-            01110
-            11100
+            1211
+            1111
+            1111
+            1111
         </layout>
     </Structure>
     <Structure>
@@ -1083,12 +1092,13 @@
     <Structure>
         <id>0x00A2</id>
         <name>fairy tale bridge (N-S)</name>
-        <size>2x4</size>
+        <size>4x4</size>
         <category>Bridges</category>
         <layout>
-            00111
-            01110
-            11100
+            1211
+            1111
+            1111
+            1111
         </layout>
     </Structure>
     <Structure>
@@ -1128,45 +1138,49 @@
     <Structure>
         <id>0x0000</id>
         <name>Player 1 House</name>
-        <size>4x4</size>
+        <size>5x4</size>
         <category>Player Houses</category>
         <layout>
-            00111
-            01110
-            11100
+            11111
+            11111
+            11111
+            11211
         </layout>
     </Structure>
     <Structure>
         <id>0x0001</id>
         <name>Player 2 House</name>
-        <size>4x4</size>
+        <size>5x4</size>
         <category>Player Houses</category>
         <layout>
-            00111
-            01110
-            11100
+            11111
+            11111
+            11111
+            11211
         </layout>
     </Structure>
     <Structure>
         <id>0x0002</id>
         <name>Player 3 House</name>
-        <size>4x4</size>
+        <size>5x4</size>
         <category>Player Houses</category>
         <layout>
-            00111
-            01110
-            11100
+            11111
+            11111
+            11111
+            11211
         </layout>
     </Structure>
     <Structure>
         <id>0x0003</id>
         <name>Player 4 House</name>
-        <size>4x4</size>
+        <size>5x4</size>
         <category>Player Houses</category>
         <layout>
-            00111
-            01110
-            11100
+            11111
+            11111
+            11111
+            11211
         </layout>
     </Structure>
 
@@ -1332,9 +1346,10 @@
         <size>7x4</size>
         <category>Town Halls</category>
         <layout>
-            00111
-            01110
-            11100
+            1111111
+            1111111
+            1111111
+            1112111
         </layout>
     </Structure>
     <Structure>
@@ -1343,9 +1358,10 @@
         <size>7x4</size>
         <category>Town Halls</category>
         <layout>
-            00111
-            01110
-            11100
+            1111111
+            1111111
+            1111111
+            1112111
         </layout>
     </Structure>
     <Structure>
@@ -1354,9 +1370,10 @@
         <size>7x4</size>
         <category>Town Halls</category>
         <layout>
-            00111
-            01110
-            11100
+            1111111
+            1111111
+            1111111
+            1112111
         </layout>
     </Structure>
     <Structure>
@@ -1365,54 +1382,51 @@
         <size>7x4</size>
         <category>Town Halls</category>
         <layout>
-            00111
-            01110
-            11100
+            1111111
+            1111111
+            1111111
+            1112111
         </layout>
     </Structure>
 
     <Structure>
         <id>0x0054</id>
         <name>classic train station</name>
-        <size>5x3</size>
+        <size>5x2</size>
         <category>Train Stations</category>
         <layout>
-            00111
-            01110
-            11100
+            11111
+            11211
         </layout>
     </Structure>
     <Structure>
         <id>0x0055</id>
         <name>zen train station</name>
-        <size>5x3</size>
+        <size>5x2</size>
         <category>Train Stations</category>
         <layout>
-            00111
-            01110
-            11100
+            11111
+            11211
         </layout>
     </Structure>
     <Structure>
         <id>0x0056</id>
         <name>fairy-tale train station</name>
-        <size>5x3</size>
+        <size>5x2</size>
         <category>Train Stations</category>
         <layout>
-            00111
-            01110
-            11100
+            11111
+            11211
         </layout>
     </Structure>
     <Structure>
         <id>0x0057</id>
         <name>modern train station</name>
-        <size>5x3</size>
+        <size>5x2</size>
         <category>Train Stations</category>
         <layout>
-            00111
-            01110
-            11100
+            11111
+            11211
         </layout>
     </Structure>
 
@@ -1422,9 +1436,9 @@
         <size>5x3</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            11111
+            11111
+            11211
         </layout>
     </Structure>
     <Structure>
@@ -1433,9 +1447,9 @@
         <size>3x3</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            111
+            121
+            111
         </layout>
     </Structure>
     <Structure>
@@ -1444,9 +1458,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1455,9 +1467,7 @@
         <size>2x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            21
         </layout>
     </Structure>
     <Structure>
@@ -1466,9 +1476,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1477,9 +1485,10 @@
         <size>2x4</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            21
+            11
+            11
+            11
         </layout>
     </Structure>
 
@@ -1489,9 +1498,9 @@
         <size>3x3</size>
         <category>Special Tents</category>
         <layout>
-            00111
-            01110
-            11100
+            111
+            111
+            121
         </layout>
     </Structure>
     <Structure>
@@ -1500,9 +1509,9 @@
         <size>3x3</size>
         <category>Special Tents</category>
         <layout>
-            00111
-            01110
-            11100
+            111
+            111
+            121
         </layout>
     </Structure>
     <Structure>
@@ -1511,9 +1520,9 @@
         <size>3x3</size>
         <category>Special Tents</category>
         <layout>
-            00111
-            01110
-            11100
+            111
+            111
+            121
         </layout>
     </Structure>
     <Structure>
@@ -1522,9 +1531,9 @@
         <size>3x3</size>
         <category>Special Tents</category>
         <layout>
-            00111
-            01110
-            11100
+            111
+            111
+            121
         </layout>
     </Structure>
     <Structure>
@@ -1533,9 +1542,9 @@
         <size>3x3</size>
         <category>Special Tents</category>
         <layout>
-            00111
-            01110
-            11100
+            111
+            111
+            121
         </layout>
     </Structure>
 
@@ -1545,9 +1554,8 @@
         <size>3x2</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            111
+            121
         </layout>
     </Structure>
     <Structure>
@@ -1556,9 +1564,7 @@
         <size>3x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            121
         </layout>
     </Structure>
     <Structure>
@@ -1567,9 +1573,8 @@
         <size>3x2</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            111
+            121
         </layout>
     </Structure>
     <Structure>
@@ -1578,9 +1583,8 @@
         <size>3x2</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            111
+            121
         </layout>
     </Structure>
     <Structure>
@@ -1589,9 +1593,7 @@
         <size>1x2</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            21
         </layout>
     </Structure>
     <Structure>
@@ -1600,9 +1602,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1611,9 +1611,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1622,9 +1620,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1633,9 +1629,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1644,9 +1638,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1655,9 +1647,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1666,9 +1656,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1677,9 +1665,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1688,9 +1674,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1699,9 +1683,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1710,9 +1692,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1721,9 +1701,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1732,9 +1710,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1743,9 +1719,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1754,9 +1728,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1765,9 +1737,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1776,9 +1746,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1787,9 +1755,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1798,9 +1764,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1809,9 +1773,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1820,9 +1782,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1831,9 +1791,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1842,9 +1800,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1853,9 +1809,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1864,9 +1818,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1875,9 +1827,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1886,9 +1836,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1897,9 +1845,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1908,9 +1854,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1919,9 +1863,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1930,9 +1872,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1941,9 +1881,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1952,9 +1890,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1963,9 +1899,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1974,9 +1908,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
     <Structure>
@@ -1985,9 +1917,7 @@
         <size>1x1</size>
         <category>Null</category>
         <layout>
-            00111
-            01110
-            11100
+            2
         </layout>
     </Structure>
 </Structures>

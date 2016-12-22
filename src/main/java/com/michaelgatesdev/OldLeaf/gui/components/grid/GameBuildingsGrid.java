@@ -2,6 +2,7 @@ package com.michaelgatesdev.OldLeaf.gui.components.grid;
 
 import com.michaelgatesdev.OldLeaf.Main;
 import com.michaelgatesdev.OldLeaf.game.GridDimension;
+import com.michaelgatesdev.OldLeaf.game.GridLayout;
 import com.michaelgatesdev.OldLeaf.game.Structure;
 import javafx.application.Platform;
 import javafx.scene.control.Label;
@@ -67,22 +68,71 @@ public class GameBuildingsGrid extends PaintGrid
                 }
                 
                 GridDimension size = structure.getSize();
+                GridLayout layout = structure.getLayout();
                 
-                int startX = (x - (size.getWidth() / 2));
-                int endX = (x + (size.getWidth() / 2));
-                int startY = (y - (size.getHeight() / 2));
-                int endY = (y + (size.getHeight() / 2));
+                /*
+                    111 | 11111 | 111 | 21 | 121
+                    111 | 11111 | 121 |    |
+                    121 | 11211 | 111 |    |
+                    
+                    7      12      4     0    1
+                   3x3    5x3     3x3   2x1  3x1
+                 */
                 
+                int originIndex = layout.getOriginIndex(); // 7, 12, 4
+                int originColumn = layout.getOriginColumn(size);
+                int originRow = layout.getOriginRow(size);
                 
-                for (int x2 = startX; x2 <= endX; x2++)
+                // 55,5 -> 70,20
+                int startX = x - ((size.getWidth() - originColumn) / 2); // 55 - (7 - (18 / 7)) -> 50
+                int startY = y - ((size.getHeight() - originRow) / 2); // 55 - (7 - (18 / 7)) -> 6
+                
+                // 35, -2
+                
+                logger.debug(String.format("%s = Origin: [%d,%d], Start: [%d,%d]", structure.getName(), x, y, startX, startY));
+                
+                logger.debug(String.valueOf(layout.getChars()));
+                
+                int n = 0;
+                for (int i = 0; i < size.getHeight(); i++)
                 {
-                    for (int y2 = startY; y2 <= endY; y2++)
+                    for (int j = 0; j < size.getWidth(); j++)
                     {
-                        PaintableCell pc = (PaintableCell) this.getCells()[x2][y2];
+                        char c = layout.getChars()[n];
+                        PaintableCell pc = (PaintableCell) this.getCells()[startX + j][startY + i];
                         
-                        pc.paint(x2 == x && y2 == y ? centerColor : mainColor);
+                        switch (c)
+                        {
+                            case '0':
+                                pc.paint(Color.TRANSPARENT);
+                                break;
+                            case '1':
+                                pc.paint(mainColor);
+                                break;
+                            case '2':
+                                pc.paint(centerColor);
+                                break;
+                        }
+                        
+                        n++;
                     }
                 }
+
+//                int startX = (originX - (size.getWidth() / 2));
+//                int endX = (originX + (size.getWidth() / 2));
+//                int startY = (originY - (size.getHeight() / 2));
+//                int endY = (originY + (size.getHeight() / 2));
+//
+//
+//                for (int x2 = startX; x2 <= endX; x2++)
+//                {
+//                    for (int y2 = startY; y2 <= endY; y2++)
+//                    {
+//                        PaintableCell pc = (PaintableCell) this.getCells()[x2][y2];
+//
+//                        pc.paint(x2 == originX && y2 == originY ? centerColor : mainColor);
+//                    }
+//                }
                 
             }
         }

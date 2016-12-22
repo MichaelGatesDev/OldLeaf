@@ -72,9 +72,7 @@ public class GameTilesGrid extends PaintGrid
         else
         {
             String category = item.getCategory();
-            //TODO fix
-            return Color.CYAN;
-//            return Main.getInstance().getGameItemCategoryColors().get(category);
+            return Main.getInstance().getGameItemCategoryColors().get(category);
         }
     }
     

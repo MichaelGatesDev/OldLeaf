@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
@@ -52,9 +53,10 @@ public class Main extends Application
     
     private SaveGame saveGame;
     
-    private Set<GameItem> gameItems;
-    private Set<String>   gameItemNames;
-    private Set<String>   gameItemCategories;
+    private Set<GameItem>      gameItems;
+    private Set<String>        gameItemNames;
+    private Set<String>        gameItemCategories;
+    private Map<String, Color> gameItemCategoryColors;
     
     private Set<Structure> gameStructures;
     private Set<String>    gameStructureNames;
@@ -194,6 +196,9 @@ public class Main extends Application
                     );
                 }
             }
+            
+            // create colors
+            this.createGameItemCategoryColors();
         }
         catch (Exception e)
         {
@@ -261,6 +266,20 @@ public class Main extends Application
     }
     
     
+    private void createGameItemCategoryColors()
+    {
+        this.gameItemCategoryColors = new HashMap<>();
+        double offsetAmt = 360.0 / this.gameItemCategories.size();
+        int n = 0;
+        for (String s : this.gameItemCategories)
+        {
+            Color color = Color.hsb(offsetAmt * n, 1.0, 1.0);
+            this.gameItemCategoryColors.put(s, color);
+            n++;
+        }
+    }
+    
+    
     @Override
     public void start(Stage stage) throws Exception
     {
@@ -316,6 +335,33 @@ public class Main extends Application
     }
     
     
+    public List<String> getItemNamesInCategory(String key)
+    {
+        List<String> list = new ArrayList<>();
+        for (GameItem item : gameItems)
+        {
+            if (item.getCategory().equals(key))
+            {
+                list.add(item.getName());
+            }
+        }
+        return list;
+    }
+    
+    
+    public GameItem getItemFromName(String itemName)
+    {
+        for (GameItem item : gameItems)
+        {
+            if (item.getName().equals(itemName))
+            {
+                return item;
+            }
+        }
+        return null;
+    }
+    
+    
     public String getStructureName(short id)
     {
         for (Structure s : gameStructures)
@@ -342,27 +388,13 @@ public class Main extends Application
     }
     
     
-    public List<String> getItemNamesInCategory(String key)
+    public GridLayout getStructureLayout(short id)
     {
-        List<String> list = new ArrayList<>();
-        for (GameItem item : gameItems)
+        for (Structure s : gameStructures)
         {
-            if (item.getCategory().equals(key))
+            if (s.getID() == id)
             {
-                list.add(item.getName());
-            }
-        }
-        return list;
-    }
-    
-    
-    public GameItem getItemFromName(String itemName)
-    {
-        for (GameItem item : gameItems)
-        {
-            if (item.getName().equals(itemName))
-            {
-                return item;
+                return s.getLayout();
             }
         }
         return null;
@@ -458,6 +490,13 @@ public class Main extends Application
     {
         return gameStructureNames;
     }
+    
+    
+    public Map<String, Color> getGameItemCategoryColors()
+    {
+        return gameItemCategoryColors;
+    }
+    
     
     // ============================================================================================================================================ \\
 }
