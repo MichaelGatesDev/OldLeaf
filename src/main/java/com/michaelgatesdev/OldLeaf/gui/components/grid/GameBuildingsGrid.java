@@ -83,15 +83,8 @@ public class GameBuildingsGrid extends PaintGrid
                 int originColumn = layout.getOriginColumn(size);
                 int originRow = layout.getOriginRow(size);
                 
-                // 55,5 -> 70,20
-                int startX = x - ((size.getWidth() - originColumn) / 2); // 55 - (7 - (18 / 7)) -> 50
-                int startY = y - ((size.getHeight() - originRow) / 2); // 55 - (7 - (18 / 7)) -> 6
-                
-                // 35, -2
-                
-                logger.debug(String.format("%s = Origin: [%d,%d], Start: [%d,%d]", structure.getName(), x, y, startX, startY));
-                
-                logger.debug(String.valueOf(layout.getChars()));
+                int startX = x - ((size.getWidth() - originColumn) / 2);
+                int startY = y - ((size.getHeight() - originRow) / 2);
                 
                 int n = 0;
                 for (int i = 0; i < size.getHeight(); i++)
